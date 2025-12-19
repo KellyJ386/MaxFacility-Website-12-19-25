@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "MFO Software - Ice Rink Management Platform",
   description:
-    "Max Facility Operations (MFO) - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $34.99/month.",
+    "Max Facility Operations (MFO) - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $49.99/month.",
   keywords: [
     "ice rink management software",
     "ice depth monitoring",
@@ -205,7 +205,7 @@ export default function SoftwarePage() {
               </Link>
             </div>
             <p className="mt-6 text-green-400 font-semibold">
-              Starting at $34.99/month
+              Starting at $49.99/month
             </p>
           </div>
         </div>
@@ -441,12 +441,12 @@ export default function SoftwarePage() {
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-navy">$34.99</div>
+                <div className="text-5xl font-bold text-navy">$49.99</div>
                 <div className="text-grey-500">per month</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
-                <div className="text-5xl font-bold text-green-600">$419.88</div>
+                <div className="text-5xl font-bold text-green-600">$599.88</div>
                 <div className="text-grey-500">per year (save $0)</div>
               </div>
             </div>

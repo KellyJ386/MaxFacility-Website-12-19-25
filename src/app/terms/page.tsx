@@ -51,8 +51,8 @@ export default function TermsPage() {
               MFO Software is provided on a subscription basis:
             </p>
             <ul className="list-disc pl-6 text-grey-600 mb-6">
-              <li>Monthly subscription: $34.99 per month</li>
-              <li>Annual subscription: $419.88 per year</li>
+              <li>Monthly subscription: $49.99 per month</li>
+              <li>Annual subscription: $599.88 per year</li>
               <li>Multi-facility discount: 15% off for 2+ facilities</li>
               <li>Subscriptions renew automatically unless cancelled</li>
             </ul>

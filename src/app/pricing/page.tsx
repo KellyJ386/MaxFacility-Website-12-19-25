@@ -5,14 +5,14 @@ import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and MFO software. Ice maintenance, consulting, and software solutions starting at $34.99/month.",
+    "Transparent pricing for Max Facility services and MFO software. Ice maintenance, consulting, and software solutions starting at $49.99/month.",
 };
 
 const softwarePlan = {
   name: "MFO Software",
   description: "Complete ice facility management platform",
-  monthlyPrice: 34.99,
-  annualPrice: 419.88,
+  monthlyPrice: 49.99,
+  annualPrice: 599.88,
   features: [
     "Ice Depth Monitoring with AI analysis",
     "Ice Operations Log (4 customizable tabs)",
