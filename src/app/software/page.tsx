@@ -1,0 +1,505 @@
+import { Metadata } from "next";
+import Link from "next/link";
+import {
+  Monitor,
+  ArrowRight,
+  Ruler,
+  ClipboardList,
+  AlertTriangle,
+  Calendar,
+  CheckSquare,
+  Thermometer,
+  FileText,
+  Settings,
+  Check,
+  Bluetooth,
+  Brain,
+  FileDown,
+  Users,
+  Shield,
+  Smartphone,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "MFO Software - Ice Rink Management Platform",
+  description:
+    "Max Facility Operations (MFO) - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $34.99/month.",
+  keywords: [
+    "ice rink management software",
+    "ice depth monitoring",
+    "facility management software",
+    "rink operations software",
+    "ice facility software",
+  ],
+};
+
+const modules = [
+  {
+    icon: Ruler,
+    title: "Ice Depth Monitoring",
+    description:
+      "Interactive SVG rink diagrams with 24, 35, or 46 point measurement formats. Track ice depth trends over time.",
+    features: [
+      "Interactive rink diagrams",
+      "Bluetooth caliper integration",
+      "AI-powered analysis",
+      "PDF report generation",
+    ],
+  },
+  {
+    icon: ClipboardList,
+    title: "Ice Operations Log",
+    description:
+      "Comprehensive logging system with 4 customizable tabs for all ice-related activities.",
+    features: [
+      "Ice Make tracking",
+      "Circle Checks documentation",
+      "Blade Change records",
+      "End of Day reports",
+    ],
+  },
+  {
+    icon: AlertTriangle,
+    title: "Incident Reporting",
+    description:
+      "Complete incident documentation with interactive body diagrams and photo uploads.",
+    features: [
+      "Interactive body diagram",
+      "Photo uploads",
+      "Witness statements",
+      "Injury tracking & trends",
+    ],
+  },
+  {
+    icon: Calendar,
+    title: "Employee Scheduling",
+    description:
+      "Powerful scheduling system designed for facilities with up to 1000 employees.",
+    features: [
+      "Multi-employee support",
+      "Shift management",
+      "Role-based access",
+      "Mobile sign-off",
+    ],
+  },
+  {
+    icon: CheckSquare,
+    title: "Facility Checklists",
+    description:
+      "Customizable opening and closing checklists with supervisor sign-off capabilities.",
+    features: [
+      "Opening procedures",
+      "Closing procedures",
+      "Custom templates",
+      "Supervisor approval",
+    ],
+  },
+  {
+    icon: Thermometer,
+    title: "Refrigeration Plant",
+    description:
+      "Track compressor readings, brine temperatures, and maintain compliance records.",
+    features: [
+      "Compressor readings",
+      "Brine temp monitoring",
+      "Alarm logging",
+      "Compliance tracking",
+    ],
+  },
+  {
+    icon: FileText,
+    title: "Daily Reports",
+    description:
+      "Highly customizable daily reporting with up to 15 admin-configurable tabs.",
+    features: [
+      "15 customizable tabs",
+      "Area-specific reports",
+      "Historical data",
+      "Export capabilities",
+    ],
+  },
+  {
+    icon: Settings,
+    title: "Admin Panel",
+    description:
+      "Comprehensive administration tools for facility managers and supervisors.",
+    features: [
+      "User management",
+      "Permission controls",
+      "System configuration",
+      "Analytics dashboard",
+    ],
+  },
+];
+
+const highlights = [
+  {
+    icon: Bluetooth,
+    title: "Bluetooth Integration",
+    description: "Connect digital calipers directly to the app for seamless ice depth measurements.",
+  },
+  {
+    icon: Brain,
+    title: "AI-Powered Analysis",
+    description: "Intelligent insights and recommendations based on your facility's data patterns.",
+  },
+  {
+    icon: FileDown,
+    title: "PDF Reports",
+    description: "Generate professional reports for stakeholders with one click.",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Friendly",
+    description: "Access all features from any device - desktop, tablet, or smartphone.",
+  },
+  {
+    icon: Users,
+    title: "Multi-User Access",
+    description: "Role-based permissions for staff at all levels of your organization.",
+  },
+  {
+    icon: Shield,
+    title: "Secure & Compliant",
+    description: "Enterprise-grade security with full audit trails and data backups.",
+  },
+];
+
+export default function SoftwarePage() {
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="relative py-32 bg-navy pt-32">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-green-900 opacity-90" />
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2369BE28' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <Monitor className="h-10 w-10 text-green-500 mr-3" />
+              <span className="text-green-500 font-semibold uppercase tracking-wider">
+                MFO Software Platform
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Max Facility Operations
+            </h1>
+            <p className="text-xl text-grey-300 mb-8">
+              The all-in-one ice rink management platform that digitizes your
+              paper-based systems. Track ice depth, manage operations, schedule
+              employees, and generate reports—all in one place.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+                Request Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link href="/pricing" className="btn-secondary text-lg px-8 py-4">
+                View Pricing
+              </Link>
+            </div>
+            <p className="mt-6 text-green-400 font-semibold">
+              Starting at $34.99/month
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Modules Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Core Modules</h2>
+            <p className="section-subheading">
+              Eight powerful modules designed specifically for ice facility
+              operations, all working together seamlessly.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {modules.map((module) => (
+              <div
+                key={module.title}
+                className="bg-white border border-grey-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4">
+                  <module.icon className="h-6 w-6 text-green-500" />
+                </div>
+                <h3 className="text-lg font-bold text-navy mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-grey-600 text-sm mb-4">{module.description}</p>
+                <ul className="space-y-2">
+                  {module.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center text-sm text-grey-500"
+                    >
+                      <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Highlights */}
+      <section className="py-20 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Platform Highlights</h2>
+            <p className="section-subheading">
+              Modern features that set MFO apart from traditional facility
+              management solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {highlights.map((item) => (
+              <div
+                key={item.title}
+                className="flex items-start p-6 bg-white rounded-xl shadow-sm"
+              >
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-6 w-6 text-green-600" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-bold text-navy mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-grey-600 text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ice Depth Feature Deep Dive */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+                Featured Module
+              </span>
+              <h2 className="section-heading text-left mt-2">
+                Ice Depth Monitoring
+              </h2>
+              <p className="text-grey-600 mb-6">
+                Our flagship ice depth monitoring module revolutionizes how you
+                track and maintain optimal ice thickness. Choose from 24, 35, or
+                46 measurement point formats to match your facility&apos;s
+                needs.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Interactive SVG rink diagrams with click-to-record measurements",
+                  "Bluetooth digital caliper integration for hands-free data entry",
+                  "AI-powered analysis identifies problem areas before they worsen",
+                  "Generate professional PDF reports for management and compliance",
+                  "Historical trending shows ice depth changes over time",
+                ].map((feature) => (
+                  <li key={feature} className="flex items-start">
+                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-grey-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact" className="btn-primary">
+                See It In Action
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+            <div className="relative">
+              <div className="bg-grey-100 rounded-2xl p-8">
+                <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
+                  {/* Simplified rink diagram representation */}
+                  <svg
+                    viewBox="0 0 200 85"
+                    className="w-full h-full p-4"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    {/* Rink outline */}
+                    <rect
+                      x="5"
+                      y="5"
+                      width="190"
+                      height="75"
+                      rx="20"
+                      fill="#f0f9ff"
+                      stroke="#002244"
+                      strokeWidth="2"
+                    />
+                    {/* Center line */}
+                    <line
+                      x1="100"
+                      y1="5"
+                      x2="100"
+                      y2="80"
+                      stroke="#dc2626"
+                      strokeWidth="1"
+                    />
+                    {/* Center circle */}
+                    <circle
+                      cx="100"
+                      cy="42.5"
+                      r="15"
+                      fill="none"
+                      stroke="#002244"
+                      strokeWidth="1"
+                    />
+                    {/* Blue lines */}
+                    <line
+                      x1="65"
+                      y1="5"
+                      x2="65"
+                      y2="80"
+                      stroke="#2563eb"
+                      strokeWidth="1.5"
+                    />
+                    <line
+                      x1="135"
+                      y1="5"
+                      x2="135"
+                      y2="80"
+                      stroke="#2563eb"
+                      strokeWidth="1.5"
+                    />
+                    {/* Goal creases */}
+                    <path
+                      d="M25 32.5 Q32 42.5 25 52.5"
+                      fill="none"
+                      stroke="#002244"
+                      strokeWidth="1"
+                    />
+                    <path
+                      d="M175 32.5 Q168 42.5 175 52.5"
+                      fill="none"
+                      stroke="#002244"
+                      strokeWidth="1"
+                    />
+                    {/* Measurement points */}
+                    {[
+                      [30, 20],
+                      [30, 42.5],
+                      [30, 65],
+                      [65, 20],
+                      [65, 42.5],
+                      [65, 65],
+                      [100, 20],
+                      [100, 42.5],
+                      [100, 65],
+                      [135, 20],
+                      [135, 42.5],
+                      [135, 65],
+                      [170, 20],
+                      [170, 42.5],
+                      [170, 65],
+                    ].map(([x, y], i) => (
+                      <circle
+                        key={i}
+                        cx={x}
+                        cy={y}
+                        r="4"
+                        fill="#69BE28"
+                        stroke="#002244"
+                        strokeWidth="1"
+                      />
+                    ))}
+                  </svg>
+                </div>
+                <p className="text-center text-grey-500 text-sm mt-4">
+                  Interactive ice depth measurement diagram
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Preview */}
+      <section className="py-20 bg-navy">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-navy mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-grey-600 mb-8">
+              Everything you need to manage your ice facility, at one affordable
+              price.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
+              <div className="text-center">
+                <div className="text-5xl font-bold text-navy">$34.99</div>
+                <div className="text-grey-500">per month</div>
+              </div>
+              <div className="hidden md:block w-px h-16 bg-grey-200" />
+              <div className="text-center">
+                <div className="text-5xl font-bold text-green-600">$419.88</div>
+                <div className="text-grey-500">per year (save $0)</div>
+              </div>
+            </div>
+            <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">
+              {[
+                "All 8 core modules included",
+                "Implementation support",
+                "Staff training",
+                "Data migration assistance",
+                "Unlimited users",
+                "Email & phone support",
+              ].map((feature) => (
+                <li key={feature} className="flex items-center text-grey-700">
+                  <Check className="h-5 w-5 text-green-500 mr-2" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link href="/pricing" className="btn-outline">
+                View Full Pricing
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-grey-500">
+              15% discount for multi-facility subscriptions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-green-500">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Modernize Your Operations?
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            Schedule a personalized demo and see how MFO can transform your ice
+            facility.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-lg hover:bg-grey-100 transition-colors"
+          >
+            Request Demo
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
