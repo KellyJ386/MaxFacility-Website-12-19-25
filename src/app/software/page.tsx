@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import RinkReportsLogo from "@/components/RinkReportsLogo";
 import {
   Monitor,
   ArrowRight,
@@ -221,7 +222,7 @@ export default function SoftwarePage() {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Max Facility Operations
+              Rink Reports by Max Facility LLC
             </h1>
             <p className="text-xl text-grey-300 mb-8">
               The all-in-one ice rink management platform that digitizes your
@@ -363,101 +364,7 @@ export default function SoftwarePage() {
             <div className="relative">
               <div className="bg-grey-100 rounded-2xl p-8">
                 <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
-                  {/* Simplified rink diagram representation */}
-                  <svg
-                    viewBox="0 0 200 85"
-                    className="w-full h-full p-4"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Rink outline */}
-                    <rect
-                      x="5"
-                      y="5"
-                      width="190"
-                      height="75"
-                      rx="20"
-                      fill="#f0f9ff"
-                      stroke="#002244"
-                      strokeWidth="2"
-                    />
-                    {/* Center line */}
-                    <line
-                      x1="100"
-                      y1="5"
-                      x2="100"
-                      y2="80"
-                      stroke="#dc2626"
-                      strokeWidth="1"
-                    />
-                    {/* Center circle */}
-                    <circle
-                      cx="100"
-                      cy="42.5"
-                      r="15"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    {/* Blue lines */}
-                    <line
-                      x1="65"
-                      y1="5"
-                      x2="65"
-                      y2="80"
-                      stroke="#2563eb"
-                      strokeWidth="1.5"
-                    />
-                    <line
-                      x1="135"
-                      y1="5"
-                      x2="135"
-                      y2="80"
-                      stroke="#2563eb"
-                      strokeWidth="1.5"
-                    />
-                    {/* Goal creases */}
-                    <path
-                      d="M25 32.5 Q32 42.5 25 52.5"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    <path
-                      d="M175 32.5 Q168 42.5 175 52.5"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    {/* Measurement points */}
-                    {[
-                      [30, 20],
-                      [30, 42.5],
-                      [30, 65],
-                      [65, 20],
-                      [65, 42.5],
-                      [65, 65],
-                      [100, 20],
-                      [100, 42.5],
-                      [100, 65],
-                      [135, 20],
-                      [135, 42.5],
-                      [135, 65],
-                      [170, 20],
-                      [170, 42.5],
-                      [170, 65],
-                    ].map(([x, y], i) => (
-                      <circle
-                        key={i}
-                        cx={x}
-                        cy={y}
-                        r="4"
-                        fill="#4DFF00"
-                        stroke="#002244"
-                        strokeWidth="1"
-                      />
-                    ))}
-                  </svg>
+                  <RinkReportsLogo className="w-full h-full p-4" />
                 </div>
                 <p className="text-center text-grey-500 text-sm mt-4">
                   Offline-first across every module
