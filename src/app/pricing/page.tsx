@@ -90,7 +90,7 @@ const faqs = [
   {
     question: "Can I switch between monthly and annual billing?",
     answer:
-      "Yes, you can switch from monthly to annual billing at any time to take advantage of the annual discount. The change takes effect at your next billing cycle.",
+      "Yes, you can switch between monthly and annual billing at any time. The change takes effect at your next billing cycle.",
   },
   {
     question: "What payment methods do you accept?",
