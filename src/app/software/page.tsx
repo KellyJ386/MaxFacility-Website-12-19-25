@@ -447,7 +447,7 @@ export default function SoftwarePage() {
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
                 <div className="text-5xl font-bold text-green-600">$599.88</div>
-                <div className="text-grey-500">per year (save $0)</div>
+                <div className="text-grey-500">per year</div>
               </div>
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">

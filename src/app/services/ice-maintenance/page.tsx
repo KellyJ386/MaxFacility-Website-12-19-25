@@ -57,13 +57,10 @@ export default function IceMaintenancePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-32 bg-navy pt-32">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1580729119342-19ebd882e0e7?auto=format&fit=crop&w=2000&q=80')",
-          }}
-        />
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
+          <div className="absolute top-1/2 right-0 w-[32rem] h-[32rem] -translate-y-1/2 translate-x-1/3 bg-green-500/10 rounded-full blur-3xl" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex items-center mb-4">

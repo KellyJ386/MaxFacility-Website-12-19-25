@@ -5,7 +5,6 @@ import {
   Monitor,
   ArrowRight,
   CheckCircle,
-  Award,
 } from "lucide-react";
 
 const services = [
@@ -65,15 +64,25 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-navy pt-16">
-        {/* Background with overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1515703407324-5f753afd8be8?auto=format&fit=crop&w=2000&q=80')",
-          }}
-        >
-          <div className="absolute inset-0 ice-gradient"></div>
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
+          <div className="absolute -top-40 -right-40 w-[36rem] h-[36rem] bg-green-500/15 rounded-full blur-3xl" />
+          <div className="absolute -bottom-52 -left-40 w-[30rem] h-[30rem] bg-navy-400/25 rounded-full blur-3xl" />
+          {/* Faint rink-line motif */}
+          <svg
+            viewBox="0 0 200 85"
+            fill="none"
+            className="absolute left-1/2 top-1/2 w-[75rem] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
+          >
+            <rect x="5" y="5" width="190" height="75" rx="20" stroke="white" strokeWidth="1" />
+            <line x1="100" y1="5" x2="100" y2="80" stroke="white" strokeWidth="0.75" />
+            <circle cx="100" cy="42.5" r="15" stroke="white" strokeWidth="0.75" />
+            <line x1="65" y1="5" x2="65" y2="80" stroke="white" strokeWidth="0.75" />
+            <line x1="135" y1="5" x2="135" y2="80" stroke="white" strokeWidth="0.75" />
+            <path d="M25 32.5 Q32 42.5 25 52.5" stroke="white" strokeWidth="0.75" />
+            <path d="M175 32.5 Q168 42.5 175 52.5" stroke="white" strokeWidth="0.75" />
+          </svg>
         </div>
 
         {/* Content */}
@@ -227,8 +236,67 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="bg-grey-100 rounded-2xl p-8 relative">
-                <div className="aspect-video bg-navy rounded-xl flex items-center justify-center">
-                  <Award className="h-24 w-24 text-green-500" />
+                {/* Mock MFO dashboard preview */}
+                <div className="bg-navy rounded-xl p-6 shadow-lg">
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center">
+                      <div className="w-9 h-9 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                        <Monitor className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white font-semibold text-sm">
+                          MFO Dashboard
+                        </div>
+                        <div className="text-grey-400 text-xs">
+                          Central Ice Arena
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-xs font-medium text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full">
+                      Ice: Optimal
+                    </span>
+                  </div>
+                  <svg
+                    viewBox="0 0 200 85"
+                    fill="none"
+                    className="w-full rounded-lg bg-navy-700 mb-5"
+                    aria-hidden="true"
+                  >
+                    <rect x="8" y="8" width="184" height="69" rx="18" fill="#f0f9ff" fillOpacity="0.08" stroke="#69BE28" strokeOpacity="0.4" strokeWidth="1" />
+                    <line x1="100" y1="8" x2="100" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
+                    <circle cx="100" cy="42.5" r="13" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
+                    <line x1="66" y1="8" x2="66" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
+                    <line x1="134" y1="8" x2="134" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
+                    {[
+                      [36, 24],
+                      [36, 61],
+                      [66, 42.5],
+                      [100, 24],
+                      [100, 61],
+                      [134, 42.5],
+                      [164, 24],
+                      [164, 61],
+                    ].map(([x, y], i) => (
+                      <circle key={i} cx={x} cy={y} r="3.5" fill="#69BE28" />
+                    ))}
+                  </svg>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { value: '1.25"', label: "Avg Ice Depth" },
+                      { value: "12/12", label: "Checks Done" },
+                      { value: "8", label: "Staff On Shift" },
+                    ].map((stat) => (
+                      <div
+                        key={stat.label}
+                        className="bg-white/5 rounded-lg px-3 py-2.5 text-center"
+                      >
+                        <div className="text-green-400 font-bold">
+                          {stat.value}
+                        </div>
+                        <div className="text-grey-400 text-xs">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
                   30+ Years Experience
