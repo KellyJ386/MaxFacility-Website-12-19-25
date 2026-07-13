@@ -31,12 +31,12 @@ const rinks = [
   {
     slug: "edge-ice-arena",
     name: "Edge Ice Arena",
-    location: "",
+    location: "Littleton, CO",
   },
   {
     slug: "apex-ice-arena",
     name: "Apex Ice Arena",
-    location: "",
+    location: "Arvada, CO",
   },
   {
     slug: "bremerton-ice-arena",
