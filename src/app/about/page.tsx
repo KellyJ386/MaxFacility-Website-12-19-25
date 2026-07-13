@@ -3,12 +3,20 @@ import path from "node:path";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Award, Users, Target, Heart, ArrowRight, Snowflake } from "lucide-react";
+import {
+  Award,
+  Users,
+  Target,
+  Heart,
+  ArrowRight,
+  Snowflake,
+  GraduationCap,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Max Facility - 30+ years of ice rink expertise. Meet our CIT, CIRM, and CRA certified team and see the rinks we've served, from Jamestown, NY to Bremerton, WA.",
+    "Max Facility LLC was founded by career ice rink operator Kelly Johnson (CIT, CIRM, CRA). Operator-built consulting and RinkReports software for rinks of every size, based in Central New York.",
 };
 
 // Rinks we've served, in the order requested. Photos live in
@@ -37,7 +45,7 @@ const rinks = [
   },
   {
     slug: "tennity-ice-pavilion",
-    name: "Tennity Ice Pavilion",
+    name: "Tennity Ice Skating Pavilion",
     location: "Syracuse University",
   },
 ];
@@ -92,23 +100,34 @@ const certifications = [
   {
     abbr: "CIT",
     name: "Certified Ice Technician",
-    org: "NHL/US Ice Rink Association",
+    org: "U.S. Ice Rink Association",
     description:
-      "The premier certification for ice making and maintenance professionals, demonstrating mastery of ice quality standards.",
+      "Advanced ice making and maintenance — ice quality, resurfacing, and refrigeration fundamentals.",
   },
   {
     abbr: "CIRM",
     name: "Certified Ice Rink Manager",
-    org: "Ice Rink Managers Association",
+    org: "U.S. Ice Rink Association",
     description:
-      "Recognizes comprehensive knowledge of all aspects of ice facility management and operations.",
+      "Comprehensive management of rink operations, scheduling, safety, and staffing.",
   },
   {
     abbr: "CRA",
     name: "Certified Rink Administrator",
-    org: "National Ice Arena Association",
+    org: "U.S. Ice Rink Association",
     description:
-      "Demonstrates expertise in facility administration, budgeting, and organizational leadership.",
+      "Facility administration, budgeting, capital planning, and organizational leadership.",
+  },
+];
+
+const education = [
+  {
+    degree: "M.S., Sport Venue and Event Management",
+    school: "Falk College, Syracuse University",
+  },
+  {
+    degree: "B.S.",
+    school: "SUNY Brockport",
   },
 ];
 
@@ -132,9 +151,9 @@ export default function AboutPage() {
               About Max Facility
             </h1>
             <p className="text-xl text-grey-300">
-              For over three decades, we&apos;ve been dedicated to elevating ice
-              rink operations through expert consulting, professional services,
-              and innovative software solutions.
+              Facility management and software built by an operator who runs
+              rinks every day &mdash; not someone consulting on them from a
+              distance.
             </p>
           </div>
         </div>
@@ -143,64 +162,102 @@ export default function AboutPage() {
       {/* Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="section-heading text-left">Our Story</h2>
               <div className="space-y-4 text-grey-600">
                 <p>
-                  Max Facility started on the ice, not behind a desk. Our work
-                  began with the early-morning realities of running a rink
-                  &mdash; edging boards, dialing in ice depth, and keeping
-                  aging equipment alive so the first skaters of the day never
-                  knew how much went on before the doors opened.
+                  Max Facility LLC was founded by Kelly Johnson, a career ice
+                  rink operator who runs facilities &mdash; not someone
+                  consulting on them from a distance. Kelly currently serves as
+                  Associate Director of Recreation at Syracuse University&apos;s
+                  Tennity Ice Skating Pavilion, where she oversees ice
+                  operations, refrigeration plant monitoring, staff management,
+                  and programming for one of Central New York&apos;s busiest
+                  collegiate rinks.
                 </p>
                 <p>
-                  Over the years that hands-on experience grew into something
-                  bigger. What began as local ice maintenance became a
-                  full-service operations company, and along the way our team
-                  earned the industry&apos;s most respected credentials &mdash;
-                  CIT, CIRM, and CRA &mdash; while working alongside facilities
-                  from Jamestown, New York all the way to Bremerton,
-                  Washington.
+                  That hands-on experience is the foundation of everything Max
+                  Facility offers. From ice depth management and resurfacer
+                  operations to air quality compliance and capital planning,
+                  Kelly has managed the daily realities that most facility
+                  software and consultants only read about. She&apos;s led
+                  equipment evaluations, dasher board and shielding replacement
+                  projects, staff training programs, and the operational
+                  documentation that keeps a rink running safely and efficiently
+                  year-round.
                 </p>
                 <p>
-                  That range is the heart of who we are. We&apos;ve maintained
-                  ice, trained staff, and rebuilt operations at community rinks,
-                  competitive arenas, and university pavilions alike &mdash;
-                  including Syracuse University&apos;s Tennity Ice Pavilion. Every
-                  building taught us something, and every lesson found its way
-                  into the way we work today.
+                  That same frustration with paper logs, scattered spreadsheets,
+                  and software built by people who&apos;ve never cut ice is what
+                  led to{" "}
+                  <Link
+                    href="/software"
+                    className="font-semibold text-green-600 hover:text-green-700 transition-colors"
+                  >
+                    RinkReports
+                  </Link>{" "}
+                  &mdash; facility management software designed by an operator,
+                  for operators.
                 </p>
                 <p>
-                  Now we combine that old-school craftsmanship with modern
-                  technology through our software platform, so the knowledge
-                  we&apos;ve gathered on the ice is available to every facility
-                  we serve. Whether you need someone to maintain your ice, train
-                  your team, or digitize your operations, we&apos;re here to
-                  help.
+                  Based in Central New York, Max Facility works with rinks and
+                  recreation facilities of every size &mdash; from single-sheet
+                  community rinks to multi-sheet complexes.
                 </p>
               </div>
             </div>
-            <div className="bg-grey-100 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-navy mb-6">
-                What Sets Us Apart
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Certified experts (CIT, CIRM, CRA) with 30+ years on the ice",
-                  "Hands-on maintenance and resurfacing, not just advice",
-                  "Operations and staff training tailored to each facility",
-                  "Experience spanning community, competitive, and collegiate rinks",
-                  "Software built from real rink-floor know-how",
-                ].map((item) => (
-                  <li key={item} className="flex items-start">
-                    <span className="mt-1 mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100">
-                      <Snowflake className="h-4 w-4 text-green-600" />
+
+            {/* Founder card */}
+            <div className="rounded-2xl bg-navy p-8 text-white shadow-md">
+              <span className="inline-block rounded-full bg-green-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-400">
+                Founder
+              </span>
+              <h3 className="mt-4 text-2xl font-bold">Kelly Johnson</h3>
+              <p className="mt-1 text-grey-300">
+                Associate Director of Recreation
+              </p>
+              <p className="text-sm text-green-400">
+                Tennity Ice Skating Pavilion &middot; Syracuse University
+              </p>
+
+              <div className="mt-6 border-t border-white/10 pt-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-grey-400">
+                  Certifications
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {certifications.map((cert) => (
+                    <span
+                      key={cert.abbr}
+                      className="rounded-lg bg-white/10 px-3 py-1.5 text-sm font-bold text-green-400"
+                    >
+                      {cert.abbr}
                     </span>
-                    <span className="text-grey-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-grey-400">
+                  U.S. Ice Rink Association
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-white/10 pt-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-grey-400">
+                  Education
+                </p>
+                <ul className="mt-3 space-y-3">
+                  {education.map((item) => (
+                    <li key={item.degree} className="flex items-start">
+                      <GraduationCap className="mr-3 mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
+                      <span className="text-sm text-grey-200">
+                        {item.degree}
+                        <span className="block text-grey-400">
+                          {item.school}
+                        </span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -288,14 +345,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications Section */}
+      {/* Credentials & Education Section */}
       <section className="py-20 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Our Credentials</h2>
+            <h2 className="section-heading">Credentials &amp; Education</h2>
             <p className="section-subheading">
-              Industry-recognized certifications that demonstrate our commitment
-              to excellence.
+              Industry-recognized certifications from the U.S. Ice Rink
+              Association, backed by graduate training in sport venue and event
+              management.
             </p>
           </div>
 
@@ -318,26 +376,49 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {education.map((item) => (
+              <div
+                key={item.degree}
+                className="flex items-start rounded-xl border border-grey-200 bg-white p-6"
+              >
+                <span className="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-green-100">
+                  <GraduationCap className="h-6 w-6 text-green-600" />
+                </span>
+                <div>
+                  <h3 className="font-bold text-navy">{item.degree}</h3>
+                  <p className="text-sm text-grey-600">{item.school}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Positioning Band */}
       <section className="py-16 bg-green-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { value: "30+", label: "Years of Experience" },
-              { value: "100+", label: "Facilities Served" },
-              { value: "500+", label: "Staff Trained" },
-              { value: "3", label: "Certifications Held" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.value}
+              {
+                value: "Operator-Led",
+                label: "Founded and run by a working rink professional",
+              },
+              {
+                value: "CIT · CIRM · CRA",
+                label: "Fully certified by the U.S. Ice Rink Association",
+              },
+              {
+                value: "Every Size",
+                label: "Single-sheet community rinks to multi-sheet complexes",
+              },
+            ].map((item) => (
+              <div key={item.value}>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  {item.value}
                 </div>
-                <div className="text-green-100 text-sm uppercase tracking-wider">
-                  {stat.label}
-                </div>
+                <div className="text-green-50 text-sm">{item.label}</div>
               </div>
             ))}
           </div>
