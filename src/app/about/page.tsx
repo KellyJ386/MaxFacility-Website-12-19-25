@@ -99,36 +99,24 @@ const values = [
 const certifications = [
   {
     abbr: "CIT",
-    name: "Certified Ice Technician",
-    org: "U.S. Ice Rink Association",
-    description:
-      "Advanced ice making and maintenance — ice quality, resurfacing, and refrigeration fundamentals.",
+    logo: "/images/certs/cit.png",
+    label: "Certified Ice Technician (CIT) — U.S. Ice Rink Association",
   },
   {
     abbr: "CIRM",
-    name: "Certified Ice Rink Manager",
-    org: "U.S. Ice Rink Association",
-    description:
-      "Comprehensive management of rink operations, scheduling, safety, and staffing.",
+    logo: "/images/certs/cirm.png",
+    label: "Certified Ice Rink Manager (CIRM) — U.S. Ice Rink Association",
   },
   {
     abbr: "CRA",
-    name: "Certified Rink Administrator",
-    org: "U.S. Ice Rink Association",
-    description:
-      "Facility administration, budgeting, capital planning, and organizational leadership.",
+    logo: "/images/certs/cra.png",
+    label: "Certified Rink Administrator (CRA) — U.S. Ice Rink Association",
   },
 ];
 
 const education = [
-  {
-    degree: "M.S., Sport Venue and Event Management",
-    school: "Falk College, Syracuse University",
-  },
-  {
-    degree: "B.S.",
-    school: "SUNY Brockport",
-  },
+  "M.S., Sport Venue and Event Management — Falk College, Syracuse University",
+  "B.S. — SUNY Brockport",
 ];
 
 export default function AboutPage() {
@@ -246,14 +234,9 @@ export default function AboutPage() {
                 </p>
                 <ul className="mt-3 space-y-3">
                   {education.map((item) => (
-                    <li key={item.degree} className="flex items-start">
+                    <li key={item} className="flex items-start">
                       <GraduationCap className="mr-3 mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
-                      <span className="text-sm text-grey-200">
-                        {item.degree}
-                        <span className="block text-grey-400">
-                          {item.school}
-                        </span>
-                      </span>
+                      <span className="text-sm text-grey-200">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -347,51 +330,45 @@ export default function AboutPage() {
 
       {/* Credentials & Education Section */}
       <section className="py-20 bg-grey-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-heading">Credentials &amp; Education</h2>
-            <p className="section-subheading">
-              Industry-recognized certifications from the U.S. Ice Rink
-              Association, backed by graduate training in sport venue and event
-              management.
-            </p>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Certifications &amp; Education</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {certifications.map((cert) => (
-              <div
-                key={cert.abbr}
-                className="bg-navy rounded-xl p-8 text-center"
-              >
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">
-                    {cert.abbr}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-1">
-                  {cert.name}
-                </h3>
-                <p className="text-green-400 text-sm mb-4">{cert.org}</p>
-                <p className="text-grey-400 text-sm">{cert.description}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Certifications list */}
+            <div className="rounded-2xl border border-grey-200 bg-white p-8">
+              <h3 className="text-xl font-bold text-navy mb-6">Certifications</h3>
+              <ul className="space-y-6">
+                {certifications.map((cert) => (
+                  <li key={cert.abbr} className="flex items-center gap-4">
+                    <span className="relative h-12 w-16 flex-shrink-0">
+                      <Image
+                        src={cert.logo}
+                        alt=""
+                        fill
+                        sizes="64px"
+                        className="object-contain"
+                      />
+                    </span>
+                    <span className="text-grey-700">{cert.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {education.map((item) => (
-              <div
-                key={item.degree}
-                className="flex items-start rounded-xl border border-grey-200 bg-white p-6"
-              >
-                <span className="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-green-100">
-                  <GraduationCap className="h-6 w-6 text-green-600" />
-                </span>
-                <div>
-                  <h3 className="font-bold text-navy">{item.degree}</h3>
-                  <p className="text-sm text-grey-600">{item.school}</p>
-                </div>
-              </div>
-            ))}
+            {/* Education list */}
+            <div className="rounded-2xl border border-grey-200 bg-white p-8">
+              <h3 className="text-xl font-bold text-navy mb-6">Education</h3>
+              <ul className="space-y-6">
+                {education.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <GraduationCap className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
+                    <span className="text-grey-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
