@@ -33,17 +33,15 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center" aria-label="Max Facility home">
-              <span className="inline-flex items-center rounded-lg bg-white px-3 py-1.5 shadow-sm">
-                <Image
-                  src="/images/max-facility-logo.svg"
-                  alt="Max Facility"
-                  width={160}
-                  height={75}
-                  priority
-                  unoptimized
-                  className="h-9 w-auto"
-                />
-              </span>
+              <Image
+                src="/images/max-facility-logo.svg"
+                alt="Max Facility"
+                width={200}
+                height={94}
+                priority
+                unoptimized
+                className="h-11 w-auto"
+              />
             </Link>
           </div>
 
