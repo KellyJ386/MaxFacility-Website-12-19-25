@@ -1,12 +1,65 @@
+import fs from "node:fs";
+import path from "node:path";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Award, Users, Target, Heart, ArrowRight } from "lucide-react";
+import { Award, Users, Target, Heart, ArrowRight, Snowflake } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Max Facility - 30+ years of ice rink expertise. Meet our CIT, CIRM, and CRA certified team dedicated to elevating ice facility operations.",
+    "Learn about Max Facility - 30+ years of ice rink expertise. Meet our CIT, CIRM, and CRA certified team and see the rinks we've served, from Jamestown, NY to Bremerton, WA.",
 };
+
+// Rinks we've served, in the order requested. Photos live in
+// public/images/rinks/. The gallery resolves the real photo when a file is
+// present and falls back to a labeled panel otherwise (see resolveRinkImage).
+const rinks = [
+  {
+    slug: "jamestown",
+    name: "Jamestown",
+    location: "Jamestown, NY",
+  },
+  {
+    slug: "edge-ice-arena",
+    name: "Edge Ice Arena",
+    location: "",
+  },
+  {
+    slug: "apex-ice-arena",
+    name: "Apex Ice Arena",
+    location: "",
+  },
+  {
+    slug: "bremerton-ice-arena",
+    name: "Bremerton Ice Arena",
+    location: "Bremerton, WA",
+  },
+  {
+    slug: "tennity-ice-pavilion",
+    name: "Tennity Ice Pavilion",
+    location: "Syracuse University",
+  },
+];
+
+// Look for a photo at public/images/rinks/<slug>.<ext>. Returns the public URL
+// if one exists, otherwise null so the card renders a placeholder panel.
+function resolveRinkImage(slug: string): string | null {
+  const exts = ["jpg", "jpeg", "png", "webp", "avif"];
+  for (const ext of exts) {
+    const file = `${slug}.${ext}`;
+    try {
+      if (
+        fs.existsSync(path.join(process.cwd(), "public", "images", "rinks", file))
+      ) {
+        return `/images/rinks/${file}`;
+      }
+    } catch {
+      // ignore and try the next extension
+    }
+  }
+  return null;
+}
 
 const values = [
   {
@@ -35,16 +88,6 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: "1994", event: "Founded in Central New York" },
-  { year: "2000", event: "Achieved CIT Certification" },
-  { year: "2005", event: "Expanded to Northeast consulting" },
-  { year: "2010", event: "100th facility milestone" },
-  { year: "2015", event: "Launched MFO Software beta" },
-  { year: "2020", event: "Nationwide consulting coverage" },
-  { year: "2024", event: "MFO Software 2.0 release" },
-];
-
 const certifications = [
   {
     abbr: "CIT",
@@ -70,6 +113,11 @@ const certifications = [
 ];
 
 export default function AboutPage() {
+  const rinkImages = rinks.map((rink) => ({
+    ...rink,
+    src: resolveRinkImage(rink.slug),
+  }));
+
   return (
     <>
       {/* Hero Section */}
@@ -100,57 +148,122 @@ export default function AboutPage() {
               <h2 className="section-heading text-left">Our Story</h2>
               <div className="space-y-4 text-grey-600">
                 <p>
-                  Max Facility was founded in Central New York with a simple
-                  mission: to help ice facilities operate at their best. What
-                  started as local ice maintenance services has grown into a
-                  comprehensive operations company serving facilities across the
-                  nation.
+                  Max Facility started on the ice, not behind a desk. Our work
+                  began with the early-morning realities of running a rink
+                  &mdash; edging boards, dialing in ice depth, and keeping
+                  aging equipment alive so the first skaters of the day never
+                  knew how much went on before the doors opened.
                 </p>
                 <p>
-                  Our founder&apos;s passion for ice sports and facility
-                  management led to decades of hands-on experience, earning the
-                  industry&apos;s most respected certifications along the way.
-                  This deep expertise became the foundation for both our
-                  consulting services and our MFO software platform.
+                  Over the years that hands-on experience grew into something
+                  bigger. What began as local ice maintenance became a
+                  full-service operations company, and along the way our team
+                  earned the industry&apos;s most respected credentials &mdash;
+                  CIT, CIRM, and CRA &mdash; while working alongside facilities
+                  from Jamestown, New York all the way to Bremerton,
+                  Washington.
                 </p>
                 <p>
-                  Today, we combine old-school craftsmanship with modern
-                  technology to deliver solutions that work. Whether you need
-                  someone to maintain your ice, train your staff, or digitize
-                  your operations, we&apos;re here to help.
+                  That range is the heart of who we are. We&apos;ve maintained
+                  ice, trained staff, and rebuilt operations at community rinks,
+                  competitive arenas, and university pavilions alike &mdash;
+                  including Syracuse University&apos;s Tennity Ice Pavilion. Every
+                  building taught us something, and every lesson found its way
+                  into the way we work today.
+                </p>
+                <p>
+                  Now we combine that old-school craftsmanship with modern
+                  technology through our software platform, so the knowledge
+                  we&apos;ve gathered on the ice is available to every facility
+                  we serve. Whether you need someone to maintain your ice, train
+                  your team, or digitize your operations, we&apos;re here to
+                  help.
                 </p>
               </div>
             </div>
             <div className="bg-grey-100 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-navy mb-6">Our Journey</h3>
-              <div className="space-y-4">
-                {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className="flex items-start">
-                    <div className="w-16 flex-shrink-0">
-                      <span className="text-green-600 font-bold">
-                        {milestone.year}
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div
-                        className={`w-3 h-3 rounded-full ${
-                          index === milestones.length - 1
-                            ? "bg-green-500"
-                            : "bg-navy"
-                        }`}
-                      />
-                      <div className="ml-4 text-grey-700">{milestone.event}</div>
-                    </div>
-                  </div>
+              <h3 className="text-xl font-bold text-navy mb-6">
+                What Sets Us Apart
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Certified experts (CIT, CIRM, CRA) with 30+ years on the ice",
+                  "Hands-on maintenance and resurfacing, not just advice",
+                  "Operations and staff training tailored to each facility",
+                  "Experience spanning community, competitive, and collegiate rinks",
+                  "Software built from real rink-floor know-how",
+                ].map((item) => (
+                  <li key={item} className="flex items-start">
+                    <span className="mt-1 mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-100">
+                      <Snowflake className="h-4 w-4 text-green-600" />
+                    </span>
+                    <span className="text-grey-700">{item}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Rinks We've Served Gallery */}
       <section className="py-20 bg-grey-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Rinks We&apos;ve Served</h2>
+            <p className="section-subheading">
+              A look at some of the facilities we&apos;ve had the privilege to
+              maintain, consult for, and help operate.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {rinkImages.map((rink) => (
+              <figure
+                key={rink.slug}
+                className="group overflow-hidden rounded-2xl bg-navy shadow-md hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  {rink.src ? (
+                    <Image
+                      src={rink.src}
+                      alt={`${rink.name}${rink.location ? ` — ${rink.location}` : ""}`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-navy-700 via-navy to-navy-500/70">
+                      <Snowflake
+                        className="h-10 w-10 text-green-500/70 mb-3"
+                        aria-hidden="true"
+                      />
+                      <span className="px-4 text-center text-sm font-medium text-grey-300">
+                        Photo coming soon
+                      </span>
+                    </div>
+                  )}
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent"
+                    aria-hidden="true"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="text-lg font-bold text-white leading-snug">
+                      {rink.name}
+                    </h3>
+                    {rink.location && (
+                      <p className="text-sm text-green-400">{rink.location}</p>
+                    )}
+                  </figcaption>
+                </div>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Our Values</h2>
@@ -176,7 +289,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Our Credentials</h2>
