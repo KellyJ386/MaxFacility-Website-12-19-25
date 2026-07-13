@@ -34,9 +34,9 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center" aria-label="Rink Reports home">
               <Image
-                src="/images/rink-reports-logo.svg"
+                src="/images/rinkreports_logo.svg"
                 alt="Rink Reports"
-                width={800}
+                width={740}
                 height={380}
                 priority
                 className="h-11 w-auto"

@@ -49,7 +49,7 @@ const milestones = [
 const certifications = [
   {
     abbr: "CIT",
-    logo: "/images/cit-logo.svg",
+    logo: "/images/cit-logo-pms_orig.png",
     name: "Certified Ice Technician",
     org: "NHL/US Ice Rink Association",
     description:
@@ -57,7 +57,7 @@ const certifications = [
   },
   {
     abbr: "CIRM",
-    logo: "/images/cirm-logo.svg",
+    logo: "/images/cirm-logo-pms_orig.png",
     name: "Certified Ice Rink Manager",
     org: "Ice Rink Managers Association",
     description:
@@ -65,7 +65,7 @@ const certifications = [
   },
   {
     abbr: "CRA",
-    logo: "/images/cra-logo.svg",
+    logo: "/images/cra-logo-pms_orig.png",
     name: "Certified Rink Administrator",
     org: "National Ice Arena Association",
     description:
@@ -196,13 +196,15 @@ export default function AboutPage() {
                 key={cert.abbr}
                 className="bg-navy rounded-xl p-8 text-center"
               >
-                <Image
-                  src={cert.logo}
-                  alt={`${cert.name} certification badge`}
-                  width={112}
-                  height={112}
-                  className="w-28 h-28 mx-auto mb-4"
-                />
+                <div className="bg-white rounded-xl h-28 flex items-center justify-center mb-5 px-4">
+                  <Image
+                    src={cert.logo}
+                    alt={`${cert.name} certification logo`}
+                    width={240}
+                    height={175}
+                    className="max-h-20 w-auto object-contain"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-white mb-1">
                   {cert.name}
                 </h3>
