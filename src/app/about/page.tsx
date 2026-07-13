@@ -101,6 +101,7 @@ const certifications = [
     abbr: "CIT",
     name: "Certified Ice Technician",
     org: "U.S. Ice Rink Association",
+    logo: "/images/certs/cit.png",
     description:
       "Advanced ice making and maintenance — ice quality, resurfacing, and refrigeration fundamentals.",
   },
@@ -108,6 +109,7 @@ const certifications = [
     abbr: "CIRM",
     name: "Certified Ice Rink Manager",
     org: "U.S. Ice Rink Association",
+    logo: "/images/certs/cirm.png",
     description:
       "Comprehensive management of rink operations, scheduling, safety, and staffing.",
   },
@@ -115,6 +117,7 @@ const certifications = [
     abbr: "CRA",
     name: "Certified Rink Administrator",
     org: "U.S. Ice Rink Association",
+    logo: "/images/certs/cra.png",
     description:
       "Facility administration, budgeting, capital planning, and organizational leadership.",
   },
@@ -361,18 +364,21 @@ export default function AboutPage() {
             {certifications.map((cert) => (
               <div
                 key={cert.abbr}
-                className="bg-navy rounded-xl p-8 text-center"
+                className="flex flex-col rounded-xl border border-grey-200 bg-white p-8 text-center shadow-sm"
               >
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">
-                    {cert.abbr}
-                  </span>
+                <div className="relative mx-auto mb-6 h-24 w-full max-w-[220px]">
+                  <Image
+                    src={cert.logo}
+                    alt={`${cert.name} (${cert.abbr}) — U.S. Ice Rink Association`}
+                    fill
+                    sizes="(min-width: 768px) 220px, 60vw"
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">
-                  {cert.name}
-                </h3>
-                <p className="text-green-400 text-sm mb-4">{cert.org}</p>
-                <p className="text-grey-400 text-sm">{cert.description}</p>
+                <p className="text-green-600 text-sm font-semibold mb-3">
+                  {cert.org}
+                </p>
+                <p className="text-grey-600 text-sm">{cert.description}</p>
               </div>
             ))}
           </div>

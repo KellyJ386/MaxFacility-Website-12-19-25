@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import RinkReportsLogo from "@/components/RinkReportsLogo";
+import Image from "next/image";
 import {
   Monitor,
   ArrowRight,
@@ -215,8 +215,17 @@ export default function SoftwarePage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
+            <Image
+              src="/images/rinkreports_logo.svg"
+              alt="RinkReports"
+              width={360}
+              height={185}
+              priority
+              unoptimized
+              className="mx-auto mb-6 h-auto w-[240px] md:w-[320px]"
+            />
             <div className="flex items-center justify-center mb-4">
-              <Monitor className="h-10 w-10 text-green-500 mr-3" />
+              <Monitor className="h-6 w-6 text-green-500 mr-2" />
               <span className="text-green-500 font-semibold uppercase tracking-wider">
                 RinkReports Software Platform
               </span>
@@ -364,7 +373,13 @@ export default function SoftwarePage() {
             <div className="relative">
               <div className="bg-grey-100 rounded-2xl p-8">
                 <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
-                  <RinkReportsLogo className="w-full h-full p-4" />
+                  <Image
+                    src="/images/rinkreports_logo.svg"
+                    alt="RinkReports"
+                    fill
+                    unoptimized
+                    className="object-contain p-6"
+                  />
                 </div>
                 <p className="text-center text-grey-500 text-sm mt-4">
                   Offline-first across every module
