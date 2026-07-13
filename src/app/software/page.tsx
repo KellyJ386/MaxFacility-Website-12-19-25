@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import RinkReportsLogo from "@/components/RinkReportsLogo";
 import {
   Monitor,
   ArrowRight,
@@ -18,12 +19,15 @@ import {
   Users,
   Shield,
   Smartphone,
+  Wind,
+  WifiOff,
+  Scale,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "MFO Software - Ice Rink Management Platform",
+  title: "RinkReports - Ice Rink Management Platform",
   description:
-    "Max Facility Operations (MFO) - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $49.99/month.",
+    "RinkReports - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $49.99/month.",
   keywords: [
     "ice rink management software",
     "ice depth monitoring",
@@ -38,12 +42,12 @@ const modules = [
     icon: Ruler,
     title: "Ice Depth Monitoring",
     description:
-      "Interactive SVG rink diagrams with 24, 35, or 46 point measurement formats. Track ice depth trends over time.",
+      "Interactive rink diagrams with admin-built measurement templates and Bluetooth caliper support. Track ice depth trends over time.",
     features: [
       "Interactive rink diagrams",
       "Bluetooth caliper integration",
-      "AI-powered analysis",
-      "PDF report generation",
+      "Custom measurement templates",
+      "Historical trend analysis",
     ],
   },
   {
@@ -68,6 +72,18 @@ const modules = [
       "Photo uploads",
       "Witness statements",
       "Injury tracking & trends",
+    ],
+  },
+  {
+    icon: Wind,
+    title: "Air Quality Monitoring",
+    description:
+      "Jurisdiction-aware CO and NO2 logging that knows your state's regulatory floor.",
+    features: [
+      "Jurisdiction-specific thresholds",
+      "Tighten standards, never loosen them",
+      "Exceedance and alarm logging",
+      "Audit-ready compliance history",
     ],
   },
   {
@@ -110,9 +126,9 @@ const modules = [
     icon: FileText,
     title: "Daily Reports",
     description:
-      "Highly customizable daily reporting with up to 15 admin-configurable tabs.",
+      "Highly customizable daily reporting with up to 20 admin-configurable tabs.",
     features: [
-      "15 customizable tabs",
+      "20 customizable tabs",
       "Area-specific reports",
       "Historical data",
       "Export capabilities",
@@ -132,7 +148,24 @@ const modules = [
   },
 ];
 
-const highlights = [
+const highlights: {
+  icon: typeof Bluetooth;
+  title: string;
+  description: string;
+  badge?: string;
+}[] = [
+  {
+    icon: WifiOff,
+    title: "Works Offline",
+    description:
+      "Rinks are concrete buildings with bad signal. Staff keep logging, keep measuring, keep working — everything syncs the moment you're back online.",
+  },
+  {
+    icon: Scale,
+    title: "Jurisdiction-Aware Compliance",
+    description:
+      "Air quality regulations vary by state and province. RinkReports enforces the right floor for your building, automatically.",
+  },
   {
     icon: Bluetooth,
     title: "Bluetooth Integration",
@@ -142,6 +175,7 @@ const highlights = [
     icon: Brain,
     title: "AI-Powered Analysis",
     description: "Intelligent insights and recommendations based on your facility's data patterns.",
+    badge: "Coming Soon",
   },
   {
     icon: FileDown,
@@ -175,7 +209,7 @@ export default function SoftwarePage() {
           <div
             className="absolute inset-0 opacity-10"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2369BE28' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234DFF00' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}
           />
         </div>
@@ -184,11 +218,11 @@ export default function SoftwarePage() {
             <div className="flex items-center justify-center mb-4">
               <Monitor className="h-10 w-10 text-green-500 mr-3" />
               <span className="text-green-500 font-semibold uppercase tracking-wider">
-                MFO Software Platform
+                RinkReports Software Platform
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Max Facility Operations
+              Rink Reports by Max Facility LLC
             </h1>
             <p className="text-xl text-grey-300 mb-8">
               The all-in-one ice rink management platform that digitizes your
@@ -217,7 +251,7 @@ export default function SoftwarePage() {
           <div className="text-center mb-16">
             <h2 className="section-heading">Core Modules</h2>
             <p className="section-subheading">
-              Eight powerful modules designed specifically for ice facility
+              Nine powerful modules designed specifically for ice facility
               operations, all working together seamlessly.
             </p>
           </div>
@@ -258,8 +292,8 @@ export default function SoftwarePage() {
           <div className="text-center mb-16">
             <h2 className="section-heading">Platform Highlights</h2>
             <p className="section-subheading">
-              Modern features that set MFO apart from traditional facility
-              management solutions.
+              Modern features that set RinkReports apart from traditional
+              facility management solutions.
             </p>
           </div>
 
@@ -273,9 +307,16 @@ export default function SoftwarePage() {
                   <item.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-bold text-navy mb-1">
-                    {item.title}
-                  </h3>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-lg font-bold text-navy">
+                      {item.title}
+                    </h3>
+                    {item.badge && (
+                      <span className="inline-block rounded-full bg-navy px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#4DFF00]">
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
                   <p className="text-grey-600 text-sm">{item.description}</p>
                 </div>
               </div>
@@ -293,21 +334,21 @@ export default function SoftwarePage() {
                 Featured Module
               </span>
               <h2 className="section-heading text-left mt-2">
-                Ice Depth Monitoring
+                Works When Your Building Doesn&apos;t Cooperate
               </h2>
               <p className="text-grey-600 mb-6">
-                Our flagship ice depth monitoring module revolutionizes how you
-                track and maintain optimal ice thickness. Choose from 24, 35, or
-                46 measurement point formats to match your facility&apos;s
-                needs.
+                Ice rinks are concrete boxes. Wi-Fi drops, cell signal dies, and
+                your staff still have a Saturday public skate to run. RinkReports
+                is built offline-first — every module keeps working without a
+                connection.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Interactive SVG rink diagrams with click-to-record measurements",
-                  "Bluetooth digital caliper integration for hands-free data entry",
-                  "AI-powered analysis identifies problem areas before they worsen",
-                  "Generate professional PDF reports for management and compliance",
-                  "Historical trending shows ice depth changes over time",
+                  "Daily reports, refrigeration logs, and incident forms capture offline",
+                  "Ice depth measurements record straight from the caliper, connection or not",
+                  "Everything syncs automatically the moment you reconnect",
+                  "No lost shifts, no re-entering a day's worth of logs",
+                  "Built on the same foundation across all nine modules",
                 ].map((feature) => (
                   <li key={feature} className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -323,104 +364,10 @@ export default function SoftwarePage() {
             <div className="relative">
               <div className="bg-grey-100 rounded-2xl p-8">
                 <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
-                  {/* Simplified rink diagram representation */}
-                  <svg
-                    viewBox="0 0 200 85"
-                    className="w-full h-full p-4"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Rink outline */}
-                    <rect
-                      x="5"
-                      y="5"
-                      width="190"
-                      height="75"
-                      rx="20"
-                      fill="#f0f9ff"
-                      stroke="#002244"
-                      strokeWidth="2"
-                    />
-                    {/* Center line */}
-                    <line
-                      x1="100"
-                      y1="5"
-                      x2="100"
-                      y2="80"
-                      stroke="#dc2626"
-                      strokeWidth="1"
-                    />
-                    {/* Center circle */}
-                    <circle
-                      cx="100"
-                      cy="42.5"
-                      r="15"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    {/* Blue lines */}
-                    <line
-                      x1="65"
-                      y1="5"
-                      x2="65"
-                      y2="80"
-                      stroke="#2563eb"
-                      strokeWidth="1.5"
-                    />
-                    <line
-                      x1="135"
-                      y1="5"
-                      x2="135"
-                      y2="80"
-                      stroke="#2563eb"
-                      strokeWidth="1.5"
-                    />
-                    {/* Goal creases */}
-                    <path
-                      d="M25 32.5 Q32 42.5 25 52.5"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    <path
-                      d="M175 32.5 Q168 42.5 175 52.5"
-                      fill="none"
-                      stroke="#002244"
-                      strokeWidth="1"
-                    />
-                    {/* Measurement points */}
-                    {[
-                      [30, 20],
-                      [30, 42.5],
-                      [30, 65],
-                      [65, 20],
-                      [65, 42.5],
-                      [65, 65],
-                      [100, 20],
-                      [100, 42.5],
-                      [100, 65],
-                      [135, 20],
-                      [135, 42.5],
-                      [135, 65],
-                      [170, 20],
-                      [170, 42.5],
-                      [170, 65],
-                    ].map(([x, y], i) => (
-                      <circle
-                        key={i}
-                        cx={x}
-                        cy={y}
-                        r="4"
-                        fill="#69BE28"
-                        stroke="#002244"
-                        strokeWidth="1"
-                      />
-                    ))}
-                  </svg>
+                  <RinkReportsLogo className="w-full h-full p-4" />
                 </div>
                 <p className="text-center text-grey-500 text-sm mt-4">
-                  Interactive ice depth measurement diagram
+                  Offline-first across every module
                 </p>
               </div>
             </div>
@@ -488,8 +435,8 @@ export default function SoftwarePage() {
             Ready to Modernize Your Operations?
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            Schedule a personalized demo and see how MFO can transform your ice
-            facility.
+            Schedule a personalized demo and see how RinkReports can transform
+            your ice facility.
           </p>
           <Link
             href="/contact"
