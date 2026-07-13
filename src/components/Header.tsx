@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -31,11 +32,15 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex items-center">
-                <span className="text-2xl font-bold text-white">MAX</span>
-                <span className="text-2xl font-bold text-green-500">FACILITY</span>
-              </div>
+            <Link href="/" className="flex items-center" aria-label="Rink Reports home">
+              <Image
+                src="/images/rink-reports-logo.svg"
+                alt="Rink Reports"
+                width={800}
+                height={380}
+                priority
+                className="h-11 w-auto"
+              />
             </Link>
           </div>
 

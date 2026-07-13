@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Certified Ice Technician">
+  <defs>
+    <path id="cit-top" d="M100 100 m-74 0 a74 74 0 0 1 148 0" />
+    <path id="cit-bot" d="M100 100 m-70 0 a70 70 0 0 0 140 0" />
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#0d2b4f" />
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#5cb733" stroke-width="3" />
+  <circle cx="100" cy="100" r="62" fill="#e8f3fa" />
+
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="11.5" letter-spacing="1.5" fill="#ffffff">
+    <textPath href="#cit-top" startOffset="50%" text-anchor="middle">CERTIFIED ICE TECHNICIAN</textPath>
+  </text>
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#5cb733">
+    <textPath href="#cit-bot" startOffset="50%" text-anchor="middle">NHL / US ICE RINK ASSOCIATION</textPath>
+  </text>
+
+  <!-- Snowflake motif -->
+  <g stroke="#1544bb" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="72" x2="100" y2="98" />
+    <line x1="88" y1="79" x2="112" y2="93" />
+    <line x1="112" y1="79" x2="88" y2="93" />
+    <g stroke="#1544bb" stroke-width="2">
+      <path d="M100 78 l-4 4 M100 78 l4 4" />
+      <path d="M91 82 l1 5 M91 82 l5 -1" transform="rotate(60 100 86)" />
+    </g>
+  </g>
+  <text x="100" y="120" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="30" letter-spacing="1" text-anchor="middle" fill="#0d2b4f">CIT</text>
+  <path d="M78 132 h44" stroke="#5cb733" stroke-width="3" stroke-linecap="round" />
+</svg>

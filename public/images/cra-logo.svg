@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Certified Rink Administrator">
+  <defs>
+    <path id="cra-top" d="M100 100 m-74 0 a74 74 0 0 1 148 0" />
+    <path id="cra-bot" d="M100 100 m-70 0 a70 70 0 0 0 140 0" />
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#0d2b4f" />
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#5cb733" stroke-width="3" />
+  <circle cx="100" cy="100" r="62" fill="#e8f3fa" />
+
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1" fill="#ffffff">
+    <textPath href="#cra-top" startOffset="50%" text-anchor="middle">CERTIFIED RINK ADMINISTRATOR</textPath>
+  </text>
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="#5cb733">
+    <textPath href="#cra-bot" startOffset="50%" text-anchor="middle">NATIONAL ICE ARENA ASSOCIATION</textPath>
+  </text>
+
+  <!-- Shield / administration motif -->
+  <g transform="translate(100,86)">
+    <path d="M0 -16 L15 -10 V2 C15 12 8 18 0 22 C-8 18 -15 12 -15 2 V-10 Z"
+          fill="#1544bb" stroke="#0d2b4f" stroke-width="2" />
+    <path d="M-7 0 l5 5 l9 -10" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <text x="100" y="124" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="1" text-anchor="middle" fill="#0d2b4f">CRA</text>
+  <path d="M78 136 h44" stroke="#5cb733" stroke-width="3" stroke-linecap="round" />
+</svg>

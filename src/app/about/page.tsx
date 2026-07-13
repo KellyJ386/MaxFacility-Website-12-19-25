@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Award, Users, Target, Heart, ArrowRight } from "lucide-react";
 
@@ -48,6 +49,7 @@ const milestones = [
 const certifications = [
   {
     abbr: "CIT",
+    logo: "/images/cit-logo.svg",
     name: "Certified Ice Technician",
     org: "NHL/US Ice Rink Association",
     description:
@@ -55,6 +57,7 @@ const certifications = [
   },
   {
     abbr: "CIRM",
+    logo: "/images/cirm-logo.svg",
     name: "Certified Ice Rink Manager",
     org: "Ice Rink Managers Association",
     description:
@@ -62,6 +65,7 @@ const certifications = [
   },
   {
     abbr: "CRA",
+    logo: "/images/cra-logo.svg",
     name: "Certified Rink Administrator",
     org: "National Ice Arena Association",
     description:
@@ -192,11 +196,13 @@ export default function AboutPage() {
                 key={cert.abbr}
                 className="bg-navy rounded-xl p-8 text-center"
               >
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">
-                    {cert.abbr}
-                  </span>
-                </div>
+                <Image
+                  src={cert.logo}
+                  alt={`${cert.name} certification badge`}
+                  width={112}
+                  height={112}
+                  className="w-28 h-28 mx-auto mb-4"
+                />
                 <h3 className="text-xl font-bold text-white mb-1">
                   {cert.name}
                 </h3>
