@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,11 +32,18 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex items-center">
-                <span className="text-2xl font-bold text-white">MAX</span>
-                <span className="text-2xl font-bold text-green-500">FACILITY</span>
-              </div>
+            <Link href="/" className="flex items-center" aria-label="Max Facility home">
+              <span className="inline-flex items-center rounded-lg bg-white px-3 py-1.5 shadow-sm">
+                <Image
+                  src="/images/max-facility-logo.svg"
+                  alt="Max Facility"
+                  width={160}
+                  height={75}
+                  priority
+                  unoptimized
+                  className="h-9 w-auto"
+                />
+              </span>
             </Link>
           </div>
 
