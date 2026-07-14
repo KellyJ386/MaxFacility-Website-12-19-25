@@ -69,24 +69,34 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
           <div className="absolute -top-40 -right-40 w-[36rem] h-[36rem] bg-green-500/15 rounded-full blur-3xl" />
           <div className="absolute -bottom-52 -left-40 w-[30rem] h-[30rem] bg-navy-400/25 rounded-full blur-3xl" />
-          {/* Faint rink-line motif */}
-          <svg
-            viewBox="0 0 200 85"
-            fill="none"
-            className="absolute left-1/2 top-1/2 w-[75rem] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.06]"
-          >
-            <rect x="5" y="5" width="190" height="75" rx="20" stroke="white" strokeWidth="1" />
-            <line x1="100" y1="5" x2="100" y2="80" stroke="white" strokeWidth="0.75" />
-            <circle cx="100" cy="42.5" r="15" stroke="white" strokeWidth="0.75" />
-            <line x1="65" y1="5" x2="65" y2="80" stroke="white" strokeWidth="0.75" />
-            <line x1="135" y1="5" x2="135" y2="80" stroke="white" strokeWidth="0.75" />
-            <path d="M25 32.5 Q32 42.5 25 52.5" stroke="white" strokeWidth="0.75" />
-            <path d="M175 32.5 Q168 42.5 175 52.5" stroke="white" strokeWidth="0.75" />
-          </svg>
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Logo splash: brand wordmark over the rink measurement grid */}
+          <div className="mx-auto mb-10 w-full max-w-md">
+            <div className="relative rounded-2xl bg-white p-5 shadow-2xl ring-1 ring-white/10 sm:p-6">
+              <div
+                className="relative w-full"
+                style={{ aspectRatio: "740 / 380" }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/rink-diagram.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/max-facility-logo.png"
+                  alt="Max Facility"
+                  className="absolute left-1/2 top-1/2 w-[44%] -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+            </div>
+          </div>
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Elevating Ice Rink Operations
             <br />
