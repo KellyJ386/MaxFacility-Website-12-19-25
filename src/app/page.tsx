@@ -74,26 +74,24 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Logo splash: brand wordmark over the rink measurement grid */}
-          <div className="mx-auto mb-10 w-full max-w-md">
-            <div className="relative rounded-2xl bg-white p-5 shadow-2xl ring-1 ring-white/10 sm:p-6">
-              <div
-                className="relative w-full"
-                style={{ aspectRatio: "740 / 380" }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/rink-diagram.svg"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 h-full w-full"
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/max-facility-logo.png"
-                  alt="Max Facility"
-                  className="absolute left-1/2 top-1/2 w-[44%] -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
+          <div className="mx-auto mb-10 w-full max-w-3xl">
+            <div
+              className="relative w-full"
+              style={{ aspectRatio: "740 / 380" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/rink-diagram.svg"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full drop-shadow-2xl"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/max-facility-logo.png"
+                alt="Max Facility"
+                className="absolute left-1/2 top-1/2 w-[44%] -translate-x-1/2 -translate-y-1/2"
+              />
             </div>
           </div>
 
