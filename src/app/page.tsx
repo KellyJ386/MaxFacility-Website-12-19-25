@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Snowflake,
   Users,
@@ -38,25 +39,21 @@ const certifications = [
   {
     abbr: "CIT",
     name: "Certified Ice Technician",
-    description: "NHL/US Ice Rink Association",
+    description: "US Ice Rink Association",
+    logo: "/images/certs/cit.png",
   },
   {
     abbr: "CIRM",
     name: "Certified Ice Rink Manager",
-    description: "Industry-recognized credential",
+    description: "US Ice Rink Association",
+    logo: "/images/certs/cirm.png",
   },
   {
     abbr: "CRA",
     name: "Certified Rink Administrator",
-    description: "Operations excellence",
+    description: "US Ice Rink Association",
+    logo: "/images/certs/cra.png",
   },
-];
-
-const stats = [
-  { value: "30+", label: "Years Experience" },
-  { value: "100+", label: "Facilities Served" },
-  { value: "500+", label: "Staff Trained" },
-  { value: "99%", label: "Client Satisfaction" },
 ];
 
 export default function Home() {
@@ -167,24 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-green-500 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-grey-400 text-sm uppercase tracking-wider">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Certifications Section */}
       <section className="py-20 bg-grey-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,10 +181,14 @@ export default function Home() {
                 key={cert.abbr}
                 className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="w-20 h-20 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-500">
-                    {cert.abbr}
-                  </span>
+                <div className="flex items-center justify-center h-28 mb-4">
+                  <Image
+                    src={cert.logo}
+                    alt={`${cert.name} (${cert.abbr}) certification logo`}
+                    width={220}
+                    height={160}
+                    className="max-h-28 w-auto object-contain"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-1">{cert.name}</h3>
                 <p className="text-sm text-grey-500">{cert.description}</p>
