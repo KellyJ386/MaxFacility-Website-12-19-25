@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "RinkReports - Ice Rink Management Platform",
   description:
-    "RinkReports - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. $49.99/month.",
+    "RinkReports - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. From $750/year.",
   keywords: [
     "ice rink management software",
     "ice depth monitoring",
@@ -248,7 +248,7 @@ export default function SoftwarePage() {
               </Link>
             </div>
             <p className="mt-6 text-green-400 font-semibold">
-              Starting at $49.99/month
+              Starting at $750/year
             </p>
           </div>
         </div>
@@ -398,18 +398,18 @@ export default function SoftwarePage() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-grey-600 mb-8">
-              Everything you need to manage your ice facility, at one affordable
-              price.
+              Everything you need to manage your ice facility, on a simple annual
+              subscription.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-navy">$49.99</div>
-                <div className="text-grey-500">per month</div>
+                <div className="text-5xl font-bold text-green-600">$999</div>
+                <div className="text-grey-500">per year — All Modules</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
-                <div className="text-5xl font-bold text-green-600">$599.88</div>
-                <div className="text-grey-500">per year</div>
+                <div className="text-5xl font-bold text-navy">$750</div>
+                <div className="text-grey-500">per year — Ice Depth</div>
               </div>
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">

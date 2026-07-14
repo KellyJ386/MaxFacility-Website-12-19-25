@@ -30,7 +30,7 @@ const services = [
       "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
     icon: Monitor,
     href: "/software",
-    price: "$49.99/month",
+    price: "From $750/year",
   },
 ];
 
