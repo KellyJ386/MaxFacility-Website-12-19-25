@@ -5,33 +5,55 @@ import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and MFO software. Ice maintenance, consulting, and software solutions starting at $49.99/month.",
+    "Transparent pricing for Max Facility services and MFO software. Ice maintenance, consulting, and software solutions starting at $750/year.",
 };
 
-const softwarePlan = {
-  name: "MFO Software",
-  description: "Complete ice facility management platform",
-  monthlyPrice: 49.99,
-  annualPrice: 599.88,
-  features: [
-    "Ice Depth Monitoring with AI analysis",
-    "Ice Operations Log (4 customizable tabs)",
-    "Incident Reporting with body diagrams",
-    "Employee Scheduling (up to 1000 employees)",
-    "Facility Checklists with sign-off",
-    "Refrigeration Plant tracking",
-    "Daily Reports (15 admin-customizable tabs)",
-    "Admin Panel with analytics",
-    "Bluetooth caliper integration",
-    "PDF report generation",
-    "Unlimited users",
-    "Mobile-friendly access",
-    "Implementation support",
-    "Staff training included",
-    "Data migration assistance",
-    "Email & phone support",
-  ],
-};
+const softwarePlans = [
+  {
+    name: "All Modules",
+    description: "Complete ice facility management platform",
+    annualPrice: 999,
+    highlight: true,
+    badge: "Most Popular — All Features Included",
+    features: [
+      "Ice Depth Monitoring with AI analysis",
+      "Ice Operations Log (4 customizable tabs)",
+      "Incident Reporting with body diagrams",
+      "Employee Scheduling (up to 1000 employees)",
+      "Facility Checklists with sign-off",
+      "Refrigeration Plant tracking",
+      "Daily Reports (15 admin-customizable tabs)",
+      "Admin Panel with analytics",
+      "Bluetooth caliper integration",
+      "PDF report generation",
+      "Unlimited users",
+      "Mobile-friendly access",
+      "Implementation support",
+      "Staff training included",
+      "Data migration assistance",
+      "Email & phone support",
+    ],
+  },
+  {
+    name: "Ice Depth",
+    description: "Ice depth monitoring with custom diagrams and ice operations",
+    annualPrice: 750,
+    highlight: false,
+    badge: null,
+    features: [
+      "Ice Depth Monitoring with AI analysis",
+      "Custom ice depth diagrams",
+      "Ice Operations Log (4 customizable tabs)",
+      "Bluetooth caliper integration",
+      "PDF report generation",
+      "Unlimited users",
+      "Mobile-friendly access",
+      "Implementation support",
+      "Staff training included",
+      "Email & phone support",
+    ],
+  },
+];
 
 const servicePlans = [
   {
@@ -88,9 +110,9 @@ const faqs = [
       "Consulting engagements are priced based on scope, duration, and travel requirements. We'll provide a detailed proposal after an initial discovery call.",
   },
   {
-    question: "Can I switch between monthly and annual billing?",
+    question: "How is MFO Software billed?",
     answer:
-      "Yes, you can switch between monthly and annual billing at any time. The change takes effect at your next billing cycle.",
+      "MFO Software is billed annually. The All Modules plan is $999 per year for the full platform, and the Ice Depth plan is $750 per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",
@@ -123,58 +145,75 @@ export default function PricingPage() {
               <Monitor className="h-8 w-8 text-green-500 mr-2" />
               <h2 className="text-2xl font-bold text-navy">MFO Software</h2>
             </div>
-            <p className="text-grey-600">{softwarePlan.description}</p>
+            <p className="text-grey-600">
+              Annual subscriptions billed once per year. Choose the full
+              platform or the ice depth package.
+            </p>
           </div>
 
-          <div className="bg-white border-2 border-green-500 rounded-2xl overflow-hidden shadow-xl">
-            <div className="bg-green-500 py-4 px-8">
-              <p className="text-center text-white font-semibold">
-                Most Popular - All Features Included
-              </p>
-            </div>
-            <div className="p-8">
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
-                <div className="text-center">
-                  <div className="text-sm text-grey-500 mb-1">Monthly</div>
-                  <div className="text-4xl font-bold text-navy">
-                    ${softwarePlan.monthlyPrice}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            {softwarePlans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`bg-white rounded-2xl overflow-hidden shadow-xl ${
+                  plan.highlight
+                    ? "border-2 border-green-500"
+                    : "border border-grey-200"
+                }`}
+              >
+                {plan.badge && (
+                  <div className="bg-green-500 py-4 px-8">
+                    <p className="text-center text-white font-semibold">
+                      {plan.badge}
+                    </p>
                   </div>
-                  <div className="text-grey-500">per month</div>
+                )}
+                <div className="p-8">
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-bold text-navy mb-1">
+                      {plan.name}
+                    </h3>
+                    <p className="text-sm text-grey-500 mb-4">
+                      {plan.description}
+                    </p>
+                    <div
+                      className={`text-4xl font-bold ${
+                        plan.highlight ? "text-green-600" : "text-navy"
+                      }`}
+                    >
+                      ${plan.annualPrice}
+                    </div>
+                    <div className="text-grey-500">per year</div>
+                  </div>
+
+                  <div className="space-y-3 mb-8">
+                    {plan.features.map((feature) => (
+                      <div key={feature} className="flex items-center">
+                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-grey-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="/contact"
+                      className={
+                        plan.highlight ? "btn-primary" : "btn-outline"
+                      }
+                    >
+                      Start Free Trial
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </div>
                 </div>
-                <div className="hidden md:block text-grey-300 text-2xl">or</div>
-                <div className="text-center">
-                  <div className="text-sm text-grey-500 mb-1">Annual</div>
-                  <div className="text-4xl font-bold text-green-600">
-                    ${softwarePlan.annualPrice}
-                  </div>
-                  <div className="text-grey-500">per year</div>
-                </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mb-8">
-                {softwarePlan.features.map((feature) => (
-                  <div key={feature} className="flex items-center">
-                    <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-grey-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link href="/software" className="btn-outline">
-                  Learn More
-                </Link>
-              </div>
-
-              <p className="text-center text-sm text-grey-500 mt-6">
-                15% discount available for 2+ facility subscriptions
-              </p>
-            </div>
+            ))}
           </div>
+
+          <p className="text-center text-sm text-grey-500 mt-8">
+            15% discount available for 2+ facility subscriptions
+          </p>
         </div>
       </section>
 
