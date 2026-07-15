@@ -16,7 +16,7 @@ const softwarePlans = [
     highlight: true,
     badge: "Most Popular — All Features Included",
     features: [
-      "Ice Depth Monitoring with AI analysis",
+      "Ice Depth Monitoring",
       "Ice Operations Log (4 customizable tabs)",
       "Incident Reporting with body diagrams",
       "Employee Scheduling (up to 1000 employees)",
@@ -41,7 +41,7 @@ const softwarePlans = [
     highlight: false,
     badge: null,
     features: [
-      "Ice Depth Monitoring with AI analysis",
+      "Ice Depth Monitoring",
       "Custom ice depth diagrams",
       "Ice Operations Log (4 customizable tabs)",
       "Bluetooth caliper integration",
