@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -136,6 +137,14 @@ export default function PricingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <Image
+              src="/images/rinkreports_logo.svg"
+              alt="RinkReports"
+              width={360}
+              height={185}
+              unoptimized
+              className="mx-auto mb-6 h-auto w-[200px] md:w-[260px]"
+            />
             <div className="flex items-center justify-center mb-4">
               <Monitor className="h-8 w-8 text-green-500 mr-2" />
               <h2 className="text-2xl font-bold text-navy">MFO Software</h2>
