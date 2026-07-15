@@ -46,11 +46,6 @@ const softwarePlans = [
       "Ice Operations Log (4 customizable tabs)",
       "Bluetooth caliper integration",
       "PDF report generation",
-      "Unlimited users",
-      "Mobile-friendly access",
-      "Implementation support",
-      "Staff training included",
-      "Email & phone support",
     ],
   },
 ];
