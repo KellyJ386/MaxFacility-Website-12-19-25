@@ -227,67 +227,151 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="bg-grey-100 rounded-2xl p-8 relative">
-                {/* Mock MFO dashboard preview */}
-                <div className="bg-navy rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="flex items-center">
-                      <div className="w-9 h-9 bg-green-500 rounded-lg flex items-center justify-center mr-3">
-                        <Monitor className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold text-sm">
-                          MFO Dashboard
-                        </div>
-                        <div className="text-grey-400 text-xs">
-                          Central Ice Arena
-                        </div>
-                      </div>
-                    </div>
-                    <span className="text-xs font-medium text-green-400 bg-green-500/10 px-2.5 py-1 rounded-full">
-                      Ice: Optimal
-                    </span>
-                  </div>
+                {/* Ice hockey rink diagram */}
+                <div className="bg-white rounded-xl p-4 shadow-lg ring-1 ring-grey-200">
                   <svg
-                    viewBox="0 0 200 85"
-                    fill="none"
-                    className="w-full rounded-lg bg-navy-700 mb-5"
-                    aria-hidden="true"
+                    viewBox="0 0 1480 760"
+                    className="w-full h-auto"
+                    role="img"
+                    aria-label="Ice hockey rink diagram with faceoff circles, zone lines, and player positioning markers"
                   >
-                    <rect x="8" y="8" width="184" height="69" rx="18" fill="#f0f9ff" fillOpacity="0.08" stroke="#69BE28" strokeOpacity="0.4" strokeWidth="1" />
-                    <line x1="100" y1="8" x2="100" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
-                    <circle cx="100" cy="42.5" r="13" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
-                    <line x1="66" y1="8" x2="66" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
-                    <line x1="134" y1="8" x2="134" y2="77" stroke="white" strokeOpacity="0.25" strokeWidth="0.75" />
+                    {/* Rink surface */}
+                    <rect
+                      x="185"
+                      y="130"
+                      width="1150"
+                      height="500"
+                      rx="95"
+                      fill="#e9f2f9"
+                      stroke="#0a2342"
+                      strokeWidth="12"
+                    />
+
+                    {/* Blue lines */}
+                    <line x1="590" y1="130" x2="590" y2="630" stroke="#1b5fc1" strokeWidth="8" />
+                    <line x1="930" y1="130" x2="930" y2="630" stroke="#1b5fc1" strokeWidth="8" />
+
+                    {/* Center red line */}
+                    <line
+                      x1="760"
+                      y1="130"
+                      x2="760"
+                      y2="630"
+                      stroke="#d1131a"
+                      strokeWidth="6"
+                      strokeDasharray="18 14"
+                    />
+
+                    {/* Goal lines */}
+                    <line x1="250" y1="176" x2="250" y2="584" stroke="#d1131a" strokeWidth="4" />
+                    <line x1="1270" y1="176" x2="1270" y2="584" stroke="#d1131a" strokeWidth="4" />
+
+                    {/* Goal-line board hash fans */}
                     {[
-                      [36, 24],
-                      [36, 61],
-                      [66, 42.5],
-                      [100, 24],
-                      [100, 61],
-                      [134, 42.5],
-                      [164, 24],
-                      [164, 61],
-                    ].map(([x, y], i) => (
-                      <circle key={i} cx={x} cy={y} r="3.5" fill="#69BE28" />
+                      [
+                        [212, 210, 250, 226],
+                        [200, 246, 250, 258],
+                        [200, 502, 250, 502],
+                        [212, 550, 250, 534],
+                      ],
+                      [
+                        [1308, 210, 1270, 226],
+                        [1320, 246, 1270, 258],
+                        [1320, 502, 1270, 502],
+                        [1308, 550, 1270, 534],
+                      ],
+                    ]
+                      .flat()
+                      .map(([x1, y1, x2, y2], i) => (
+                        <line
+                          key={`hash-${i}`}
+                          x1={x1}
+                          y1={y1}
+                          x2={x2}
+                          y2={y2}
+                          stroke="#d1131a"
+                          strokeWidth="3"
+                        />
+                      ))}
+
+                    {/* Goal creases */}
+                    <path
+                      d="M250 356 A30 30 0 0 1 250 404"
+                      fill="#bcdcf0"
+                      stroke="#d1131a"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M1270 356 A30 30 0 0 0 1270 404"
+                      fill="#bcdcf0"
+                      stroke="#d1131a"
+                      strokeWidth="3"
+                    />
+
+                    {/* Center faceoff circle */}
+                    <circle cx="760" cy="380" r="90" fill="none" stroke="#1b5fc1" strokeWidth="4" />
+                    <circle cx="760" cy="380" r="9" fill="#1b5fc1" />
+
+                    {/* End-zone faceoff circles with hash marks and dots */}
+                    {[
+                      [330, 255],
+                      [330, 505],
+                      [1190, 255],
+                      [1190, 505],
+                    ].map(([cx, cy], i) => (
+                      <g key={`faceoff-${i}`}>
+                        <circle cx={cx} cy={cy} r="88" fill="none" stroke="#d1131a" strokeWidth="4" />
+                        <line x1={cx - 8} y1={cy - 98} x2={cx - 8} y2={cy - 74} stroke="#d1131a" strokeWidth="3" />
+                        <line x1={cx + 8} y1={cy - 98} x2={cx + 8} y2={cy - 74} stroke="#d1131a" strokeWidth="3" />
+                        <line x1={cx - 8} y1={cy + 74} x2={cx - 8} y2={cy + 98} stroke="#d1131a" strokeWidth="3" />
+                        <line x1={cx + 8} y1={cy + 74} x2={cx + 8} y2={cy + 98} stroke="#d1131a" strokeWidth="3" />
+                        <circle cx={cx} cy={cy} r="9" fill="#d1131a" />
+                      </g>
+                    ))}
+
+                    {/* Neutral-zone faceoff dots */}
+                    {[
+                      [615, 255],
+                      [615, 505],
+                      [905, 255],
+                      [905, 505],
+                    ].map(([cx, cy], i) => (
+                      <circle key={`ndot-${i}`} cx={cx} cy={cy} r="9" fill="#d1131a" />
+                    ))}
+
+                    {/* Player positioning markers (two teams) */}
+                    {[
+                      // Left end-zone clusters
+                      [252, 177, "green"], [408, 177, "navy"], [252, 333, "navy"], [408, 333, "green"],
+                      [252, 427, "navy"], [408, 427, "green"], [252, 583, "green"], [408, 583, "navy"],
+                      // Right end-zone clusters
+                      [1112, 177, "navy"], [1268, 177, "green"], [1112, 333, "green"], [1268, 333, "navy"],
+                      [1112, 427, "green"], [1268, 427, "navy"], [1112, 583, "navy"], [1268, 583, "green"],
+                      // Zone columns
+                      [490, 190, "green"], [490, 300, "navy"], [490, 375, "green"], [490, 460, "navy"], [490, 570, "green"],
+                      [1030, 190, "navy"], [1030, 300, "green"], [1030, 375, "navy"], [1030, 460, "green"], [1030, 570, "navy"],
+                      // Center column
+                      [760, 190, "navy"], [760, 290, "green"], [760, 470, "green"], [760, 570, "navy"],
+                    ].map(([x, y, color], i) => (
+                      <g key={`marker-${i}`}>
+                        <circle
+                          cx={x}
+                          cy={y}
+                          r="17"
+                          fill={color === "green" ? "#e4f2d6" : "#dbe4f1"}
+                          stroke={color === "green" ? "#5bb02f" : "#12325b"}
+                          strokeWidth="2.5"
+                          strokeDasharray="3 3"
+                        />
+                        <circle
+                          cx={x}
+                          cy={y}
+                          r="8.5"
+                          fill={color === "green" ? "#5bb02f" : "#12325b"}
+                        />
+                      </g>
                     ))}
                   </svg>
-                  <div className="grid grid-cols-3 gap-3">
-                    {[
-                      { value: '1.25"', label: "Avg Ice Depth" },
-                      { value: "12/12", label: "Checks Done" },
-                      { value: "8", label: "Staff On Shift" },
-                    ].map((stat) => (
-                      <div
-                        key={stat.label}
-                        className="bg-white/5 rounded-lg px-3 py-2.5 text-center"
-                      >
-                        <div className="text-green-400 font-bold">
-                          {stat.value}
-                        </div>
-                        <div className="text-grey-400 text-xs">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
                   30+ Years Experience
