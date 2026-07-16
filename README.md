@@ -1,7 +1,7 @@
 # Max Facility Website
 
 Marketing site for Max Facility — ice rink operations consulting, maintenance
-services, and the MFO management software platform.
+services, and the RinkReports management software platform.
 
 Built with **Next.js 16** (App Router), **React 18**, **TypeScript**, and
 **Tailwind CSS**.
@@ -29,7 +29,7 @@ src/
     page.tsx               Home
     about/                 About
     pricing/               Pricing
-    software/              MFO software
+    software/              RinkReports software
     contact/               Contact form (client component)
     services/
       ice-maintenance/

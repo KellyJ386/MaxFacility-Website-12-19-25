@@ -27,7 +27,7 @@ export default function TermsPage() {
             </h2>
             <p className="text-grey-600 mb-6">
               By accessing or using Max Facility&apos;s services, including our
-              website, consulting services, and MFO Software platform, you agree
+              website, consulting services, and RinkReports Software platform, you agree
               to be bound by these Terms of Service. If you do not agree to
               these terms, please do not use our services.
             </p>
@@ -41,14 +41,14 @@ export default function TermsPage() {
             <ul className="list-disc pl-6 text-grey-600 mb-6">
               <li>Ice maintenance services in Central New York</li>
               <li>Facility consulting services (Northeast and Nationwide)</li>
-              <li>MFO Software - Ice rink management platform</li>
+              <li>RinkReports Software - Ice rink management platform</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-navy mt-8 mb-4">
-              3. MFO Software Subscription
+              3. RinkReports Software Subscription
             </h2>
             <p className="text-grey-600 mb-4">
-              MFO Software is provided on a subscription basis:
+              RinkReports Software is provided on a subscription basis:
             </p>
             <ul className="list-disc pl-6 text-grey-600 mb-6">
               <li>All Modules plan: $999 per year (annual billing)</li>
@@ -101,7 +101,7 @@ export default function TermsPage() {
               8. Cancellation and Refunds
             </h2>
             <p className="text-grey-600 mb-6">
-              You may cancel your MFO Software subscription at any time.
+              You may cancel your RinkReports Software subscription at any time.
               Cancellation takes effect at the end of the current billing
               period. We do not provide refunds for partial billing periods.
               Contact us for questions about our refund policy.

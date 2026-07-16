@@ -32,7 +32,7 @@ export default function PrivacyPage() {
               <li>Name and contact information</li>
               <li>Facility name and type</li>
               <li>Service interests and inquiries</li>
-              <li>Account credentials for MFO Software users</li>
+              <li>Account credentials for RinkReports Software users</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-navy mt-8 mb-4">
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
             <p className="text-grey-600 mb-6">
               We implement appropriate security measures to protect your
               personal information from unauthorized access, alteration,
-              disclosure, or destruction. Our MFO Software platform uses
+              disclosure, or destruction. Our RinkReports Software platform uses
               enterprise-grade security including encryption and regular
               backups.
             </p>

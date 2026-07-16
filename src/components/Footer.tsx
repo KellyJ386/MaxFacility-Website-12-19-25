@@ -5,7 +5,7 @@ const footerLinks = {
   services: [
     { name: "Ice Maintenance", href: "/services/ice-maintenance" },
     { name: "Facility Consulting", href: "/services/consulting" },
-    { name: "MFO Software", href: "/software" },
+    { name: "RinkReports Software", href: "/software" },
   ],
   company: [
     { name: "About Us", href: "/about" },
