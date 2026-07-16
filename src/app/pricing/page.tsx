@@ -5,7 +5,7 @@ import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and MFO software. Ice maintenance, consulting, and software solutions starting at $750/year.",
+    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $750/year.",
 };
 
 const softwarePlans = [
@@ -18,11 +18,13 @@ const softwarePlans = [
     features: [
       "Ice Depth Monitoring",
       "Ice Operations Log (4 customizable tabs)",
-      "Incident Reporting with body diagrams",
+      "Incident Reports with body diagrams",
+      "Accident Reports for staff & patrons",
       "Employee Scheduling (up to 1000 employees)",
-      "Facility Checklists with sign-off",
       "Refrigeration Plant tracking",
-      "Daily Reports (15 admin-customizable tabs)",
+      "Air Quality Monitoring",
+      "Daily Reports (up to 20 admin-customizable tabs)",
+      "Communications Center",
       "Admin Panel with analytics",
       "Bluetooth caliper integration",
       "PDF report generation",
@@ -85,14 +87,14 @@ const servicePlans = [
 
 const faqs = [
   {
-    question: "Is there a free trial for MFO Software?",
+    question: "Is there a free trial for RinkReports Software?",
     answer:
-      "Yes! We offer a 14-day free trial so you can experience all the features of MFO before committing. No credit card required to start.",
+      "Yes! We offer a 14-day free trial so you can experience all the features of RinkReports before committing. No credit card required to start.",
   },
   {
     question: "What's included in the implementation support?",
     answer:
-      "Our team will help you set up your facility in MFO, configure your custom settings, import any existing data, and train your staff on using the platform effectively.",
+      "Our team will help you set up your facility in RinkReports, configure your custom settings, import any existing data, and train your staff on using the platform effectively.",
   },
   {
     question: "Do you offer discounts for multiple facilities?",
@@ -105,9 +107,9 @@ const faqs = [
       "Consulting engagements are priced based on scope, duration, and travel requirements. We'll provide a detailed proposal after an initial discovery call.",
   },
   {
-    question: "How is MFO Software billed?",
+    question: "How is RinkReports Software billed?",
     answer:
-      "MFO Software is billed annually. The All Modules plan is $999 per year for the full platform, and the Ice Depth plan is $750 per year for ice depth monitoring with custom diagrams and ice operations.",
+      "RinkReports Software is billed annually. The All Modules plan is $999 per year for the full platform, and the Ice Depth plan is $750 per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",
@@ -138,7 +140,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Monitor className="h-8 w-8 text-green-500 mr-2" />
-              <h2 className="text-2xl font-bold text-navy">MFO Software</h2>
+              <h2 className="text-2xl font-bold text-navy">RinkReports Software</h2>
             </div>
             <p className="text-grey-600">
               Annual subscriptions billed once per year. Choose the full

@@ -4,14 +4,6 @@ import Image from "next/image";
 import {
   Monitor,
   ArrowRight,
-  Ruler,
-  ClipboardList,
-  AlertTriangle,
-  Calendar,
-  CheckSquare,
-  Thermometer,
-  FileText,
-  Settings,
   Check,
   Bluetooth,
   Brain,
@@ -19,10 +11,10 @@ import {
   Users,
   Shield,
   Smartphone,
-  Wind,
   WifiOff,
   Scale,
 } from "lucide-react";
+import { modules, moduleCount } from "@/lib/modules";
 
 export const metadata: Metadata = {
   title: "RinkReports - Ice Rink Management Platform",
@@ -36,117 +28,6 @@ export const metadata: Metadata = {
     "ice facility software",
   ],
 };
-
-const modules = [
-  {
-    icon: Ruler,
-    title: "Ice Depth Monitoring",
-    description:
-      "Interactive rink diagrams with admin-built measurement templates and Bluetooth caliper support. Track ice depth trends over time.",
-    features: [
-      "Interactive rink diagrams",
-      "Bluetooth caliper integration",
-      "Custom measurement templates",
-      "Historical trend analysis",
-    ],
-  },
-  {
-    icon: ClipboardList,
-    title: "Ice Operations Log",
-    description:
-      "Comprehensive logging system with 4 customizable tabs for all ice-related activities.",
-    features: [
-      "Ice Make tracking",
-      "Circle Checks documentation",
-      "Blade Change records",
-      "End of Day reports",
-    ],
-  },
-  {
-    icon: AlertTriangle,
-    title: "Incident Reporting",
-    description:
-      "Complete incident documentation with interactive body diagrams and photo uploads.",
-    features: [
-      "Interactive body diagram",
-      "Photo uploads",
-      "Witness statements",
-      "Injury tracking & trends",
-    ],
-  },
-  {
-    icon: Wind,
-    title: "Air Quality Monitoring",
-    description:
-      "Jurisdiction-aware CO and NO2 logging that knows your state's regulatory floor.",
-    features: [
-      "Jurisdiction-specific thresholds",
-      "Tighten standards, never loosen them",
-      "Exceedance and alarm logging",
-      "Audit-ready compliance history",
-    ],
-  },
-  {
-    icon: Calendar,
-    title: "Employee Scheduling",
-    description:
-      "Powerful scheduling system designed for facilities with up to 1000 employees.",
-    features: [
-      "Multi-employee support",
-      "Shift management",
-      "Role-based access",
-      "Mobile sign-off",
-    ],
-  },
-  {
-    icon: CheckSquare,
-    title: "Facility Checklists",
-    description:
-      "Customizable opening and closing checklists with supervisor sign-off capabilities.",
-    features: [
-      "Opening procedures",
-      "Closing procedures",
-      "Custom templates",
-      "Supervisor approval",
-    ],
-  },
-  {
-    icon: Thermometer,
-    title: "Refrigeration Plant",
-    description:
-      "Track compressor readings, brine temperatures, and maintain compliance records.",
-    features: [
-      "Compressor readings",
-      "Brine temp monitoring",
-      "Alarm logging",
-      "Compliance tracking",
-    ],
-  },
-  {
-    icon: FileText,
-    title: "Daily Reports",
-    description:
-      "Highly customizable daily reporting with up to 20 admin-configurable tabs.",
-    features: [
-      "20 customizable tabs",
-      "Area-specific reports",
-      "Historical data",
-      "Export capabilities",
-    ],
-  },
-  {
-    icon: Settings,
-    title: "Admin Panel",
-    description:
-      "Comprehensive administration tools for facility managers and supervisors.",
-    features: [
-      "User management",
-      "Permission controls",
-      "System configuration",
-      "Analytics dashboard",
-    ],
-  },
-];
 
 const highlights: {
   icon: typeof Bluetooth;
@@ -260,8 +141,8 @@ export default function SoftwarePage() {
           <div className="text-center mb-16">
             <h2 className="section-heading">Core Modules</h2>
             <p className="section-subheading">
-              Nine powerful modules designed specifically for ice facility
-              operations, all working together seamlessly.
+              {moduleCount} powerful modules designed specifically for ice
+              facility operations, all working together seamlessly.
             </p>
           </div>
 
@@ -357,7 +238,7 @@ export default function SoftwarePage() {
                   "Ice depth measurements record straight from the caliper, connection or not",
                   "Everything syncs automatically the moment you reconnect",
                   "No lost shifts, no re-entering a day's worth of logs",
-                  "Built on the same foundation across all nine modules",
+                  `Built on the same foundation across all ${moduleCount} modules`,
                 ].map((feature) => (
                   <li key={feature} className="flex items-start">
                     <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -414,7 +295,7 @@ export default function SoftwarePage() {
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">
               {[
-                "All 8 core modules included",
+                `All ${moduleCount} core modules included`,
                 "Implementation support",
                 "Staff training",
                 "Data migration assistance",

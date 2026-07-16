@@ -26,7 +26,7 @@ const services = [
     location: "Northeast / Nationwide",
   },
   {
-    name: "MFO Software",
+    name: "RinkReports Software",
     description:
       "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
     icon: Monitor,

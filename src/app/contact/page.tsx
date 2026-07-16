@@ -16,7 +16,7 @@ const facilityTypes = [
 const serviceInterests = [
   { value: "maintenance", label: "Ice Maintenance Services" },
   { value: "consulting", label: "Facility Consulting" },
-  { value: "software", label: "MFO Software" },
+  { value: "software", label: "RinkReports Software" },
   { value: "all", label: "All Services" },
 ];
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                       href="/software"
                       className="text-green-600 hover:underline"
                     >
-                      Request MFO Demo →
+                      Request RinkReports Demo →
                     </a>
                   </li>
                   <li>
