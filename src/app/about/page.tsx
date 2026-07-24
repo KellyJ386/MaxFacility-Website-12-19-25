@@ -116,7 +116,7 @@ const certifications = [
 
 const education = [
   "M.S., Sport Venue and Event Management — Falk College, Syracuse University",
-  "B.S. — SUNY Brockport",
+  "B.S., Marketing — SUNY Brockport",
 ];
 
 export default function AboutPage() {
@@ -155,38 +155,31 @@ export default function AboutPage() {
               <h2 className="section-heading text-left">Our Story</h2>
               <div className="space-y-4 text-grey-600">
                 <p>
-                  Max Facility LLC was founded by Kelly Johnson, a career ice
-                  rink operator who runs facilities &mdash; not someone
-                  consulting on them from a distance. Kelly currently serves as
-                  Associate Director of Recreation at Syracuse University&apos;s
-                  Tennity Ice Skating Pavilion, where she oversees ice
-                  operations, refrigeration plant monitoring, staff management,
-                  and programming for one of Central New York&apos;s busiest
-                  collegiate rinks.
+                  Max Facility LLC was founded by Kelly Johnson, who has over
+                  20 years of experience running ice rinks &mdash; ice
+                  operations, refrigeration plant monitoring, staff
+                  scheduling, programming, and capital planning. He runs
+                  facilities, not someone consulting on them from a distance.
                 </p>
                 <p>
                   That hands-on experience is the foundation of everything Max
-                  Facility offers. From ice depth management and resurfacer
-                  operations to air quality compliance and capital planning,
-                  Kelly has managed the daily realities that most facility
-                  software and consultants only read about. She&apos;s led
-                  equipment evaluations, dasher board and shielding replacement
-                  projects, staff training programs, and the operational
-                  documentation that keeps a rink running safely and efficiently
-                  year-round.
+                  Facility offers. Kelly has managed the daily realities that
+                  most facility software and consultants only read about.
+                  His work has included dasher board replacement projects,
+                  equipment evaluations, staff training programs, and the
+                  operational documentation rinks rely on for compliance and
+                  daily operations.
                 </p>
                 <p>
-                  That same frustration with paper logs, scattered spreadsheets,
-                  and software built by people who&apos;ve never cut ice is what
-                  led to{" "}
                   <Link
                     href="/software"
                     className="font-semibold text-green-600 hover:text-green-700 transition-colors"
                   >
                     RinkReports
                   </Link>{" "}
-                  &mdash; facility management software designed by an operator,
-                  for operators.
+                  came out of that experience. It replaces paper logs and
+                  spreadsheets with a system built around how rinks actually
+                  operate.
                 </p>
                 <p>
                   Based in Central New York, Max Facility works with rinks and
@@ -202,11 +195,9 @@ export default function AboutPage() {
                 Founder
               </span>
               <h3 className="mt-4 text-2xl font-bold">Kelly Johnson</h3>
-              <p className="mt-1 text-grey-300">
-                Associate Director of Recreation
-              </p>
+              <p className="mt-1 text-grey-300">Career Ice Rink Operator</p>
               <p className="text-sm text-green-400">
-                Tennity Ice Skating Pavilion &middot; Syracuse University
+                20+ Years in Ice Rink Operations
               </p>
 
               <div className="mt-6 border-t border-white/10 pt-6">
