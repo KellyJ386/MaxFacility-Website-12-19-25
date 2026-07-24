@@ -31,18 +31,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // In a production environment, you would:
-    // 1. Save to Supabase database
-    // 2. Send email notification via Resend
-
-    // Example Supabase integration (uncomment when configured):
-    /*
-    const { createClient } = await import("@supabase/supabase-js");
-
+    // Save to Supabase database (when configured)
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
     if (supabaseUrl && supabaseKey) {
+      const { createClient } = await import("@supabase/supabase-js");
       const supabase = createClient(supabaseUrl, supabaseKey);
 
       const { error } = await supabase.from("leads").insert({
@@ -58,17 +52,14 @@ export async function POST(request: NextRequest) {
 
       if (error) {
         console.error("Supabase error:", error);
-        throw new Error("Failed to save lead");
       }
     }
-    */
 
-    // Example Resend email integration (uncomment when configured):
-    /*
+    // Send email notification via Resend
     const resendApiKey = process.env.RESEND_API_KEY;
-    const contactEmail = process.env.CONTACT_EMAIL;
+    const contactEmail = process.env.CONTACT_EMAIL || "kelly@maxfacility.com";
 
-    if (resendApiKey && contactEmail) {
+    if (resendApiKey) {
       const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -78,6 +69,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           from: "Max Facility <noreply@maxfacility.com>",
           to: contactEmail,
+          reply_to: data.email,
           subject: `New Lead: ${data.name} - ${data.serviceInterest}`,
           html: `
             <h2>New Contact Form Submission</h2>
@@ -96,8 +88,9 @@ export async function POST(request: NextRequest) {
       if (!response.ok) {
         console.error("Resend error:", await response.text());
       }
+    } else {
+      console.warn("RESEND_API_KEY not configured; skipping email notification");
     }
-    */
 
     // Log the submission for development
     console.log("Contact form submission:", data);
