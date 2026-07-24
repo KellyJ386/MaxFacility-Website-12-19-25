@@ -88,11 +88,6 @@ const servicePlans = [
 
 const faqs = [
   {
-    question: "Is there a free trial for RinkReports Software?",
-    answer:
-      "Yes! We offer a 14-day free trial so you can experience all the features of RinkReports before committing. No credit card required to start.",
-  },
-  {
     question: "What's included in the implementation support?",
     answer:
       "Our team will help you set up your facility in RinkReports, configure your custom settings, import any existing data, and train your staff on using the platform effectively.",
@@ -208,7 +203,7 @@ export default function PricingPage() {
                         plan.highlight ? "btn-primary" : "btn-outline"
                       }
                     >
-                      Start Free Trial
+                      Request Information
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
