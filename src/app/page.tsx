@@ -10,6 +10,14 @@ import {
 
 const services = [
   {
+    name: "RinkReports Software",
+    description:
+      "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
+    icon: Monitor,
+    href: "/software",
+    price: "From $750/year",
+  },
+  {
     name: "Ice Maintenance",
     description:
       "Professional ice maintenance and resurfacing services for facilities throughout Central New York. Expert care for optimal ice quality.",
@@ -24,14 +32,6 @@ const services = [
     icon: Users,
     href: "/services/consulting",
     location: "Northeast / Nationwide",
-  },
-  {
-    name: "RinkReports Software",
-    description:
-      "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
-    icon: Monitor,
-    href: "/software",
-    price: "From $750/year",
   },
 ];
 

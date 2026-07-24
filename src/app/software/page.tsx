@@ -310,7 +310,7 @@ export default function SoftwarePage() {
             </ul>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                Start Free Trial
+                Request Information
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link href="/pricing" className="btn-outline">
