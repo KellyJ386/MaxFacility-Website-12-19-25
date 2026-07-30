@@ -84,10 +84,10 @@ export default function PrivacyPage() {
               You have the right to access, correct, or delete your personal
               information. Contact us at{" "}
               <a
-                href="mailto:contact@maxfacility.com"
+                href="mailto:kelly@maxfacility.com"
                 className="text-green-600 hover:underline"
               >
-                contact@maxfacility.com
+                kelly@maxfacility.com
               </a>{" "}
               to exercise these rights.
             </p>
@@ -108,10 +108,10 @@ export default function PrivacyPage() {
               If you have questions about this privacy policy, please contact us
               at{" "}
               <a
-                href="mailto:contact@maxfacility.com"
+                href="mailto:kelly@maxfacility.com"
                 className="text-green-600 hover:underline"
               >
-                contact@maxfacility.com
+                kelly@maxfacility.com
               </a>
               .
             </p>

@@ -131,10 +131,10 @@ export default function TermsPage() {
             <p className="text-grey-600 mb-6">
               For questions about these terms, please contact us at{" "}
               <a
-                href="mailto:contact@maxfacility.com"
+                href="mailto:kelly@maxfacility.com"
                 className="text-green-600 hover:underline"
               >
-                contact@maxfacility.com
+                kelly@maxfacility.com
               </a>
               .
             </p>

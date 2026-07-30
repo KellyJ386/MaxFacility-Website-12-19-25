@@ -40,18 +40,18 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <a
-                href="mailto:contact@maxfacility.com"
+                href="mailto:kelly@maxfacility.com"
                 className="flex items-center text-sm text-grey-400 hover:text-white transition-colors"
               >
                 <Mail className="h-4 w-4 mr-2" />
-                contact@maxfacility.com
+                kelly@maxfacility.com
               </a>
               <a
-                href="tel:+1-315-555-0100"
+                href="tel:+1-315-439-8847"
                 className="flex items-center text-sm text-grey-400 hover:text-white transition-colors"
               >
                 <Phone className="h-4 w-4 mr-2" />
-                (315) 555-0100
+                (315) 439-8847
               </a>
               <div className="flex items-start text-sm text-grey-400">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />
