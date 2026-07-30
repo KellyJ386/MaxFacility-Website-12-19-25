@@ -108,10 +108,10 @@ export default function ContactPage() {
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Email</h3>
                     <a
-                      href="mailto:contact@maxfacility.com"
+                      href="mailto:kelly@maxfacility.com"
                       className="text-grey-600 hover:text-green-600"
                     >
-                      contact@maxfacility.com
+                      kelly@maxfacility.com
                     </a>
                   </div>
                 </div>
@@ -123,10 +123,10 @@ export default function ContactPage() {
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Phone</h3>
                     <a
-                      href="tel:+1-315-555-0100"
+                      href="tel:+1-315-439-8847"
                       className="text-grey-600 hover:text-green-600"
                     >
-                      (315) 555-0100
+                      (315) 439-8847
                     </a>
                   </div>
                 </div>
@@ -421,11 +421,11 @@ export default function ContactPage() {
             experts.
           </p>
           <a
-            href="tel:+1-315-555-0100"
+            href="tel:+1-315-439-8847"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-lg hover:bg-grey-100 transition-colors"
           >
             <Phone className="mr-2 h-5 w-5" />
-            Call (315) 555-0100
+            Call (315) 439-8847
           </a>
         </div>
       </section>
