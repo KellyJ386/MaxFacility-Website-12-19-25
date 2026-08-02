@@ -180,7 +180,7 @@ export default function ContactPage() {
                   </li>
                   <li>
                     <a
-                      href="/services/consulting"
+                      href="/services#consulting"
                       className="text-green-600 hover:underline"
                     >
                       Schedule Consultation →

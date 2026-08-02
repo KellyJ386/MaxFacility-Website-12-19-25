@@ -22,7 +22,7 @@ const services = [
     description:
       "Professional ice maintenance and resurfacing services for facilities throughout Central New York. Expert care for optimal ice quality.",
     icon: Snowflake,
-    href: "/services/ice-maintenance",
+    href: "/services#ice-maintenance",
     location: "Central New York",
   },
   {
@@ -30,7 +30,7 @@ const services = [
     description:
       "Comprehensive operational assessments, staff training, and best practices implementation for ice facilities across the Northeast and nationwide.",
     icon: Users,
-    href: "/services/consulting",
+    href: "/services#consulting",
     location: "Northeast / Nationwide",
   },
 ];
