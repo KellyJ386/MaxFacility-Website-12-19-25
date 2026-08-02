@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { name: "Ice Maintenance", href: "/services/ice-maintenance" },
-    { name: "Facility Consulting", href: "/services/consulting" },
+    { name: "Ice Maintenance", href: "/services#ice-maintenance" },
+    { name: "Facility Consulting", href: "/services#consulting" },
     { name: "RinkReports Software", href: "/software" },
   ],
   company: [

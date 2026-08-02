@@ -11,13 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/services/ice-maintenance`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/consulting`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
