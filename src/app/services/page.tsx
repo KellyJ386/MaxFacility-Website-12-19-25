@@ -278,7 +278,7 @@ export default function ServicesPage() {
             <p className="section-subheading">
               Transform your ice facility operations with expert consulting
               from industry veterans. Our CIRM and CRA certified consultants
-              bring 30+ years of experience to every engagement.
+              bring 20+ years of experience to every engagement.
             </p>
           </div>
 

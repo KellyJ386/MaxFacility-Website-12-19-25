@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Max Facility",
   },
   description:
-    "Expert ice rink consulting, maintenance services, and RinkReports software platform. 30+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
+    "Expert ice rink consulting, maintenance services, and RinkReports software platform. 20+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
   keywords: [
     "ice rink management software",
     "ice facility consulting",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Max Facility | Ice Rink Operations & Management Solutions",
     description:
-      "Expert ice rink consulting, maintenance services, and RinkReports software platform. 30+ years of experience elevating ice facility operations.",
+      "Expert ice rink consulting, maintenance services, and RinkReports software platform. 20+ years of experience elevating ice facility operations.",
     url: "https://maxfacility.com",
     siteName: "Max Facility",
     locale: "en_US",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Max Facility | Ice Rink Operations & Management Solutions",
     description:
-      "Expert ice rink consulting, maintenance services, and RinkReports software platform. 30+ years of experience elevating ice facility operations.",
+      "Expert ice rink consulting, maintenance services, and RinkReports software platform. 20+ years of experience elevating ice facility operations.",
   },
   robots: {
     index: true,

@@ -117,7 +117,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="mt-3 text-xs text-grey-500">
-              NHL/US Ice Rink Association Certified
+              U.S. Ice Rink Association Certified
             </p>
           </div>
         </div>

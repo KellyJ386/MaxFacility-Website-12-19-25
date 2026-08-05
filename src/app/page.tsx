@@ -98,7 +98,7 @@ export default function Home() {
             <span className="text-green-500">Through Expert Solutions</span>
           </h1>
           <p className="text-xl text-grey-300 max-w-3xl mx-auto mb-10">
-            30+ years of experience optimizing operations, reducing costs, and
+            20+ years of experience optimizing operations, reducing costs, and
             enhancing user experiences at ice facilities across the nation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -212,9 +212,9 @@ export default function Home() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Certified experts with 30+ years in ice operations",
+                  "Certified experts with 20+ years in ice operations",
                   "Comprehensive software that digitizes paper systems",
-                  "Proven track record with 100+ facilities served",
+                  "Career operator experience across facilities of every size",
                   "Personalized consulting tailored to your needs",
                   "Ongoing support and training for your staff",
                 ].map((item) => (
@@ -238,7 +238,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
-                  30+ Years Experience
+                  20+ Years Experience
                 </div>
               </div>
             </div>

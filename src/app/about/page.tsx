@@ -158,8 +158,7 @@ export default function AboutPage() {
                   Max Facility LLC was founded by Kelly Johnson, who has over
                   20 years of experience running ice rinks &mdash; ice
                   operations, refrigeration plant monitoring, staff
-                  scheduling, programming, and capital planning. He runs
-                  facilities, not someone consulting on them from a distance.
+                  scheduling, programming, and capital planning.
                 </p>
                 <p>
                   That hands-on experience is the foundation of everything Max

@@ -14,7 +14,7 @@ import {
   WifiOff,
   Scale,
 } from "lucide-react";
-import { modules, moduleCount } from "@/lib/modules";
+import { modules, moduleCount, adminControlCenter } from "@/lib/modules";
 
 export const metadata: Metadata = {
   title: "RinkReports - Ice Rink Management Platform",
@@ -45,12 +45,13 @@ const highlights: {
     icon: Scale,
     title: "Jurisdiction-Aware Compliance",
     description:
-      "Air quality regulations vary by state and province. RinkReports enforces the right floor for your building, automatically.",
+      "Air quality regulations vary by state. RinkReports enforces the right floor for your building, automatically.",
   },
   {
     icon: Bluetooth,
-    title: "Bluetooth Integration",
+    title: "Bluetooth Caliper Integration",
     description: "Connect digital calipers directly to the app for seamless ice depth measurements.",
+    badge: "Coming Soon",
   },
   {
     icon: Brain,
@@ -173,6 +174,36 @@ export default function SoftwarePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-6 bg-navy rounded-xl p-6 flex flex-col md:flex-row md:items-start gap-6">
+            <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <adminControlCenter.icon className="h-6 w-6 text-green-400" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-lg font-bold text-white">
+                  {adminControlCenter.title}
+                </h3>
+                <span className="inline-block rounded-full bg-white/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-400">
+                  Included with every plan
+                </span>
+              </div>
+              <p className="text-grey-300 text-sm mb-3">
+                {adminControlCenter.description}
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
+                {adminControlCenter.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center text-sm text-grey-300"
+                  >
+                    <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -235,7 +266,7 @@ export default function SoftwarePage() {
               <ul className="space-y-4 mb-8">
                 {[
                   "Daily reports, refrigeration logs, and incident forms capture offline",
-                  "Ice depth measurements record straight from the caliper, connection or not",
+                  "Ice depth measurements save the moment they're entered, connection or not",
                   "Everything syncs automatically the moment you reconnect",
                   "No lost shifts, no re-entering a day's worth of logs",
                   `Built on the same foundation across all ${moduleCount} modules`,
