@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
 const facilityTypes = [
   "Municipal Recreation Center",
@@ -112,21 +112,6 @@ export default function ContactPage() {
                       className="text-grey-600 hover:text-green-600"
                     >
                       kelly@maxfacility.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-navy">Phone</h3>
-                    <a
-                      href="tel:+1-315-439-8847"
-                      className="text-grey-600 hover:text-green-600"
-                    >
-                      (315) 439-8847
                     </a>
                   </div>
                 </div>
@@ -414,18 +399,18 @@ export default function ContactPage() {
       <section className="py-16 bg-green-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Prefer to Schedule a Call?
+            Prefer to Reach Out Directly?
           </h2>
           <p className="text-green-100 mb-6">
-            Book a free 30-minute consultation with one of our ice facility
-            experts.
+            Email us to schedule a free 30-minute consultation with one of
+            our ice facility experts.
           </p>
           <a
-            href="tel:+1-315-439-8847"
+            href="mailto:kelly@maxfacility.com"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-lg hover:bg-grey-100 transition-colors"
           >
-            <Phone className="mr-2 h-5 w-5" />
-            Call (315) 439-8847
+            <Mail className="mr-2 h-5 w-5" />
+            Email kelly@maxfacility.com
           </a>
         </div>
       </section>
