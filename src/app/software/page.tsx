@@ -19,7 +19,7 @@ import { modules, moduleCount } from "@/lib/modules";
 export const metadata: Metadata = {
   title: "RinkReports - Ice Rink Management Platform",
   description:
-    "RinkReports - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. From $750/year.",
+    "RinkReports - comprehensive ice rink management SaaS. Ice depth tracking, operations logs, incident reporting, employee scheduling, and more. From $399/year.",
   keywords: [
     "ice rink management software",
     "ice depth monitoring",
@@ -129,7 +129,7 @@ export default function SoftwarePage() {
               </Link>
             </div>
             <p className="mt-6 text-green-400 font-semibold">
-              Starting at $750/year
+              Starting at $399/year
             </p>
           </div>
         </div>
@@ -284,12 +284,12 @@ export default function SoftwarePage() {
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-green-600">$999</div>
+                <div className="text-5xl font-bold text-green-600">$799</div>
                 <div className="text-grey-500">per year — All Modules</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
-                <div className="text-5xl font-bold text-navy">$750</div>
+                <div className="text-5xl font-bold text-navy">$399</div>
                 <div className="text-grey-500">per year — Ice Depth</div>
               </div>
             </div>
@@ -300,7 +300,7 @@ export default function SoftwarePage() {
                 "Staff training",
                 "Data migration assistance",
                 "Unlimited users",
-                "Email & phone support",
+                "Email support",
               ].map((feature) => (
                 <li key={feature} className="flex items-center text-grey-700">
                   <Check className="h-5 w-5 text-green-500 mr-2" />
