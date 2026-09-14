@@ -6,9 +6,12 @@ import {
   ClipboardList,
   Ruler,
   Calendar,
+  CalendarCheck,
   ShieldAlert,
   Megaphone,
   Settings,
+  LayoutGrid,
+  FolderOpen,
   type LucideIcon,
 } from "lucide-react";
 
@@ -144,6 +147,39 @@ export const modules: SoftwareModule[] = [
       "Permission controls down to the module level",
       "System configuration for every module — tabs, thresholds, equipment, templates",
       "Analytics dashboard with facility-wide visibility",
+    ],
+  },
+  {
+    icon: CalendarCheck,
+    title: "Rink Scheduling",
+    description:
+      "Ice booking and billing that automatically hands pre- and post-booking tasks to your staff.",
+    features: [
+      "Book ice time and manage billing from a single facility calendar",
+      "Automatically generates locker-room cleaning tasks with configurable lead and vacate times",
+      "Cleaning tasks land directly on the assigned staff member's dashboard the moment a booking is made",
+      "Ice Operations tasks (ice-make/resurface) generated from the same booking data — in progress",
+    ],
+  },
+  {
+    icon: LayoutGrid,
+    title: "Dasher Boards",
+    description:
+      "Perimeter and dasher board mapping with custom panel labeling and a full glass spec on every panel.",
+    features: [
+      "Map your full perimeter with custom-labeled dasher board panels",
+      "Each panel stores width, height, thickness, and material — tempered, acrylic, polycarbonate, or HDPE",
+      "Breakage lookup returns the exact replacement spec instead of an on-site remeasure",
+      "Panel layout stays tied to your facility's actual rink geometry",
+    ],
+  },
+  {
+    icon: FolderOpen,
+    title: "Facility Paperwork",
+    description: "A document repository and browser for your facility's paperwork.",
+    features: [
+      "Central repository for facility documents",
+      "Browse documents by category or facility area",
     ],
   },
 ];
