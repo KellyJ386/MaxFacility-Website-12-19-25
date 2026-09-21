@@ -25,7 +25,7 @@ export interface SoftwareModule {
 /**
  * Canonical RinkReports module list — single source of truth for the site.
  * Order and copy mirror rinkreports.com. The module count shown on the
- * /software page (header and pricing block) is derived from this array's
+ * /ice-rink page (RinkReports header and pricing block) is derived from this array's
  * length via `moduleCount`, so there is one place to change the count.
  */
 export const modules: SoftwareModule[] = [

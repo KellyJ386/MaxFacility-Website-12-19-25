@@ -45,4 +45,12 @@
     text-wrap: balance;
   }
 
+  /* Handwritten tagline treatment used on the custom-software page,
+     matching the script line in the Max Facility marketing piece. */
+  .font-script {
+    font-family: "Segoe Script", "Bradley Hand", "Brush Script MT",
+      "Snell Roundhand", cursive;
+    font-style: italic;
+  }
+
 }

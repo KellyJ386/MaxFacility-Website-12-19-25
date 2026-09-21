@@ -172,7 +172,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   <Link
-                    href="/software"
+                    href="/ice-rink#rinkreports"
                     className="font-semibold text-green-600 hover:text-green-700 transition-colors"
                   >
                     RinkReports
