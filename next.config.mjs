@@ -11,10 +11,10 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        // /software was the RinkReports page; RinkReports now lives on the
-        // ice rink page and /custom-software is the software landing page.
+        // /software was the RinkReports page; RinkReports now lives in the
+        // #rinkreports section of the ice rink page.
         source: '/software',
-        destination: '/custom-software',
+        destination: '/ice-rink#rinkreports',
         permanent: true,
       },
       {
