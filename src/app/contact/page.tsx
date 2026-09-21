@@ -149,7 +149,7 @@ export default function ContactPage() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="/software"
+                      href="/ice-rink#rinkreports"
                       className="text-green-600 hover:underline"
                     >
                       Request RinkReports Demo →

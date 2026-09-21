@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Software", href: "/software" },
+  { name: "Ice Rink", href: "/ice-rink" },
+  { name: "Custom Software", href: "/custom-software" },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
@@ -26,12 +26,11 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center" aria-label="Max Facility home">
               <Image
-                src="/images/max-facility-logo.svg"
+                src="/images/max-facility-logo.png"
                 alt="Max Facility"
-                width={200}
-                height={94}
+                width={1612}
+                height={756}
                 priority
-                unoptimized
                 className="h-11 w-auto"
               />
             </Link>
