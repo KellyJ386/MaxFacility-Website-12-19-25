@@ -63,11 +63,11 @@ export default function Home() {
             Custom Solutions. Real Impact.
           </p>
           <h1 className="mt-8 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-            Two ways we make facilities run better
+            We make facilities run better.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-grey-300">
             Expert ice rink operations, and custom software built for the way
-            your facility actually works. Pick the one you came for.
+            your facility actually works.
           </p>
         </div>
       </section>
