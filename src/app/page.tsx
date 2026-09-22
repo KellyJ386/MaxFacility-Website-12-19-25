@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       {/* Hero / brand splash */}
-      <section className="relative flex min-h-[60vh] items-center justify-center bg-navy pt-24 pb-16">
+      <section className="relative flex min-h-[42vh] items-center justify-center bg-navy pt-24 pb-14">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
           <div className="absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-green-500/15 blur-3xl" />
@@ -59,16 +59,11 @@ export default function Home() {
             priority
             className="mx-auto h-auto w-64 sm:w-80 md:w-96"
           />
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-green-500 sm:text-sm">
+          {/* The brand tagline carries the page's h1 so the home page keeps a
+              real heading for search engines and screen readers. */}
+          <h1 className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-green-500 sm:text-sm">
             Custom Solutions. Real Impact.
-          </p>
-          <h1 className="mt-8 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-            We make facilities run better.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-grey-300">
-            Expert ice rink operations, and custom software built for the way
-            your facility actually works.
-          </p>
         </div>
       </section>
 
