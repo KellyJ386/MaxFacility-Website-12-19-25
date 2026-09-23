@@ -141,7 +141,7 @@ export default function IceRinkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-navy pt-16">
+      <section className="relative min-h-screen flex items-center justify-center bg-navy pt-20">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
@@ -330,7 +330,7 @@ export default function IceRinkPage() {
       {/* ---------- RinkReports ---------- */}
 
       {/* RinkReports Hero */}
-      <section id="rinkreports" className="relative py-24 bg-navy scroll-mt-16">
+      <section id="rinkreports" className="relative py-24 bg-navy scroll-mt-20">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-green-900 opacity-90" />
           <div

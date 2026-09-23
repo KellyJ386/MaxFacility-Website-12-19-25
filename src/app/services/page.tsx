@@ -171,7 +171,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Ice Maintenance Section */}
-      <section id="ice-maintenance" className="py-20 bg-white scroll-mt-16">
+      <section id="ice-maintenance" className="py-20 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
@@ -265,7 +265,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Facility Consulting Section */}
-      <section id="consulting" className="py-20 bg-grey-50 scroll-mt-16">
+      <section id="consulting" className="py-20 bg-grey-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
