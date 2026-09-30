@@ -567,24 +567,6 @@ export default function IceRinkPage() {
         </div>
       </section>
 
-      {/* Cross-sell to custom software */}
-      <section className="py-16 bg-grey-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
-            Not Just Ice Rinks
-          </h2>
-          <p className="text-grey-600 mb-8">
-            RinkReports proved what purpose-built software does for a facility.
-            We build the same kind of custom web applications for fitness
-            centers, aquatics, sports fields, gyms, and community centers.
-          </p>
-          <Link href="/custom-software" className="btn-outline">
-            Explore Custom Facility Software
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

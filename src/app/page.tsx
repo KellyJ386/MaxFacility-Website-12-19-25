@@ -1,43 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Snowflake,
-  Monitor,
-  ArrowRight,
-  Award,
-  MousePointerClick,
-} from "lucide-react";
+import { Snowflake, ArrowRight, Award } from "lucide-react";
 
-const doors = [
-  {
-    name: "Ice Rink Solutions",
-    eyebrow: "30+ Years On The Ice",
-    description:
-      "Consulting, maintenance, and the RinkReports management platform for ice facilities — from a single sheet to a multi-rink complex.",
-    bullets: [
-      "Ice maintenance & resurfacing",
-      "Operational assessments & staff training",
-      "RinkReports management software",
-    ],
-    icon: Snowflake,
-    href: "/ice-rink",
-    cta: "Explore Ice Rink Solutions",
-  },
-  {
-    name: "Custom Facility Software",
-    eyebrow: "All Facilities. One Partner.",
-    description:
-      "Custom web applications for recreation and sport facilities of all sizes. Built around your operations. Designed for your people.",
-    bullets: [
-      "Rinks, fitness, aquatics, fields & courts",
-      "Built for your workflow, not a template",
-      "Single facility or multi-site organization",
-    ],
-    icon: Monitor,
-    href: "/custom-software",
-    cta: "Tired of Cookie-Cutter Software?",
-  },
-];
+const offering = {
+  eyebrow: "30+ Years On The Ice",
+  name: "RinkReports",
+  description:
+    "The ice rink management platform built by an operator. Digitize daily reports, ice depth, scheduling, and compliance — backed by consulting and maintenance from the same team.",
+  bullets: [
+    "RinkReports management software",
+    "Operational assessments & staff training",
+    "Ice maintenance & resurfacing",
+  ],
+  href: "/ice-rink",
+  cta: "Explore RinkReports & Ice Rink Solutions",
+};
 
 export default function Home() {
   return (
@@ -63,103 +40,48 @@ export default function Home() {
             Custom Solutions. Real Impact.
           </p>
           <h1 className="mt-8 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-            Two ways we make facilities run better
+            Ice rink operations, run better
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-grey-300">
-            Expert ice rink operations, and custom software built for the way
-            your facility actually works. Pick the one you came for.
+            RinkReports management software, plus expert consulting and
+            maintenance from an operator who runs rinks every day.
           </p>
         </div>
       </section>
 
-      {/* The two doors */}
+      {/* Offering */}
       <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Ice Rink door */}
-            <Link
-              href={doors[0].href}
-              className="group flex flex-col rounded-2xl border-2 border-grey-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-navy hover:shadow-2xl md:p-10"
-            >
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-navy transition-colors group-hover:bg-navy-700">
-                <Snowflake className="h-8 w-8 text-green-500" />
-              </div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-green-600">
-                {doors[0].eyebrow}
-              </p>
-              <h2 className="mb-4 text-2xl font-extrabold uppercase text-navy md:text-3xl">
-                {doors[0].name}
-              </h2>
-              <p className="mb-6 text-grey-700">{doors[0].description}</p>
-              <ul className="mb-8 space-y-2">
-                {doors[0].bullets.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="flex items-start text-sm text-grey-700"
-                  >
-                    <span className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-              <span className="mt-auto inline-flex items-center justify-center rounded-lg border-2 border-navy px-6 py-3 text-base font-semibold text-navy transition-colors group-hover:bg-navy group-hover:text-white">
-                {doors[0].cta}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </span>
-            </Link>
-
-            {/* Custom Software door — styled after the Max Facility ad */}
-            <Link
-              href={doors[1].href}
-              className="group relative flex flex-col overflow-hidden rounded-2xl bg-navy transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <div className="flex flex-1 flex-col p-8 md:p-10">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-green-500">
-                  <Monitor className="h-8 w-8 text-white" />
-                </div>
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-green-500">
-                  {doors[1].eyebrow}
-                </p>
-                <h2 className="mb-4 text-2xl font-extrabold uppercase leading-tight text-white md:text-3xl">
-                  Custom Facility
-                  <br />
-                  <span className="text-green-500">Software</span>
-                </h2>
-                <p className="mb-6 text-grey-300">{doors[1].description}</p>
-                <ul className="space-y-2">
-                  {doors[1].bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start text-sm text-grey-300"
-                    >
-                      <span className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Green CTA band with an angled edge, echoing the ad */}
-              <div className="relative mt-auto">
-                <div
-                  className="absolute inset-y-0 left-0 w-full bg-green-500"
-                  style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
-                  aria-hidden="true"
-                />
-                <div
-                  className="absolute inset-y-0 right-0 hidden w-24 bg-navy sm:block"
-                  style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-                  aria-hidden="true"
-                />
-                <div className="relative flex items-center gap-3 px-8 py-6 md:px-10">
-                  <MousePointerClick className="h-7 w-7 flex-shrink-0 text-white" />
-                  <span className="text-base font-extrabold uppercase leading-tight tracking-wide text-white sm:text-lg">
-                    {doors[1].cta}
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </div>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Link
+            href={offering.href}
+            className="group flex flex-col rounded-2xl border-2 border-grey-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-navy hover:shadow-2xl md:p-10"
+          >
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-navy transition-colors group-hover:bg-navy-700">
+              <Snowflake className="h-8 w-8 text-green-500" />
+            </div>
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-green-600">
+              {offering.eyebrow}
+            </p>
+            <h2 className="mb-4 text-2xl font-extrabold uppercase text-navy md:text-3xl">
+              {offering.name}
+            </h2>
+            <p className="mb-6 text-grey-700">{offering.description}</p>
+            <ul className="mb-8 space-y-2">
+              {offering.bullets.map((bullet) => (
+                <li
+                  key={bullet}
+                  className="flex items-start text-sm text-grey-700"
+                >
+                  <span className="mr-3 mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+            <span className="mt-auto inline-flex items-center justify-center rounded-lg border-2 border-navy px-6 py-3 text-base font-semibold text-navy transition-colors group-hover:bg-navy group-hover:text-white">
+              {offering.cta}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -193,12 +115,11 @@ export default function Home() {
       <section className="bg-navy py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
-            Not sure which one you need?
+            Not sure where to start?
           </h2>
           <p className="mb-8 text-xl text-grey-300">
             Tell us how your facility runs today. We&apos;ll tell you honestly
-            whether that&apos;s a consulting problem, a software problem, or
-            neither.
+            whether RinkReports, consulting, or neither is the right fit.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="btn-primary text-lg px-8 py-4">

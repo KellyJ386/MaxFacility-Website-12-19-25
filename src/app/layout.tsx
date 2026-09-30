@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Max Facility | Ice Rink Operations & Custom Facility Software",
+    default: "Max Facility | RinkReports & Ice Rink Operations",
     template: "%s | Max Facility",
   },
   description:
-    "Expert ice rink consulting and maintenance, the RinkReports platform, and custom web applications for recreation and sport facilities of all sizes. CIT, CIRM, CRA certified.",
+    "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform. CIT, CIRM, CRA certified.",
   keywords: [
     "ice rink management software",
     "ice facility consulting",
@@ -17,11 +17,7 @@ export const metadata: Metadata = {
     "CIT certified",
     "ice maintenance services",
     "ice rink management",
-    "facility management software",
-    "custom facility software",
-    "custom web applications",
-    "recreation facility software",
-    "sports facility software",
+    "RinkReports",
   ],
   authors: [{ name: "Max Facility" }],
   creator: "Max Facility",
@@ -32,9 +28,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Max Facility | Ice Rink Operations & Custom Facility Software",
+    title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
-      "Expert ice rink consulting and maintenance, the RinkReports platform, and custom web applications for recreation and sport facilities of all sizes.",
+      "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
     url: "https://maxfacility.com",
     siteName: "Max Facility",
     locale: "en_US",
@@ -42,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Max Facility | Ice Rink Operations & Custom Facility Software",
+    title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
-      "Expert ice rink consulting and maintenance, the RinkReports platform, and custom web applications for recreation and sport facilities of all sizes.",
+      "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
   },
   robots: {
     index: true,

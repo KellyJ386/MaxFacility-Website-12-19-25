@@ -1,8 +1,7 @@
 # Max Facility Website
 
-Marketing site for Max Facility — two business lines: ice rink operations
-(consulting, maintenance, and the RinkReports management platform) and custom
-web applications for recreation and sport facilities of all sizes.
+Marketing site for Max Facility — focused on ice rink operations (consulting,
+maintenance, and the RinkReports management platform).
 
 Built with **Next.js 16** (App Router), **React 18**, **TypeScript**, and
 **Tailwind CSS**.
@@ -27,9 +26,8 @@ npm run lint     # eslint
 ```
 src/
   app/                     App Router pages
-    page.tsx               Home — two-door chooser (ice rink / custom software)
+    page.tsx               Home
     ice-rink/              Ice rink solutions + RinkReports platform
-    custom-software/       Custom facility software (mirrors the print ad)
     about/                 About
     pricing/               Pricing
     contact/               Contact form (client component)
