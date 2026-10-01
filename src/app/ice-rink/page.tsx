@@ -24,7 +24,7 @@ import WorkflowShowcase from "@/components/WorkflowShowcase";
 export const metadata: Metadata = {
   title: "Ice Rink Solutions",
   description:
-    "Ice rink consulting, maintenance services, and the RinkReports management platform. 30+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
+    "Ice rink consulting, maintenance services, and the RinkReports management platform. 20+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
   keywords: [
     "ice rink management software",
     "ice facility consulting",
@@ -182,7 +182,7 @@ export default function IceRinkPage() {
             <span className="text-green-500">Through Expert Solutions</span>
           </h1>
           <p className="text-xl text-grey-300 max-w-3xl mx-auto mb-10">
-            30+ years of experience optimizing operations, reducing costs, and
+            20+ years of experience optimizing operations, reducing costs, and
             enhancing user experiences at ice facilities across the nation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -296,7 +296,7 @@ export default function IceRinkPage() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Certified experts with 30+ years in ice operations",
+                  "Certified experts with 20+ years in ice operations",
                   "Comprehensive software that digitizes paper systems",
                   "Built by a working rink operator, not a software vendor",
                   "Personalized consulting tailored to your needs",
@@ -322,7 +322,7 @@ export default function IceRinkPage() {
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
-                  30+ Years Experience
+                  20+ Years Experience
                 </div>
               </div>
             </div>

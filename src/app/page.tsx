@@ -67,7 +67,7 @@ export default function Home() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-navy-100 md:text-xl">
               Hands-on ice maintenance, expert consulting, and the RinkReports
-              platform — built by certified ice professionals with 30+ years on
+              platform — built by certified ice professionals with 20+ years on
               the ice.
             </p>
           </Reveal>
@@ -139,7 +139,7 @@ export default function Home() {
           <Reveal>
             <div className="card-soft grid grid-cols-1 gap-8 p-10 text-center sm:grid-cols-2">
               {[
-                { stat: "30+", label: "Years in facility operations" },
+                { stat: "20+", label: "Years in facility operations" },
                 { stat: "CIT·CIRM·CRA", label: "US Ice Rink Association certified" },
               ].map((item) => (
                 <div key={item.label}>
