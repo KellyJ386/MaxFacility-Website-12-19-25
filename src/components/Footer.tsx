@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
             <p className="text-grey-400 text-sm">
               Expert ice rink operations consulting and software for
-              recreation and sport facilities of all sizes.
+              ice facilities of all sizes.
             </p>
             <div className="space-y-2">
               <a
