@@ -195,7 +195,9 @@ export default function AboutPage() {
                 Founder
               </span>
               <h3 className="mt-4 text-2xl font-bold">Kelly Johnson</h3>
-              <p className="mt-1 text-grey-300">Career Ice Rink Operator</p>
+              <p className="mt-1 text-grey-300">
+                Founder, Max Facility LLC &middot; Creator of RinkReports
+              </p>
               <p className="text-sm text-green-400">
                 20+ Years in Ice Rink Operations
               </p>

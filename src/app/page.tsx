@@ -37,7 +37,7 @@ export default function Home() {
             className="mx-auto h-auto w-64 sm:w-80 md:w-96"
           />
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.3em] text-green-500 sm:text-sm">
-            Custom Solutions. Real Impact.
+            Built By An Operator. Made For Rinks.
           </p>
           <h1 className="mt-8 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Ice rink operations, run better
