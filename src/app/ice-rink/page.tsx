@@ -155,25 +155,15 @@ export default function IceRinkPage() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Logo splash: brand wordmark over the rink measurement grid */}
-          <div className="mx-auto mb-10 w-full max-w-3xl">
-            <div
-              className="relative w-full"
-              style={{ aspectRatio: "740 / 380" }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/rink-diagram.svg"
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full drop-shadow-2xl"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/max-facility-logo.png"
-                alt="Max Facility"
-                className="absolute left-1/2 top-1/2 w-[44%] -translate-x-1/2 -translate-y-1/2"
-              />
-            </div>
+          <div className="-my-6 mx-auto mb-4 w-full max-w-5xl">
+            <Image
+              src="/images/rink-hero.png"
+              alt="Max Facility logo over an ice rink diagram with measurement points"
+              width={1850}
+              height={950}
+              priority
+              className="h-auto w-full drop-shadow-2xl"
+            />
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
