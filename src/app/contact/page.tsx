@@ -109,7 +109,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-navy">Email</h3>
                     <a
                       href="mailto:kelly@maxfacility.com"
-                      className="text-grey-600 hover:text-green-600"
+                      className="text-grey-700 hover:text-green-600"
                     >
                       kelly@maxfacility.com
                     </a>
@@ -122,8 +122,8 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Location</h3>
-                    <p className="text-grey-600">Central New York</p>
-                    <p className="text-grey-500 text-sm">
+                    <p className="text-grey-700">Central New York</p>
+                    <p className="text-grey-700 text-sm">
                       Serving Northeast & Nationwide
                     </p>
                   </div>
@@ -135,8 +135,8 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Business Hours</h3>
-                    <p className="text-grey-600">Mon - Fri: 8am - 6pm EST</p>
-                    <p className="text-grey-500 text-sm">
+                    <p className="text-grey-700">Mon - Fri: 8am - 6pm EST</p>
+                    <p className="text-grey-700 text-sm">
                       Emergency support available
                     </p>
                   </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="/ice-rink#rinkreports"
+                      href="/request-demo"
                       className="text-green-600 hover:underline"
                     >
                       Request RinkReports Demo →
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     <h3 className="text-xl font-bold text-navy mb-2">
                       Message Sent!
                     </h3>
-                    <p className="text-grey-600 mb-6">
+                    <p className="text-grey-700 mb-6">
                       Thank you for contacting us. We&apos;ll get back to you
                       within 24 hours.
                     </p>
@@ -354,7 +354,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-lg hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
@@ -396,18 +396,18 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-500">
+      <section className="py-16 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Prefer to Reach Out Directly?
           </h2>
-          <p className="text-green-100 mb-6">
+          <p className="text-grey-300 mb-6">
             Email us to schedule a free 30-minute consultation with one of
             our ice facility experts.
           </p>
           <a
             href="mailto:kelly@maxfacility.com"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-lg hover:bg-grey-100 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
           >
             <Mail className="mr-2 h-5 w-5" />
             Email kelly@maxfacility.com

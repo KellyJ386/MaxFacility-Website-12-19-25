@@ -175,7 +175,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Snowflake className="h-8 w-8 text-green-500 mr-3" />
+              <Snowflake className="h-8 w-8 text-green-600 mr-3" />
               <span className="text-green-600 font-semibold uppercase tracking-wider">
                 Central New York
               </span>
@@ -202,7 +202,7 @@ export default function ServicesPage() {
                   <h3 className="text-lg font-bold text-navy mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-grey-600">{service.description}</p>
+                  <p className="text-grey-700">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -213,7 +213,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-navy mb-4">
                 Why Choose Our Ice Maintenance?
               </h3>
-              <p className="text-grey-600 mb-8">
+              <p className="text-grey-700 mb-8">
                 Our team brings decades of experience and industry
                 certifications to every job, ensuring your ice meets the
                 highest standards.
@@ -221,7 +221,7 @@ export default function ServicesPage() {
               <ul className="space-y-4">
                 {maintenanceBenefits.map((benefit) => (
                   <li key={benefit} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0" />
                     <span className="text-grey-700">{benefit}</span>
                   </li>
                 ))}
@@ -269,7 +269,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Users className="h-8 w-8 text-green-500 mr-3" />
+              <Users className="h-8 w-8 text-green-600 mr-3" />
               <span className="text-green-600 font-semibold uppercase tracking-wider">
                 Northeast / Nationwide
               </span>
@@ -294,7 +294,7 @@ export default function ServicesPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {service.title}
                 </h3>
-                <p className="text-grey-600">{service.description}</p>
+                <p className="text-grey-700">{service.description}</p>
               </div>
             ))}
           </div>
@@ -315,14 +315,14 @@ export default function ServicesPage() {
               {processSteps.map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-xl font-bold text-white">
+                    <span className="text-xl font-bold text-navy-900">
                       {item.step}
                     </span>
                   </div>
                   <h4 className="text-lg font-bold text-navy mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-grey-600 text-sm">{item.description}</p>
+                  <p className="text-grey-700 text-sm">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -337,7 +337,7 @@ export default function ServicesPage() {
               <ul className="space-y-3">
                 {expertise.map((item) => (
                   <li key={item} className="flex items-center text-grey-300">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
                     {item}
                   </li>
                 ))}
@@ -347,13 +347,13 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-navy mb-4">
                 Nationwide Coverage
               </h3>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 While we&apos;re based in Central New York, our consulting
                 services extend throughout the Northeast and across the
                 nation. We&apos;ve worked with facilities of all sizes, from
                 community rinks to multi-sheet complexes.
               </p>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 Our consultants travel to your location, providing hands-on
                 guidance and support throughout the engagement. Remote
                 consulting options are also available for initial
@@ -382,18 +382,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-500">
+      <section className="py-20 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-grey-300 mb-8">
             Contact us today to talk about ice maintenance, facility
             consulting, or both.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-lg hover:bg-grey-100 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
           >
             Get in Touch
             <ArrowRight className="ml-2 h-5 w-5" />
