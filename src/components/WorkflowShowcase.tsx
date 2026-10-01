@@ -11,7 +11,7 @@ const workflows = [
     alt: "One schedule drives the entire rink: a single facility schedule feeds ice operations, locker rooms and facility, employee scheduling, front desk, pro shop and rentals, and concessions.",
   },
   {
-    tab: "Booking to Awareness",
+    tab: "Facility Automation",
     src: "/images/workflows/booking-to-awareness.webp",
     alt: "From booking to building-wide awareness: one facility booking creates automatic actions and notifies the ice crew, custodial, managers, front desk, pro shop, and concessions.",
   },
@@ -21,7 +21,7 @@ const workflows = [
     alt: "Ice operations keep the crew in sync: scheduled ice make, crew notified, edging, blade change, propane change, circle check, and an end-of-day record, summarized in an ice operations dashboard.",
   },
   {
-    tab: "Every Area Reports",
+    tab: "Centralized Reporting",
     src: "/images/workflows/every-area-reports.webp",
     alt: "Every area reports and everyone stays informed: front desk, ice operations, locker rooms, safety reporting, refrigeration, air quality, employee scheduling, and communications all connect to the Rink Reports hub.",
   },
