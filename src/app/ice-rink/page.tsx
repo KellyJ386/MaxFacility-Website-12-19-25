@@ -19,6 +19,7 @@ import {
 import { modules, moduleCount } from "@/lib/modules";
 import Reveal from "@/components/Reveal";
 import ModuleTabs from "@/components/ModuleTabs";
+import WorkflowShowcase from "@/components/WorkflowShowcase";
 
 export const metadata: Metadata = {
   title: "Ice Rink Solutions",
@@ -297,7 +298,7 @@ export default function IceRinkPage() {
                 {[
                   "Certified experts with 30+ years in ice operations",
                   "Comprehensive software that digitizes paper systems",
-                  "Proven track record with 100+ facilities served",
+                  "Built by a working rink operator, not a software vendor",
                   "Personalized consulting tailored to your needs",
                   "Ongoing support and training for your staff",
                 ].map((item) => (
@@ -389,15 +390,11 @@ export default function IceRinkPage() {
             <p className="eyebrow mb-5">What RinkReports does for you</p>
             <h2 className="section-heading">From paper binders to one clean workflow.</h2>
             <p className="section-subheading">
-              See how a day at your facility moves through RinkReports.
+              See how scheduling, ice operations, and every department connect in RinkReports.
             </p>
           </Reveal>
           <Reveal>
-            {/* Drop the workflow graphic in public/images/rinkreports-workflow.svg (or .png)
-                and swap this placeholder for an <Image>. */}
-            <div className="card-soft flex min-h-[320px] items-center justify-center border-2 border-dashed border-navy-200 p-10 text-center text-grey-500">
-              Workflow graphic goes here
-            </div>
+            <WorkflowShowcase />
           </Reveal>
         </div>
       </Reveal></section>

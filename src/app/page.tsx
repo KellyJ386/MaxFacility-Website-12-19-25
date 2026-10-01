@@ -137,10 +137,9 @@ export default function Home() {
       <section className="bg-soft-fade py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="card-soft grid grid-cols-1 gap-8 p-10 text-center sm:grid-cols-3">
+            <div className="card-soft grid grid-cols-1 gap-8 p-10 text-center sm:grid-cols-2">
               {[
                 { stat: "30+", label: "Years in facility operations" },
-                { stat: "100+", label: "Facilities served" },
                 { stat: "CIT·CIRM·CRA", label: "US Ice Rink Association certified" },
               ].map((item) => (
                 <div key={item.label}>
