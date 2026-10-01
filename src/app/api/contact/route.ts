@@ -7,7 +7,7 @@ interface ContactFormData {
   facilityName?: string;
   facilityType?: string;
   serviceInterest: string;
-  message: string;
+  message?: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -15,7 +15,13 @@ export async function POST(request: NextRequest) {
     const data: ContactFormData = await request.json();
 
     // Validate required fields
-    if (!data.name || !data.email || !data.serviceInterest || !data.message) {
+    const isDemo = data.serviceInterest === "demo";
+    if (
+      !data.name ||
+      !data.email ||
+      !data.serviceInterest ||
+      (!isDemo && !data.message)
+    ) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -52,7 +58,7 @@ export async function POST(request: NextRequest) {
         facility_name: data.facilityName || null,
         facility_type: data.facilityType || null,
         service_interest: data.serviceInterest,
-        message: data.message,
+        message: data.message || null,
         created_at: new Date().toISOString(),
       });
 
@@ -88,7 +94,7 @@ export async function POST(request: NextRequest) {
             <p><strong>Facility Type:</strong> ${data.facilityType || "Not provided"}</p>
             <p><strong>Service Interest:</strong> ${data.serviceInterest}</p>
             <p><strong>Message:</strong></p>
-            <p>${data.message}</p>
+            <p>${data.message || "Not provided"}</p>
           `,
         }),
       });
