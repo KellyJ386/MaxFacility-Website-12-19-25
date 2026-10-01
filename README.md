@@ -27,9 +27,8 @@ npm run lint     # eslint
 ```
 src/
   app/                     App Router pages
-    page.tsx               Home — two-door chooser (ice rink / custom software)
+    page.tsx               Home
     ice-rink/              Ice rink solutions + RinkReports platform
-    custom-software/       Custom facility software (mirrors the print ad)
     about/                 About
     pricing/               Pricing
     contact/               Contact form (client component)

@@ -4,7 +4,6 @@ import { Mail, MapPin } from "lucide-react";
 const footerLinks = {
   services: [
     { name: "Ice Rink Solutions", href: "/ice-rink" },
-    { name: "Custom Facility Software", href: "/custom-software" },
     { name: "Ice Maintenance", href: "/services#ice-maintenance" },
     { name: "Facility Consulting", href: "/services#consulting" },
     { name: "RinkReports Software", href: "/ice-rink#rinkreports" },
@@ -38,7 +37,7 @@ export default function Footer() {
               <span className="text-2xl font-bold text-green-500">FACILITY</span>
             </div>
             <p className="text-grey-400 text-sm">
-              Expert ice rink operations consulting and custom software for
+              Expert ice rink operations consulting and software for
               recreation and sport facilities of all sizes.
             </p>
             <div className="space-y-2">

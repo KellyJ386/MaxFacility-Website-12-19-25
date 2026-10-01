@@ -25,7 +25,7 @@ export default function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
     io.observe(el);
     return () => io.disconnect();

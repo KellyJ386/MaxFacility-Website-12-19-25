@@ -143,7 +143,7 @@ export default function IceRinkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-navy pt-16">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24 flex min-h-[90vh] items-center justify-center"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
@@ -206,7 +206,7 @@ export default function IceRinkPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Our Ice Rink Services</h2>
@@ -220,9 +220,9 @@ export default function IceRinkPage() {
             {services.map((service) => (
               <div
                 key={service.name}
-                className="bg-white border border-grey-200 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 group"
+                className="bg-white border border-grey-200 rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 group"
               >
-                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                <div className="w-14 h-14 bg-green-100 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                   <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">
@@ -245,10 +245,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Industry Certifications</h2>
@@ -262,7 +262,7 @@ export default function IceRinkPage() {
             {certifications.map((cert) => (
               <div
                 key={cert.abbr}
-                className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white rounded-3xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-center justify-center h-28 mb-4">
                   <Image
@@ -279,10 +279,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -309,9 +309,9 @@ export default function IceRinkPage() {
               </ul>
             </div>
             <div className="relative">
-              <div className="bg-grey-100 rounded-2xl p-8 relative">
+              <div className="bg-grey-100 rounded-3xl p-8 relative">
                 {/* Ice hockey rink diagram */}
-                <div className="bg-white rounded-xl p-4 shadow-lg ring-1 ring-grey-200">
+                <div className="bg-white rounded-3xl p-4 shadow-lg ring-1 ring-grey-200">
                   <Image
                     src="/Max Facility Rink Logo-selection No logo.png"
                     alt="Ice hockey rink diagram with faceoff circles, zone lines, and player positioning markers"
@@ -320,19 +320,19 @@ export default function IceRinkPage() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
                   30+ Years Experience
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* ---------- RinkReports ---------- */}
 
       {/* RinkReports Hero */}
-      <section id="rinkreports" className="relative py-24 bg-navy scroll-mt-16">
+      <section id="rinkreports" className="px-4 py-10 sm:px-6 lg:px-8 scroll-mt-24"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-green-900 opacity-90" />
           <div
@@ -380,10 +380,10 @@ export default function IceRinkPage() {
             </p>
           </div>
         </div>
-      </section>
+      </div></Reveal></section>
 
       {/* What RinkReports does for you — workflow graphic slot */}
-      <section className="bg-soft-fade py-24">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">What RinkReports does for you</p>
@@ -400,10 +400,10 @@ export default function IceRinkPage() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Modules Section */}
-      <section className="py-24">
+      <section className="py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">Core Modules</p>
@@ -417,10 +417,10 @@ export default function IceRinkPage() {
             <ModuleTabs />
           </Reveal>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Feature Highlights */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Platform Highlights</h2>
@@ -434,9 +434,9 @@ export default function IceRinkPage() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start p-6 bg-white rounded-xl shadow-sm"
+                className="flex items-start p-6 bg-white rounded-3xl shadow-sm"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                   <item.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="ml-4">
@@ -454,10 +454,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Offline Deep Dive */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -493,8 +493,8 @@ export default function IceRinkPage() {
               </Link>
             </div>
             <div className="relative">
-              <div className="bg-grey-100 rounded-2xl p-8">
-                <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
+              <div className="bg-grey-100 rounded-3xl p-8">
+                <div className="aspect-[4/3] bg-white rounded-3xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden shadow-soft">
                   <Image
                     src="/images/rinkreports_logo.svg"
                     alt="RinkReports"
@@ -510,12 +510,12 @@ export default function IceRinkPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Pricing Preview */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 md:p-12 text-center">
+          <div className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-soft">
             <h2 className="text-3xl font-bold text-navy mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -563,28 +563,10 @@ export default function IceRinkPage() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* Cross-sell to custom software */}
-      <section className="py-16 bg-grey-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
-            Not Just Ice Rinks
-          </h2>
-          <p className="text-grey-600 mb-8">
-            RinkReports proved what purpose-built software does for a facility.
-            We build the same kind of custom web applications for fitness
-            centers, aquatics, sports fields, gyms, and community centers.
-          </p>
-          <Link href="/custom-software" className="btn-outline">
-            Explore Custom Facility Software
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </section>
+      </div></Reveal></section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Elevate Your Ice Facility Operations?
@@ -603,7 +585,7 @@ export default function IceRinkPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }
