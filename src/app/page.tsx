@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {differentiators.map((d) => (
-                <div key={d.title} className="card-soft p-8 text-center">
+                <div key={d.title} className="card-soft flex h-full flex-col items-center justify-center p-8 text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
                     <d.icon className="h-7 w-7 text-green-600" />
                   </div>
