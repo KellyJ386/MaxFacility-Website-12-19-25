@@ -224,7 +224,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">Professional Services</h2>
             <p className="section-subheading">
-              Custom solutions tailored to your facility&apos;s specific needs.
+              Hands-on ice maintenance and operations consulting, quoted by facility size and scope.
             </p>
           </div>
 
