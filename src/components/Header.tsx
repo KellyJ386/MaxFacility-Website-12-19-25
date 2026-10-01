@@ -3,12 +3,26 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const navigation = [
+type NavItem = {
+  name: string;
+  href: string;
+  children?: { name: string; href: string }[];
+};
+
+const navigation: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "Our Services", href: "/services" },
+  {
+    name: "Our Services",
+    href: "/services",
+    children: [
+      { name: "RinkReports Software", href: "/ice-rink#rinkreports" },
+      { name: "Ice Maintenance", href: "/services#ice-maintenance" },
+      { name: "Facility Consulting", href: "/services#consulting" },
+    ],
+  },
   { name: "Ice Rink", href: "/ice-rink" },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
@@ -37,15 +51,43 @@ export default function Header() {
           </Link>
 
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="font-display text-sm font-medium text-grey-300 transition-colors hover:text-white"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.children ? (
+                <div key={item.name} className="group relative">
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-1 font-display text-sm font-medium text-grey-300 transition-colors hover:text-white group-focus-within:text-white"
+                  >
+                    {item.name}
+                    <ChevronDown
+                      className="h-4 w-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-4 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div className="rounded-2xl bg-navy/95 p-2 shadow-float backdrop-blur">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.href}
+                          className="block rounded-xl px-4 py-2.5 font-display text-sm font-medium text-grey-300 transition-colors hover:bg-white/10 hover:text-white"
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="font-display text-sm font-medium text-grey-300 transition-colors hover:text-white"
+                >
+                  {item.name}
+                </Link>
+              ),
+            )}
           </div>
 
           <div className="hidden lg:flex lg:items-center">
@@ -76,14 +118,25 @@ export default function Header() {
         <div className={cn("lg:hidden", mobileMenuOpen ? "block" : "hidden")}>
           <div className="space-y-1 pb-4 pt-2">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-base font-medium text-grey-300 hover:text-white"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name}>
+                <Link
+                  href={item.href}
+                  className="block px-3 py-2 text-base font-medium text-grey-300 hover:text-white"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+                {item.children?.map((child) => (
+                  <Link
+                    key={child.name}
+                    href={child.href}
+                    className="block py-2 pl-8 pr-3 text-sm font-medium text-grey-400 hover:text-white"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {child.name}
+                  </Link>
+                ))}
+              </div>
             ))}
             <div className="px-3 pt-3">
               <Link
