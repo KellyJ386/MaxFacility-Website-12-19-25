@@ -368,8 +368,7 @@ export default function AboutPage() {
       </Reveal></section>
 
       {/* Positioning Band */}
-      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
-      <section className="py-16 bg-navy">
+<section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[

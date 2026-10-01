@@ -213,9 +213,7 @@ export default function IceRinkPage() {
                 key={service.name}
                 className="bg-white border border-grey-200 rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 group"
               >
-                <div className="w-14 h-14 bg-green-100 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
-                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
-                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                   <service.icon className="h-7 w-7 text-green-600 group-hover:text-navy-900 transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">
@@ -313,10 +311,8 @@ export default function IceRinkPage() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-xl font-semibold shadow-lg">
                   25+ Years Experience
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-lg font-semibold shadow-lg">
-                  30+ Years Experience
                 </div>
               </div>
             </div>
@@ -582,7 +578,6 @@ export default function IceRinkPage() {
           </div>
         </div>
       </div></Reveal></section>
-      </section>
 
       {/* CTA Section */}
       <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">

@@ -383,8 +383,7 @@ export default function ServicesPage() {
       </Reveal></section>
 
       {/* CTA Section */}
-      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
-      <section className="py-20 bg-navy">
+<section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -395,8 +394,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-full hover:bg-grey-100 transition-colors"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-full hover:bg-green-400 transition-colors"
           >
             Get in Touch
             <ArrowRight className="ml-2 h-5 w-5" />
