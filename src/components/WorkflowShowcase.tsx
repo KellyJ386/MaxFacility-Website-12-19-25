@@ -80,7 +80,7 @@ const workflows = [
   },
   {
     tab: "Schedule-Driven Workflows",
-    src: "/images/workflows/schedule-driven-workflows.webp",
+    src: "/images/workflows/schedule-driven-workflows-v2.webp",
     width: 1448,
     height: 1086,
     alt: "Schedule-driven workflows: a rink scheduling event and employee scheduling drive the whole building. The schedule triggers the ice make, assigns employees, creates locker room and party room cleaning tasks, notifies the pro shop and concessions, and informs the front desk.",
