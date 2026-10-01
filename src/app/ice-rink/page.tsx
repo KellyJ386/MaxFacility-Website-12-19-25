@@ -39,7 +39,7 @@ const services = [
       "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
     icon: Monitor,
     href: "#rinkreports",
-    price: "From $399/year",
+    price: "From $399/year per facility",
   },
   {
     name: "Ice Maintenance",
@@ -374,7 +374,7 @@ export default function IceRinkPage() {
               </Link>
             </div>
             <p className="mt-6 text-green-400 font-semibold">
-              Starting at $399/year
+              Starting at $399/year per facility
             </p>
           </div>
         </div>
@@ -528,12 +528,12 @@ export default function IceRinkPage() {
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
                 <div className="text-5xl font-bold text-green-600">$799</div>
-                <div className="text-grey-500">per year — All Modules</div>
+                <div className="text-grey-500">per facility, per year — All Modules</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
                 <div className="text-5xl font-bold text-navy">$399</div>
-                <div className="text-grey-500">per year — Ice Depth</div>
+                <div className="text-grey-500">per facility, per year — Ice Depth</div>
               </div>
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">

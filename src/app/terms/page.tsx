@@ -48,7 +48,7 @@ export default function TermsPage() {
               3. RinkReports Software Subscription
             </h2>
             <p className="text-grey-600 mb-4">
-              RinkReports Software is provided on a subscription basis:
+              RinkReports Software is provided on a per-facility subscription basis, regardless of the number of ice sheets:
             </p>
             <ul className="list-disc pl-6 text-grey-600 mb-6">
               <li>All Modules plan: $999 per year (annual billing)</li>

@@ -105,7 +105,7 @@ const faqs = [
   {
     question: "How is RinkReports Software billed?",
     answer:
-      "RinkReports Software is billed annually. The All Modules plan is $799 per year for the full platform, and the Ice Depth plan is $399 per year for ice depth monitoring with custom diagrams and ice operations.",
+      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $799 per facility per year for the full platform, and the Ice Depth plan is $399 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",
@@ -147,8 +147,9 @@ export default function PricingPage() {
               <h2 className="text-2xl font-bold text-navy">RinkReports Software</h2>
             </div>
             <p className="text-grey-600">
-              Annual subscriptions billed once per year. Choose the full
-              platform or the ice depth package.
+              Annual subscriptions billed once per year, per facility, regardless
+              of the number of ice sheets. Choose the full platform or the ice
+              depth package.
             </p>
           </div>
 
@@ -184,7 +185,7 @@ export default function PricingPage() {
                     >
                       ${plan.annualPrice}
                     </div>
-                    <div className="text-grey-500">per year</div>
+                    <div className="text-grey-500">per facility, per year</div>
                   </div>
 
                   <div className="space-y-3 mb-8">
