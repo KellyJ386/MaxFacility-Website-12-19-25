@@ -64,6 +64,41 @@ const workflows = [
     height: 1086,
     alt: "Air quality monitoring: monitor, detect, alert, act, verify. Readings are compared to configured limits, an out-of-range alert is sent to the right people, corrective action is taken, and safe levels are confirmed, with history and records kept for compliance.",
   },
+  {
+    tab: "Refrigeration Plant",
+    src: "/images/workflows/refrigeration-plant.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Refrigeration plant: monitor, detect, alert, act, stabilize. Plant readings such as brine temperature and suction pressure are compared to configured limits, a threshold-exceeded alert is sent to the right people, maintenance investigates and repairs, and readings return to normal, with plant history and inspection-ready records kept for compliance.",
+  },
+  {
+    tab: "Ice Operations & Ice Quality",
+    src: "/images/workflows/ice-operations-ice-quality.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Ice operations and ice quality: one connected ice operation. A schedule triggers the ice make, the resurfacer makes ice, then circle check, edging, blade change, propane change, and ice depth check, followed by trend review, quality improvement, and the ice operations log.",
+  },
+  {
+    tab: "Schedule-Driven Workflows",
+    src: "/images/workflows/schedule-driven-workflows.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Schedule-driven workflows: a rink scheduling event and employee scheduling drive the whole building. The schedule triggers the ice make, assigns employees, creates locker room and party room cleaning tasks, notifies the pro shop and concessions, and informs the front desk.",
+  },
+  {
+    tab: "Communication & Oversight",
+    src: "/images/workflows/communication-oversight.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Communication and oversight: incident reports, daily reports, ice operations, maintenance, air quality, and scheduling feed the communications center and admin panel, so frontline staff, managers, facility leaders, and ownership each get the right information, with role-based control and real-time visibility.",
+  },
+  {
+    tab: "Facility Assets & Documentation",
+    src: "/images/workflows/facility-assets-documentation.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Facility assets and documentation: track, inspect, maintain, document. A dasher board issue is found, the inspection is logged, a repair task is assigned and completed, maintenance records are linked to the asset, and permits and manuals are stored in one place, with asset tracking and facility paperwork connected to dasher boards.",
+  },
 ];
 
 /** Pill tabs that switch between the RinkReports workflow graphics. */
@@ -81,7 +116,7 @@ export default function WorkflowShowcase() {
       <div
         role="tablist"
         aria-label="RinkReports workflows"
-        className="mx-auto mb-8 flex max-w-5xl gap-2 overflow-x-auto rounded-[2rem] bg-white p-2 shadow-soft [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible [&::-webkit-scrollbar]:hidden"
+        className="mx-auto mb-8 flex max-w-6xl gap-2 overflow-x-auto rounded-[2rem] bg-white p-2 shadow-soft [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible [&::-webkit-scrollbar]:hidden"
       >
         {workflows.map((item, i) => (
           <button
