@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Space_Mono } from "next/font/google";
-import { Inter, Poppins, Space_Grotesk } from "next/font/google";
+import { Inter, Poppins, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,12 +19,6 @@ const label = Space_Grotesk({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
 const spaceMono = Space_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -35,11 +28,6 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Max Facility | Ice Rink Operations & RinkReports Software",
-    template: "%s | Max Facility",
-  },
-  description:
-    "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes. CIT, CIRM, CRA certified.",
     default: "Max Facility | RinkReports & Ice Rink Operations",
     template: "%s | Max Facility",
   },
@@ -52,7 +40,6 @@ export const metadata: Metadata = {
     "CIT certified",
     "ice maintenance services",
     "ice rink management",
-    "facility management software",
     "RinkReports",
   ],
   authors: [{ name: "Max Facility" }],
@@ -64,9 +51,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Max Facility | Ice Rink Operations & RinkReports Software",
-    description:
-      "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
     title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
       "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
@@ -77,9 +61,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Max Facility | Ice Rink Operations & RinkReports Software",
-    description:
-      "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
     title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
       "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
@@ -103,10 +84,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
-      <body className="font-sans">
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} ${label.variable} font-sans`}>
+      <body className={`${inter.variable} ${poppins.variable} ${label.variable} ${spaceMono.variable} font-sans`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

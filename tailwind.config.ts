@@ -22,16 +22,16 @@ const config: Config = {
           800: "#001428",
           900: "#000d1a",
         },
-        // Brand green #4DFF00 is the accent on dark backgrounds. 600+ are
-        // darker shades for text/links on white (600 is 5:1 on white).
+        // Seattle Seahawks action green. 600+ are darker shades for text and
+        // links on white (600 is 5:1 on white).
         green: {
-          DEFAULT: "#4DFF00",
-          50: "#f0ffe6",
-          100: "#dcffc7",
-          200: "#b9ff94",
-          300: "#94ff61",
-          400: "#70ff2e",
-          500: "#4DFF00",
+          DEFAULT: "#69BE28",
+          50: "#f0f9e8",
+          100: "#e1f4d1",
+          200: "#c3e8a3",
+          300: "#a5dd75",
+          400: "#87d147",
+          500: "#69BE28",
           600: "#2A8000",
           700: "#1F6000",
           800: "#164400",
@@ -56,7 +56,6 @@ const config: Config = {
         float: "0 24px 60px -20px rgba(0, 34, 68, 0.35)",
       },
       fontFamily: {
-        sans: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
         mono: ["var(--font-space-mono)", "ui-monospace", "monospace"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-poppins)", "system-ui", "sans-serif"],

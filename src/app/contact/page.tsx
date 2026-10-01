@@ -355,8 +355,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-lg hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-xl hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
@@ -398,8 +397,7 @@ export default function ContactPage() {
       </Reveal></section>
 
       {/* CTA Section */}
-      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
-      <section className="py-16 bg-navy">
+<section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Prefer to Reach Out Directly?
@@ -410,8 +408,7 @@ export default function ContactPage() {
           </p>
           <a
             href="mailto:kelly@maxfacility.com"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-full hover:bg-grey-100 transition-colors"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-full hover:bg-green-400 transition-colors"
           >
             <Mail className="mr-2 h-5 w-5" />
             Email kelly@maxfacility.com

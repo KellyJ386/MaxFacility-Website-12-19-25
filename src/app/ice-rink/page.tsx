@@ -213,9 +213,7 @@ export default function IceRinkPage() {
                 key={service.name}
                 className="bg-white border border-grey-200 rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 group"
               >
-                <div className="w-14 h-14 bg-green-100 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
-                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
-                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                   <service.icon className="h-7 w-7 text-green-600 group-hover:text-navy-900 transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">
@@ -313,10 +311,8 @@ export default function IceRinkPage() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-xl font-semibold shadow-lg">
                   25+ Years Experience
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-lg font-semibold shadow-lg">
-                  30+ Years Experience
                 </div>
               </div>
             </div>
@@ -333,7 +329,7 @@ export default function IceRinkPage() {
           <div
             className="absolute inset-0 opacity-10"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234DFF00' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2369BE28' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}
           />
         </div>
@@ -461,7 +457,7 @@ export default function IceRinkPage() {
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="text-lg font-bold text-navy">{item.title}</h3>
                     {item.badge && (
-                      <span className="inline-block rounded-full bg-navy px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#4DFF00]">
+                      <span className="inline-block rounded-full bg-navy px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-[#69BE28]">
                         {item.badge}
                       </span>
                     )}
@@ -582,7 +578,6 @@ export default function IceRinkPage() {
           </div>
         </div>
       </div></Reveal></section>
-      </section>
 
       {/* CTA Section */}
       <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">

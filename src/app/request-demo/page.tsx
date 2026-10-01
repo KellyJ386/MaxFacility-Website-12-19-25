@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 export default function RequestDemoPage() {
   return (
     <>
-      <section className="relative bg-navy pt-32 pb-16">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pb-20 pt-40">
+        <div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Image
             src="/images/rinkreports_logo.svg"
@@ -31,9 +32,9 @@ export default function RequestDemoPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-grey-50 rounded-2xl p-8">
+          <div className="card-soft p-8 md:p-10">
             <DemoForm />
           </div>
         </div>

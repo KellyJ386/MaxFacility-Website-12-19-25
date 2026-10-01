@@ -23,7 +23,7 @@ const emptyForm = {
 };
 
 const inputClass =
-  "w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent";
+  "w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent";
 
 export default function DemoForm() {
   const [formData, setFormData] = useState(emptyForm);
@@ -173,7 +173,7 @@ export default function DemoForm() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">
+        <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600">
           {error}
         </div>
       )}
@@ -181,7 +181,7 @@ export default function DemoForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-lg hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-full shadow-soft hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Request a Demo"}
       </button>
