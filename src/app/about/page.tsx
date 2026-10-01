@@ -157,7 +157,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-grey-600">
                 <p>
                   Max Facility LLC was founded by Kelly Johnson, who has over
-                  20 years of experience running ice rinks &mdash; ice
+                  25 years of experience running ice rinks &mdash; ice
                   operations, refrigeration plant monitoring, staff
                   scheduling, programming, and capital planning. He runs
                   facilities, not someone consulting on them from a distance.
@@ -198,7 +198,7 @@ export default function AboutPage() {
               <h3 className="mt-4 text-2xl font-bold">Kelly Johnson</h3>
               <p className="mt-1 text-grey-300">Career Ice Rink Operator</p>
               <p className="text-sm text-green-400">
-                20+ Years in Ice Rink Operations
+                25+ Years in Ice Rink Operations
               </p>
 
               <div className="mt-6 border-t border-white/10 pt-6">
