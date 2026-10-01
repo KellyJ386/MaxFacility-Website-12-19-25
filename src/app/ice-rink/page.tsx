@@ -561,7 +561,7 @@ export default function IceRinkPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-grey-500">
-              15% discount for multi-facility subscriptions
+              15% off every facility for multi-facility subscriptions
             </p>
           </div>
         </div>

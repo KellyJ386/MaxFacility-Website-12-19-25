@@ -224,7 +224,7 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-6 text-sm text-grey-700">
-            15% off for multi-facility subscriptions.{" "}
+            15% off every facility for multi-facility subscriptions.{" "}
             <Link href="/pricing" className="font-semibold text-green-600 hover:text-green-700">
               Full pricing →
             </Link>
