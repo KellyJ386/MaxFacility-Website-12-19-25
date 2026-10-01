@@ -153,7 +153,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="section-heading text-left">Our Story</h2>
-              <div className="space-y-4 text-grey-600">
+              <div className="space-y-4 text-grey-700">
                 <p>
                   Max Facility LLC was founded by Kelly Johnson, who has over
                   20 years of experience running ice rinks &mdash; ice
@@ -314,7 +314,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {value.title}
                 </h3>
-                <p className="text-grey-600 text-sm">{value.description}</p>
+                <p className="text-grey-700 text-sm">{value.description}</p>
               </div>
             ))}
           </div>

@@ -70,7 +70,7 @@ export default function DemoForm() {
           <CheckCircle className="h-8 w-8 text-green-600" />
         </div>
         <h2 className="text-xl font-bold text-navy mb-2">Demo request sent</h2>
-        <p className="text-grey-600">
+        <p className="text-grey-700">
           Thanks. We&apos;ll be in touch within one business day to schedule
           your RinkReports demo.
         </p>

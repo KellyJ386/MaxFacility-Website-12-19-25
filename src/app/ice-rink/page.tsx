@@ -226,7 +226,7 @@ export default function IceRinkPage() {
                 <h3 className="text-xl font-bold text-navy mb-3">
                   {service.name}
                 </h3>
-                <p className="text-grey-600 mb-4">{service.description}</p>
+                <p className="text-grey-700 mb-4">{service.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-green-600 font-medium">
                     {service.location || service.price}
@@ -272,7 +272,7 @@ export default function IceRinkPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-1">{cert.name}</h3>
-                <p className="text-sm text-grey-500">{cert.description}</p>
+                <p className="text-sm text-grey-700">{cert.description}</p>
               </div>
             ))}
           </div>
@@ -287,7 +287,7 @@ export default function IceRinkPage() {
               <h2 className="section-heading text-left">
                 Why Choose Max Facility?
               </h2>
-              <p className="text-grey-600 mb-8">
+              <p className="text-grey-700 mb-8">
                 We combine decades of hands-on experience with modern technology
                 to deliver unmatched value for ice facility operations.
               </p>
@@ -403,12 +403,12 @@ export default function IceRinkPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {module.title}
                 </h3>
-                <p className="text-grey-600 text-sm mb-4">{module.description}</p>
+                <p className="text-grey-700 text-sm mb-4">{module.description}</p>
                 <ul className="space-y-2">
                   {module.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center text-sm text-grey-500"
+                      className="flex items-center text-sm text-grey-700"
                     >
                       <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
                       {feature}
@@ -450,7 +450,7 @@ export default function IceRinkPage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-grey-600 text-sm">{item.description}</p>
+                  <p className="text-grey-700 text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -469,7 +469,7 @@ export default function IceRinkPage() {
               <h2 className="section-heading text-left mt-2">
                 Works When Your Building Doesn&apos;t Cooperate
               </h2>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 Ice rinks are concrete boxes. Wi-Fi drops, cell signal dies, and
                 your staff still have a Saturday public skate to run. RinkReports
                 is built offline-first — every module keeps working without a
@@ -505,7 +505,7 @@ export default function IceRinkPage() {
                     className="object-contain p-6"
                   />
                 </div>
-                <p className="text-center text-grey-500 text-sm mt-4">
+                <p className="text-center text-grey-700 text-sm mt-4">
                   Offline-first across every module
                 </p>
               </div>
@@ -521,19 +521,19 @@ export default function IceRinkPage() {
             <h2 className="text-3xl font-bold text-navy mb-4">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-grey-600 mb-8">
+            <p className="text-grey-700 mb-8">
               Everything you need to manage your ice facility, on a simple annual
               subscription.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
                 <div className="text-5xl font-bold text-green-600">$999</div>
-                <div className="text-grey-500">per facility, per year — All Modules</div>
+                <div className="text-grey-700">per facility, per year — All Modules</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
                 <div className="text-5xl font-bold text-navy">$599</div>
-                <div className="text-grey-500">per facility, per year — Ice Depth</div>
+                <div className="text-grey-700">per facility, per year — Ice Depth</div>
               </div>
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">
@@ -560,7 +560,7 @@ export default function IceRinkPage() {
                 View Full Pricing
               </Link>
             </div>
-            <p className="mt-4 text-sm text-grey-500">
+            <p className="mt-4 text-sm text-grey-700">
               15% off every facility for multi-facility subscriptions
             </p>
           </div>

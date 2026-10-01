@@ -202,7 +202,7 @@ export default function ServicesPage() {
                   <h3 className="text-lg font-bold text-navy mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-grey-600">{service.description}</p>
+                  <p className="text-grey-700">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -213,7 +213,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-navy mb-4">
                 Why Choose Our Ice Maintenance?
               </h3>
-              <p className="text-grey-600 mb-8">
+              <p className="text-grey-700 mb-8">
                 Our team brings decades of experience and industry
                 certifications to every job, ensuring your ice meets the
                 highest standards.
@@ -294,7 +294,7 @@ export default function ServicesPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {service.title}
                 </h3>
-                <p className="text-grey-600">{service.description}</p>
+                <p className="text-grey-700">{service.description}</p>
               </div>
             ))}
           </div>
@@ -322,7 +322,7 @@ export default function ServicesPage() {
                   <h4 className="text-lg font-bold text-navy mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-grey-600 text-sm">{item.description}</p>
+                  <p className="text-grey-700 text-sm">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -347,13 +347,13 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-navy mb-4">
                 Nationwide Coverage
               </h3>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 While we&apos;re based in Central New York, our consulting
                 services extend throughout the Northeast and across the
                 nation. We&apos;ve worked with facilities of all sizes, from
                 community rinks to multi-sheet complexes.
               </p>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 Our consultants travel to your location, providing hands-on
                 guidance and support throughout the engagement. Remote
                 consulting options are also available for initial

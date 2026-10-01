@@ -109,7 +109,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-navy">Email</h3>
                     <a
                       href="mailto:kelly@maxfacility.com"
-                      className="text-grey-600 hover:text-green-600"
+                      className="text-grey-700 hover:text-green-600"
                     >
                       kelly@maxfacility.com
                     </a>
@@ -122,8 +122,8 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Location</h3>
-                    <p className="text-grey-600">Central New York</p>
-                    <p className="text-grey-500 text-sm">
+                    <p className="text-grey-700">Central New York</p>
+                    <p className="text-grey-700 text-sm">
                       Serving Northeast & Nationwide
                     </p>
                   </div>
@@ -135,8 +135,8 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-navy">Business Hours</h3>
-                    <p className="text-grey-600">Mon - Fri: 8am - 6pm EST</p>
-                    <p className="text-grey-500 text-sm">
+                    <p className="text-grey-700">Mon - Fri: 8am - 6pm EST</p>
+                    <p className="text-grey-700 text-sm">
                       Emergency support available
                     </p>
                   </div>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     <h3 className="text-xl font-bold text-navy mb-2">
                       Message Sent!
                     </h3>
-                    <p className="text-grey-600 mb-6">
+                    <p className="text-grey-700 mb-6">
                       Thank you for contacting us. We&apos;ll get back to you
                       within 24 hours.
                     </p>

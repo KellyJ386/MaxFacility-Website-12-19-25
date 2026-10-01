@@ -146,7 +146,7 @@ export default function PricingPage() {
               <Monitor className="h-8 w-8 text-green-600 mr-2" />
               <h2 className="text-2xl font-bold text-navy">RinkReports Software</h2>
             </div>
-            <p className="text-grey-600">
+            <p className="text-grey-700">
               Annual subscriptions billed once per year, per facility, regardless
               of the number of ice sheets. Choose the full platform or the ice
               depth package.
@@ -175,7 +175,7 @@ export default function PricingPage() {
                     <h3 className="text-xl font-bold text-navy mb-1">
                       {plan.name}
                     </h3>
-                    <p className="text-sm text-grey-500 mb-4">
+                    <p className="text-sm text-grey-700 mb-4">
                       {plan.description}
                     </p>
                     <div
@@ -185,7 +185,7 @@ export default function PricingPage() {
                     >
                       ${plan.annualPrice}
                     </div>
-                    <div className="text-grey-500">per facility, per year</div>
+                    <div className="text-grey-700">per facility, per year</div>
                   </div>
 
                   <div className="space-y-3 mb-8">
@@ -213,7 +213,7 @@ export default function PricingPage() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-grey-500 mt-8">
+          <p className="text-center text-sm text-grey-700 mt-8">
             15% off every facility when you subscribe for 2 or more
           </p>
         </div>
@@ -241,7 +241,7 @@ export default function PricingPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-xl font-bold text-navy">{plan.name}</h3>
-                    <p className="text-grey-500 text-sm">{plan.description}</p>
+                    <p className="text-grey-700 text-sm">{plan.description}</p>
                   </div>
                 </div>
 
@@ -260,7 +260,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <p className="text-sm text-grey-500 mb-6">{plan.note}</p>
+                <p className="text-sm text-grey-700 mb-6">{plan.note}</p>
 
                 <Link
                   href="/contact"
@@ -290,7 +290,7 @@ export default function PricingPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {faq.question}
                 </h3>
-                <p className="text-grey-600">{faq.answer}</p>
+                <p className="text-grey-700">{faq.answer}</p>
               </div>
             ))}
           </div>

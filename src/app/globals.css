@@ -36,7 +36,7 @@
   }
 
   .section-subheading {
-    @apply text-lg text-grey-600 max-w-2xl mx-auto;
+    @apply text-lg text-grey-700 max-w-2xl mx-auto;
   }
 }
 
