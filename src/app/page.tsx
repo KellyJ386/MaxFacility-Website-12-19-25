@@ -13,20 +13,14 @@ const differentiators = [
   {
     icon: WifiOff,
     title: "Works offline",
-    description:
-      "Rinks have bad signal. Staff keep logging, and everything syncs when they're back online.",
   },
   {
     icon: Wrench,
     title: "Built by someone who runs rinks",
-    description:
-      "Kelly built RinkReports to replace the paper systems he used himself.",
   },
   {
     icon: Users,
     title: "Priced per facility",
-    description:
-      "One price per facility, no matter how many ice sheets. Unlimited users on every plan.",
   },
 ];
 
@@ -110,8 +104,7 @@ export default function Home() {
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
                     <d.icon className="h-7 w-7 text-green-600" />
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-navy">{d.title}</h3>
-                  <p className="text-grey-700">{d.description}</p>
+                  <h3 className="text-lg font-bold text-navy">{d.title}</h3>
                 </div>
               ))}
             </div>
