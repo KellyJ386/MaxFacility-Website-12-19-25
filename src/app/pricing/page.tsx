@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -118,7 +119,7 @@ export default function PricingPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-navy pt-32">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Simple, Transparent Pricing
@@ -131,7 +132,7 @@ export default function PricingPage() {
       </section>
 
       {/* Software Pricing */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Image
@@ -217,10 +218,10 @@ export default function PricingPage() {
             15% off every facility when you subscribe for 2 or more
           </p>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Services Pricing */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Professional Services</h2>
@@ -233,10 +234,10 @@ export default function PricingPage() {
             {servicePlans.map((plan) => (
               <div
                 key={plan.name}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-3xl p-8 shadow-lg"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-navy rounded-2xl flex items-center justify-center">
                     <plan.icon className="h-6 w-6 text-green-500" />
                   </div>
                   <div className="ml-4">
@@ -264,7 +265,7 @@ export default function PricingPage() {
 
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy-700 transition-colors"
+                  className="block w-full text-center px-6 py-3 bg-navy text-white font-semibold rounded-full hover:bg-navy-700 transition-colors"
                 >
                   Request Quote
                 </Link>
@@ -272,10 +273,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Frequently Asked Questions</h2>
@@ -285,7 +286,7 @@ export default function PricingPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-grey-50 rounded-xl p-6"
+                className="bg-grey-50 rounded-3xl p-6"
               >
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {faq.question}
@@ -295,10 +296,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Have Questions About Pricing?
@@ -312,7 +313,7 @@ export default function PricingPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }

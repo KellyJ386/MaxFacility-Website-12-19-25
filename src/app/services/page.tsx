@@ -16,6 +16,7 @@ import {
   FileText,
   Calendar,
 } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -138,7 +139,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-navy pt-32">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
           <div className="absolute top-1/2 right-0 w-[32rem] h-[32rem] -translate-y-1/2 translate-x-1/3 bg-green-500/10 rounded-full blur-3xl" />
@@ -160,7 +161,7 @@ export default function ServicesPage() {
               </a>
               <a
                 href="#consulting"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white border border-white/30 rounded-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white border border-white/30 rounded-full hover:bg-white/10 transition-colors"
               >
                 Facility Consulting
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -171,7 +172,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Ice Maintenance Section */}
-      <section id="ice-maintenance" className="py-20 bg-white scroll-mt-16">
+      <section id="ice-maintenance" className="py-24 scroll-mt-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
@@ -193,9 +194,9 @@ export default function ServicesPage() {
             {maintenanceServices.map((service) => (
               <div
                 key={service.title}
-                className="flex items-start p-6 bg-grey-50 rounded-xl hover:bg-grey-100 transition-colors"
+                className="flex items-start p-6 bg-grey-50 rounded-3xl hover:bg-grey-100 transition-colors"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                   <service.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="ml-4">
@@ -227,7 +228,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-navy rounded-2xl p-8">
+            <div className="bg-navy rounded-3xl p-8">
               <h3 className="text-xl font-bold text-white mb-4">
                 Service Area
               </h3>
@@ -262,10 +263,10 @@ export default function ServicesPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Facility Consulting Section */}
-      <section id="consulting" className="py-20 bg-grey-50 scroll-mt-16">
+      <section id="consulting" className="bg-soft-fade py-24 scroll-mt-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
@@ -278,7 +279,7 @@ export default function ServicesPage() {
             <p className="section-subheading">
               Transform your ice facility operations with expert consulting
               from industry veterans. Our CIRM and CRA certified consultants
-              bring 30+ years of experience to every engagement.
+              bring 25+ years of experience to every engagement.
             </p>
           </div>
 
@@ -286,9 +287,9 @@ export default function ServicesPage() {
             {consultingServices.map((service) => (
               <div
                 key={service.title}
-                className="p-6 bg-white border border-grey-200 rounded-xl hover:shadow-lg transition-shadow"
+                className="p-6 bg-white border border-grey-200 rounded-3xl hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-navy rounded-2xl flex items-center justify-center mb-4">
                   <service.icon className="h-6 w-6 text-green-500" />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-2">
@@ -330,7 +331,7 @@ export default function ServicesPage() {
 
           {/* Expertise */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-navy rounded-2xl p-8">
+            <div className="bg-navy rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
                 Facility Types We Serve
               </h3>
@@ -379,9 +380,10 @@ export default function ServicesPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* CTA Section */}
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
       <section className="py-20 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -393,13 +395,14 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-full hover:bg-grey-100 transition-colors"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
           >
             Get in Touch
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }

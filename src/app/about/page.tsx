@@ -12,6 +12,7 @@ import {
   Snowflake,
   GraduationCap,
 } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -128,7 +129,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-navy pt-32">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
           <div className="absolute top-1/2 right-0 w-[32rem] h-[32rem] -translate-y-1/2 translate-x-1/3 bg-green-500/10 rounded-full blur-3xl" />
@@ -148,7 +149,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -156,7 +157,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-grey-700">
                 <p>
                   Max Facility LLC was founded by Kelly Johnson, who has over
-                  20 years of experience running ice rinks &mdash; ice
+                  25 years of experience running ice rinks &mdash; ice
                   operations, refrigeration plant monitoring, staff
                   scheduling, programming, and capital planning. He runs
                   facilities, not someone consulting on them from a distance.
@@ -190,7 +191,7 @@ export default function AboutPage() {
             </div>
 
             {/* Founder card */}
-            <div className="rounded-2xl bg-navy p-8 text-white shadow-md">
+            <div className="rounded-3xl bg-navy p-8 text-white shadow-md">
               <span className="inline-block rounded-full bg-green-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-400">
                 Founder
               </span>
@@ -199,7 +200,7 @@ export default function AboutPage() {
                 Founder, Max Facility LLC &middot; Creator of RinkReports
               </p>
               <p className="text-sm text-green-400">
-                20+ Years in Ice Rink Operations
+                25+ Years in Ice Rink Operations
               </p>
 
               <div className="mt-6 border-t border-white/10 pt-6">
@@ -210,7 +211,7 @@ export default function AboutPage() {
                   {certifications.map((cert) => (
                     <span
                       key={cert.abbr}
-                      className="rounded-lg bg-white/10 px-3 py-1.5 text-sm font-bold text-green-400"
+                      className="rounded-xl bg-white/10 px-3 py-1.5 text-sm font-bold text-green-400"
                     >
                       {cert.abbr}
                     </span>
@@ -237,10 +238,10 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Rinks We've Served Gallery */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Rinks We&apos;ve Served</h2>
@@ -254,7 +255,7 @@ export default function AboutPage() {
             {rinkImages.map((rink) => (
               <figure
                 key={rink.slug}
-                className="group overflow-hidden rounded-2xl bg-navy shadow-md hover:shadow-xl transition-shadow duration-300"
+                className="group overflow-hidden rounded-3xl bg-navy shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   {rink.src ? (
@@ -293,10 +294,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Values Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Our Values</h2>
@@ -319,10 +320,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Credentials & Education Section */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Certifications &amp; Education</h2>
@@ -330,7 +331,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Certifications list */}
-            <div className="rounded-2xl border border-grey-200 bg-white p-8">
+            <div className="rounded-3xl border border-grey-200 bg-white p-8 shadow-soft">
               <h3 className="text-xl font-bold text-navy mb-6">Certifications</h3>
               <ul className="space-y-6">
                 {certifications.map((cert) => (
@@ -351,7 +352,7 @@ export default function AboutPage() {
             </div>
 
             {/* Education list */}
-            <div className="rounded-2xl border border-grey-200 bg-white p-8">
+            <div className="rounded-3xl border border-grey-200 bg-white p-8 shadow-soft">
               <h3 className="text-xl font-bold text-navy mb-6">Education</h3>
               <ul className="space-y-6">
                 {education.map((item) => (
@@ -364,9 +365,10 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Positioning Band */}
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
       <section className="py-16 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -393,10 +395,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </div></Reveal></section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Let&apos;s Work Together
@@ -410,7 +412,7 @@ export default function AboutPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }

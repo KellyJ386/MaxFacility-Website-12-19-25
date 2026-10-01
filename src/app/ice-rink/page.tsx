@@ -19,11 +19,12 @@ import {
 import { modules, moduleCount } from "@/lib/modules";
 import Reveal from "@/components/Reveal";
 import ModuleTabs from "@/components/ModuleTabs";
+import WorkflowShowcase from "@/components/WorkflowShowcase";
 
 export const metadata: Metadata = {
   title: "Ice Rink Solutions",
   description:
-    "Ice rink consulting, maintenance services, and the RinkReports management platform. 30+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
+    "Ice rink consulting, maintenance services, and the RinkReports management platform. 25+ years of experience elevating ice facility operations. CIT, CIRM, CRA certified.",
   keywords: [
     "ice rink management software",
     "ice facility consulting",
@@ -143,7 +144,7 @@ export default function IceRinkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-navy pt-16">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24 flex min-h-[90vh] items-center justify-center"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-navy-700 via-navy to-navy-500/60" />
@@ -154,25 +155,15 @@ export default function IceRinkPage() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Logo splash: brand wordmark over the rink measurement grid */}
-          <div className="mx-auto mb-10 w-full max-w-3xl">
-            <div
-              className="relative w-full"
-              style={{ aspectRatio: "740 / 380" }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/rink-diagram.svg"
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full drop-shadow-2xl"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/max-facility-logo.png"
-                alt="Max Facility"
-                className="absolute left-1/2 top-1/2 w-[44%] -translate-x-1/2 -translate-y-1/2"
-              />
-            </div>
+          <div className="-my-6 mx-auto mb-4 w-full max-w-5xl">
+            <Image
+              src="/images/rink-hero.png"
+              alt="Max Facility logo over an ice rink diagram with measurement points"
+              width={1850}
+              height={950}
+              priority
+              className="h-auto w-full drop-shadow-2xl"
+            />
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -181,7 +172,7 @@ export default function IceRinkPage() {
             <span className="text-green-500">Through Expert Solutions</span>
           </h1>
           <p className="text-xl text-grey-300 max-w-3xl mx-auto mb-10">
-            30+ years of experience optimizing operations, reducing costs, and
+            25+ years of experience optimizing operations, reducing costs, and
             enhancing user experiences at ice facilities across the nation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -206,7 +197,7 @@ export default function IceRinkPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Our Ice Rink Services</h2>
@@ -220,8 +211,10 @@ export default function IceRinkPage() {
             {services.map((service) => (
               <div
                 key={service.name}
-                className="bg-white border border-grey-200 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 group"
+                className="bg-white border border-grey-200 rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 group"
               >
+                <div className="w-14 h-14 bg-green-100 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
                 <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                   <service.icon className="h-7 w-7 text-green-600 group-hover:text-navy-900 transition-colors" />
                 </div>
@@ -245,10 +238,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading">Industry Certifications</h2>
@@ -262,7 +255,7 @@ export default function IceRinkPage() {
             {certifications.map((cert) => (
               <div
                 key={cert.abbr}
-                className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white rounded-3xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-center justify-center h-28 mb-4">
                   <Image
@@ -279,10 +272,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -295,9 +288,9 @@ export default function IceRinkPage() {
               </p>
               <ul className="space-y-4">
                 {[
-                  "Certified experts with 30+ years in ice operations",
+                  "Certified experts with 25+ years in ice operations",
                   "Comprehensive software that digitizes paper systems",
-                  "Proven track record with 100+ facilities served",
+                  "Built by a working rink operator, not a software vendor",
                   "Personalized consulting tailored to your needs",
                   "Ongoing support and training for your staff",
                 ].map((item) => (
@@ -309,9 +302,9 @@ export default function IceRinkPage() {
               </ul>
             </div>
             <div className="relative">
-              <div className="bg-grey-100 rounded-2xl p-8 relative">
+              <div className="bg-grey-100 rounded-3xl p-8 relative">
                 {/* Ice hockey rink diagram */}
-                <div className="bg-white rounded-xl p-4 shadow-lg ring-1 ring-grey-200">
+                <div className="bg-white rounded-3xl p-4 shadow-lg ring-1 ring-grey-200">
                   <Image
                     src="/Max Facility Rink Logo-selection No logo.png"
                     alt="Ice hockey rink diagram with faceoff circles, zone lines, and player positioning markers"
@@ -320,6 +313,8 @@ export default function IceRinkPage() {
                     className="w-full h-auto"
                   />
                 </div>
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
+                  25+ Years Experience
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-lg font-semibold shadow-lg">
                   30+ Years Experience
                 </div>
@@ -327,12 +322,12 @@ export default function IceRinkPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* ---------- RinkReports ---------- */}
 
       {/* RinkReports Hero */}
-      <section id="rinkreports" className="relative py-24 bg-navy scroll-mt-16">
+      <section id="rinkreports" className="px-4 py-10 sm:px-6 lg:px-8 scroll-mt-24"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-green-900 opacity-90" />
           <div
@@ -380,27 +375,23 @@ export default function IceRinkPage() {
             </p>
           </div>
         </div>
-      </section>
+      </div></Reveal></section>
 
       {/* What RinkReports does for you — workflow graphic slot */}
-      <section className="bg-soft-fade py-24">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">What RinkReports does for you</p>
             <h2 className="section-heading">From paper binders to one clean workflow.</h2>
             <p className="section-subheading">
-              See how a day at your facility moves through RinkReports.
+              See how scheduling, ice operations, and every department connect in RinkReports.
             </p>
           </Reveal>
           <Reveal>
-            {/* Drop the workflow graphic in public/images/rinkreports-workflow.svg (or .png)
-                and swap this placeholder for an <Image>. */}
-            <div className="card-soft flex min-h-[320px] items-center justify-center border-2 border-dashed border-navy-200 p-10 text-center text-grey-500">
-              Workflow graphic goes here
-            </div>
+            <WorkflowShowcase />
           </Reveal>
         </div>
-      </section>
+      </Reveal></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {modules.map((module) => (
@@ -430,7 +421,7 @@ export default function IceRinkPage() {
             ))}
           </div>
       {/* Modules Section */}
-      <section className="py-24">
+      <section className="py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">Core Modules</p>
@@ -444,10 +435,10 @@ export default function IceRinkPage() {
             <ModuleTabs />
           </Reveal>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Feature Highlights */}
-      <section className="py-20 bg-grey-50">
+      <section className="bg-soft-fade py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-heading">Platform Highlights</h2>
@@ -461,9 +452,9 @@ export default function IceRinkPage() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start p-6 bg-white rounded-xl shadow-sm"
+                className="flex items-start p-6 bg-white rounded-3xl shadow-sm"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                   <item.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="ml-4">
@@ -481,10 +472,10 @@ export default function IceRinkPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Offline Deep Dive */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -520,8 +511,8 @@ export default function IceRinkPage() {
               </Link>
             </div>
             <div className="relative">
-              <div className="bg-grey-100 rounded-2xl p-8">
-                <div className="aspect-[4/3] bg-white rounded-xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden">
+              <div className="bg-grey-100 rounded-3xl p-8">
+                <div className="aspect-[4/3] bg-white rounded-3xl border-2 border-grey-200 flex items-center justify-center relative overflow-hidden shadow-soft">
                   <Image
                     src="/images/rinkreports_logo.svg"
                     alt="RinkReports"
@@ -537,12 +528,12 @@ export default function IceRinkPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* Pricing Preview */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 md:p-12 text-center">
+          <div className="bg-white rounded-3xl p-8 md:p-12 text-center shadow-soft">
             <h2 className="text-3xl font-bold text-navy mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -590,10 +581,11 @@ export default function IceRinkPage() {
             </p>
           </div>
         </div>
+      </div></Reveal></section>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-navy">
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Elevate Your Ice Facility Operations?
@@ -612,7 +604,7 @@ export default function IceRinkPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }

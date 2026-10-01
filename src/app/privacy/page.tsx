@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -10,14 +11,14 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <section className="py-32 bg-navy pt-32">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
           <p className="text-grey-300">Last updated: December 2025</p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-navy mt-8 mb-4">
@@ -123,7 +124,7 @@ export default function PrivacyPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </Reveal></section>
     </>
   );
 }

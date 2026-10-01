@@ -11,6 +11,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // The custom software offering was retired; send old links home.
+        source: '/custom-software',
+        destination: '/',
+        permanent: true,
+      },
+      {
         // /software was the RinkReports page; RinkReports now lives in the
         // #rinkreports section of the ice rink page.
         source: '/software',

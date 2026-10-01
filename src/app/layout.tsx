@@ -35,6 +35,11 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
+    default: "Max Facility | Ice Rink Operations & RinkReports Software",
+    template: "%s | Max Facility",
+  },
+  description:
+    "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes. CIT, CIRM, CRA certified.",
     default: "Max Facility | RinkReports & Ice Rink Operations",
     template: "%s | Max Facility",
   },
@@ -47,6 +52,7 @@ export const metadata: Metadata = {
     "CIT certified",
     "ice maintenance services",
     "ice rink management",
+    "facility management software",
     "RinkReports",
   ],
   authors: [{ name: "Max Facility" }],
@@ -58,6 +64,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
+    title: "Max Facility | Ice Rink Operations & RinkReports Software",
+    description:
+      "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
     title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
       "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
@@ -68,6 +77,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Max Facility | Ice Rink Operations & RinkReports Software",
+    description:
+      "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
     title: "Max Facility | RinkReports & Ice Rink Operations",
     description:
       "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",

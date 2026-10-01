@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const facilityTypes = [
   "Municipal Recreation Center",
@@ -79,7 +80,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-navy pt-32">
+      <section className="relative overflow-hidden rounded-b-[3rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 pt-40 pb-24"><div className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Get In Touch
@@ -92,7 +93,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24"><Reveal>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -102,7 +103,7 @@ export default function ContactPage() {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-green-600" />
                   </div>
                   <div className="ml-4">
@@ -117,7 +118,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-green-600" />
                   </div>
                   <div className="ml-4">
@@ -130,7 +131,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <Clock className="h-6 w-6 text-green-600" />
                   </div>
                   <div className="ml-4">
@@ -144,7 +145,7 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Links */}
-              <div className="mt-8 p-6 bg-grey-50 rounded-xl">
+              <div className="mt-8 p-6 bg-grey-50 rounded-3xl">
                 <h3 className="font-semibold text-navy mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                   <li>
@@ -177,7 +178,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-grey-50 rounded-2xl p-8">
+              <div className="bg-grey-50 rounded-3xl p-8">
                 <h2 className="text-2xl font-bold text-navy mb-6">
                   Send Us a Message
                 </h2>
@@ -218,7 +219,7 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
                           placeholder="John Smith"
                         />
                       </div>
@@ -237,7 +238,7 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
                           placeholder="john@example.com"
                         />
                       </div>
@@ -255,7 +256,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
                           placeholder="(555) 555-5555"
                         />
                       </div>
@@ -273,7 +274,7 @@ export default function ContactPage() {
                           name="facilityName"
                           value={formData.facilityName}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
                           placeholder="Central Ice Arena"
                         />
                       </div>
@@ -290,7 +291,7 @@ export default function ContactPage() {
                           name="facilityType"
                           value={formData.facilityType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white"
                         >
                           <option value="">Select type...</option>
                           {facilityTypes.map((type) => (
@@ -314,7 +315,7 @@ export default function ContactPage() {
                           required
                           value={formData.serviceInterest}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white"
+                          className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white"
                         >
                           <option value="">Select interest...</option>
                           {serviceInterests.map((interest) => (
@@ -340,13 +341,13 @@ export default function ContactPage() {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-grey-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                        className="w-full px-4 py-3 border border-grey-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                         placeholder="Tell us about your facility and how we can help..."
                       />
                     </div>
 
                     {error && (
-                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600">
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600">
                         {error}
                       </div>
                     )}
@@ -354,6 +355,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
+                      className="w-full md:w-auto px-8 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                       className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-lg hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       {isSubmitting ? (
@@ -393,9 +395,10 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal></section>
 
       {/* CTA Section */}
+      <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
       <section className="py-16 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -407,13 +410,14 @@ export default function ContactPage() {
           </p>
           <a
             href="mailto:kelly@maxfacility.com"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-green-600 bg-white rounded-full hover:bg-grey-100 transition-colors"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
           >
             <Mail className="mr-2 h-5 w-5" />
             Email kelly@maxfacility.com
           </a>
         </div>
-      </section>
+      </div></Reveal></section>
     </>
   );
 }
