@@ -59,7 +59,7 @@ const workflows = [
   },
   {
     tab: "Air Quality Monitoring",
-    src: "/images/workflows/air-quality-monitoring.webp",
+    src: "/images/workflows/air-quality-monitoring-v2.webp",
     width: 1448,
     height: 1086,
     alt: "Air quality monitoring: monitor, detect, alert, act, verify. Readings are compared to configured limits, an out-of-range alert is sent to the right people, corrective action is taken, and safe levels are confirmed, with history and records kept for compliance.",
