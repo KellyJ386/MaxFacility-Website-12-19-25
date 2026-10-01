@@ -181,7 +181,7 @@ export default function DemoForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full md:w-auto px-8 py-4 bg-green-500 text-navy-900 font-semibold rounded-lg hover:bg-green-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Request a Demo"}
       </button>

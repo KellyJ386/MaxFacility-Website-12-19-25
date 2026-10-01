@@ -143,7 +143,7 @@ export default function PricingPage() {
               className="mx-auto mb-6 h-auto w-[200px] md:w-[260px]"
             />
             <div className="flex items-center justify-center mb-4">
-              <Monitor className="h-8 w-8 text-green-500 mr-2" />
+              <Monitor className="h-8 w-8 text-green-600 mr-2" />
               <h2 className="text-2xl font-bold text-navy">RinkReports Software</h2>
             </div>
             <p className="text-grey-600">
@@ -164,7 +164,7 @@ export default function PricingPage() {
               >
                 {plan.badge && (
                   <div className="bg-green-500 py-4 px-8">
-                    <p className="text-center text-white font-semibold">
+                    <p className="text-center text-navy-900 font-semibold">
                       {plan.badge}
                     </p>
                   </div>
@@ -190,7 +190,7 @@ export default function PricingPage() {
                   <div className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <div key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                         <span className="text-grey-700">{feature}</span>
                       </div>
                     ))}
@@ -253,7 +253,7 @@ export default function PricingPage() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                       <span className="text-grey-700">{feature}</span>
                     </li>
                   ))}

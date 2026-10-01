@@ -367,7 +367,7 @@ export default function AboutPage() {
       </section>
 
       {/* Positioning Band */}
-      <section className="py-16 bg-green-500">
+      <section className="py-16 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
@@ -385,10 +385,10 @@ export default function AboutPage() {
               },
             ].map((item) => (
               <div key={item.value}>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">
+                <div className="text-2xl md:text-3xl font-bold text-green-500 mb-2">
                   {item.value}
                 </div>
-                <div className="text-green-50 text-sm">{item.label}</div>
+                <div className="text-grey-300 text-sm">{item.label}</div>
               </div>
             ))}
           </div>

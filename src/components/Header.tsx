@@ -52,7 +52,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
             >
               Get Started
             </Link>
@@ -96,7 +96,7 @@ export default function Header() {
             <div className="px-3 py-3">
               <Link
                 href="/contact"
-                className="block w-full text-center px-5 py-2 text-sm font-semibold text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors"
+                className="block w-full text-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started

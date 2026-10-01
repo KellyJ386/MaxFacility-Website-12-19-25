@@ -221,7 +221,7 @@ export default function IceRinkPage() {
                 className="bg-white border border-grey-200 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 group"
               >
                 <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
-                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
+                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-navy-900 transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">
                   {service.name}
@@ -300,7 +300,7 @@ export default function IceRinkPage() {
                   "Ongoing support and training for your staff",
                 ].map((item) => (
                   <li key={item} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0" />
                     <span className="text-grey-700">{item}</span>
                   </li>
                 ))}
@@ -318,7 +318,7 @@ export default function IceRinkPage() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg">
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-lg font-semibold shadow-lg">
                   30+ Years Experience
                 </div>
               </div>
@@ -410,7 +410,7 @@ export default function IceRinkPage() {
                       key={feature}
                       className="flex items-center text-sm text-grey-500"
                     >
-                      <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -484,7 +484,7 @@ export default function IceRinkPage() {
                   `Built on the same foundation across all ${moduleCount} modules`,
                 ].map((feature) => (
                   <li key={feature} className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-grey-700">{feature}</span>
                   </li>
                 ))}
@@ -546,7 +546,7 @@ export default function IceRinkPage() {
                 "Email support",
               ].map((feature) => (
                 <li key={feature} className="flex items-center text-grey-700">
-                  <Check className="h-5 w-5 text-green-500 mr-2" />
+                  <Check className="h-5 w-5 text-green-600 mr-2" />
                   {feature}
                 </li>
               ))}

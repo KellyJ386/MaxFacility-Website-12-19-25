@@ -98,7 +98,7 @@ export default function Home() {
             unoptimized
             className="mx-auto h-auto w-56 sm:w-72"
           />
-          <p className="mt-6 text-xs font-bold uppercase tracking-[0.3em] text-green-500 sm:text-sm">
+          <p className="mt-6 font-mono text-xs font-bold uppercase tracking-[0.3em] text-green-500 sm:text-sm">
             Built by an ice rink operator
           </p>
           <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
@@ -136,7 +136,7 @@ export default function Home() {
                   <f.icon className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-navy">{f.title}</h3>
-                <p className="text-grey-600">{f.description}</p>
+                <p className="text-grey-700">{f.description}</p>
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function Home() {
                   <d.icon className="h-6 w-6 text-green-500" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-navy">{d.title}</h3>
-                <p className="text-grey-600">{d.description}</p>
+                <p className="text-grey-700">{d.description}</p>
               </div>
             ))}
           </div>
@@ -177,7 +177,7 @@ export default function Home() {
           <h2 className="section-heading">
             Why RinkReports understands your rink
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-grey-600">
+          <p className="mx-auto mt-4 max-w-2xl text-grey-700">
             RinkReports is built by Kelly Johnson, founder of Max Facility LLC,
             who holds the industry&apos;s core ice rink certifications.
           </p>
@@ -191,9 +191,9 @@ export default function Home() {
                   height={120}
                   className="mx-auto h-24 w-auto object-contain"
                 />
-                <p className="mt-3 text-sm font-semibold text-navy">{c.abbr}</p>
-                <p className="text-xs text-grey-600">{c.name}</p>
-                <p className="text-xs text-grey-500">U.S. Ice Rink Association</p>
+                <p className="mt-3 font-mono text-sm font-semibold text-navy">{c.abbr}</p>
+                <p className="text-xs text-grey-700">{c.name}</p>
+                <p className="text-xs text-grey-700">U.S. Ice Rink Association</p>
               </div>
             ))}
           </div>
@@ -207,28 +207,28 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="rounded-xl border-2 border-green-500 bg-white p-6">
               <p className="text-lg font-bold text-navy">All Modules</p>
-              <p className="mt-2 text-3xl font-extrabold text-navy">
-                $799<span className="text-base font-medium text-grey-600">/year</span>
+              <p className="mt-2 font-mono text-3xl font-extrabold text-navy">
+                $799<span className="text-base font-medium text-grey-700">/year</span>
               </p>
-              <p className="mt-2 text-sm text-grey-600">The complete platform.</p>
+              <p className="mt-2 text-sm text-grey-700">The complete platform.</p>
             </div>
             <div className="rounded-xl border border-grey-200 bg-white p-6">
               <p className="text-lg font-bold text-navy">Ice Depth</p>
-              <p className="mt-2 text-3xl font-extrabold text-navy">
-                $399<span className="text-base font-medium text-grey-600">/year</span>
+              <p className="mt-2 font-mono text-3xl font-extrabold text-navy">
+                $399<span className="text-base font-medium text-grey-700">/year</span>
               </p>
-              <p className="mt-2 text-sm text-grey-600">
+              <p className="mt-2 text-sm text-grey-700">
                 Depth monitoring and ice operations.
               </p>
             </div>
           </div>
-          <p className="mt-6 text-sm text-grey-600">
+          <p className="mt-6 text-sm text-grey-700">
             15% off for multi-facility subscriptions.{" "}
             <Link href="/pricing" className="font-semibold text-green-600 hover:text-green-700">
               Full pricing →
             </Link>
           </p>
-          <p className="mt-10 text-sm text-grey-600">
+          <p className="mt-10 text-sm text-grey-700">
             Also available: ice maintenance and operations consulting.{" "}
             <Link href="/services" className="font-semibold text-green-600 hover:text-green-700">
               Learn more →
