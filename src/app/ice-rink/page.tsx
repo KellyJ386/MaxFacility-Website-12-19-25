@@ -17,6 +17,8 @@ import {
   Scale,
 } from "lucide-react";
 import { modules, moduleCount } from "@/lib/modules";
+import Reveal from "@/components/Reveal";
+import ModuleTabs from "@/components/ModuleTabs";
 
 export const metadata: Metadata = {
   title: "Ice Rink Solutions",
@@ -380,16 +382,25 @@ export default function IceRinkPage() {
         </div>
       </section>
 
-      {/* Modules Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-heading">Core Modules</h2>
+      {/* What RinkReports does for you — workflow graphic slot */}
+      <section className="bg-soft-fade py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="mb-12 text-center">
+            <p className="eyebrow mb-5">What RinkReports does for you</p>
+            <h2 className="section-heading">From paper binders to one clean workflow.</h2>
             <p className="section-subheading">
-              {moduleCount} powerful modules designed specifically for ice
-              facility operations, all working together seamlessly.
+              See how a day at your facility moves through RinkReports.
             </p>
-          </div>
+          </Reveal>
+          <Reveal>
+            {/* Drop the workflow graphic in public/images/rinkreports-workflow.svg (or .png)
+                and swap this placeholder for an <Image>. */}
+            <div className="card-soft flex min-h-[320px] items-center justify-center border-2 border-dashed border-navy-200 p-10 text-center text-grey-500">
+              Workflow graphic goes here
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {modules.map((module) => (
@@ -418,6 +429,20 @@ export default function IceRinkPage() {
               </div>
             ))}
           </div>
+      {/* Modules Section */}
+      <section className="py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="mb-12 text-center">
+            <p className="eyebrow mb-5">Core Modules</p>
+            <h2 className="section-heading">Everything your facility runs on.</h2>
+            <p className="section-subheading">
+              {moduleCount} modules designed specifically for ice facility
+              operations, all working together seamlessly.
+            </p>
+          </Reveal>
+          <Reveal>
+            <ModuleTabs />
+          </Reveal>
         </div>
       </section>
 

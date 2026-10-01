@@ -15,24 +15,52 @@
 
   body {
     @apply antialiased;
+    background: #f6f9fd;
+  }
+
+  h1, h2, h3 {
+    @apply font-display tracking-tight;
   }
 }
 
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-green-500 rounded-full shadow-soft hover:bg-green-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white border-2 border-white rounded-lg hover:bg-white hover:text-navy transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-navy transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-navy border-2 border-navy rounded-lg hover:bg-navy hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-navy border-2 border-navy rounded-full hover:bg-navy hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2;
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-navy mb-4;
+    @apply font-display text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4;
+  }
+
+  /* Small letterspaced label inside a pill */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-navy-100 bg-white px-4 py-2 font-label text-xs font-bold uppercase tracking-[0.2em] text-navy shadow-soft;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-2 w-2 rounded-full bg-green-500;
+  }
+
+  .card-soft {
+    @apply rounded-3xl border border-white/70 bg-white shadow-soft;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-navy-100 bg-white/80 px-4 py-2 text-sm font-semibold text-navy;
+  }
+
+  /* Soft section backdrop that fades into the page */
+  .bg-soft-fade {
+    background: linear-gradient(180deg, #f6f9fd 0%, #e8f0fa 50%, #f6f9fd 100%);
   }
 
   .section-subheading {
@@ -45,4 +73,18 @@
     text-wrap: balance;
   }
 
+}
+
+/* Scroll-in reveal (see components/Reveal.tsx) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }

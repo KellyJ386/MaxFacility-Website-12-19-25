@@ -18,47 +18,45 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy shadow-lg">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+      <nav
+        className="mx-auto max-w-7xl rounded-full bg-navy/95 px-4 shadow-float backdrop-blur sm:px-6"
+        aria-label="Top"
+      >
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center" aria-label="Max Facility home">
-              <Image
-                src="/images/max-facility-logo.png"
-                alt="Max Facility"
-                width={1612}
-                height={756}
-                priority
-                className="h-11 w-auto"
-              />
-            </Link>
-          </div>
+          <Link href="/" className="flex items-center" aria-label="Max Facility home">
+            <Image
+              src="/images/max-facility-logo.png"
+              alt="Max Facility"
+              width={1612}
+              height={756}
+              priority
+              className="h-11 w-auto"
+            />
+          </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-grey-300 hover:text-white transition-colors"
+                className="font-display text-sm font-medium text-grey-300 transition-colors hover:text-white"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden lg:flex lg:items-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-2.5 font-display text-sm font-semibold text-white transition-colors hover:bg-green-600"
             >
-              Get Started
+              Book a Demo
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -75,14 +73,8 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        <div
-          className={cn(
-            "lg:hidden",
-            mobileMenuOpen ? "block" : "hidden"
-          )}
-        >
-          <div className="space-y-1 pb-3 pt-2">
+        <div className={cn("lg:hidden", mobileMenuOpen ? "block" : "hidden")}>
+          <div className="space-y-1 pb-4 pt-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -93,13 +85,14 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="px-3 py-3">
+            <div className="px-3 pt-3">
               <Link
                 href="/contact"
                 className="block w-full text-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
+                className="block w-full rounded-full bg-green-500 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-green-600"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Book a Demo
               </Link>
             </div>
           </div>

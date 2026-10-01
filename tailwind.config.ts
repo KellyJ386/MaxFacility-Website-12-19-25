@@ -51,9 +51,16 @@ const config: Config = {
           900: "#212223",
         },
       },
+      boxShadow: {
+        soft: "0 10px 40px -12px rgba(0, 34, 68, 0.18)",
+        float: "0 24px 60px -20px rgba(0, 34, 68, 0.35)",
+      },
       fontFamily: {
         sans: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
         mono: ["var(--font-space-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        label: ["var(--font-label)", "system-ui", "sans-serif"],
       },
     },
   },
