@@ -2,56 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Ruler,
-  ClipboardCheck,
-  ShieldAlert,
-  CalendarClock,
-  Thermometer,
-  FileDown,
   WifiOff,
   Wrench,
   Users,
 } from "lucide-react";
-import { moduleCount } from "@/lib/modules";
 import Reveal from "@/components/Reveal";
 import WorkflowShowcase from "@/components/WorkflowShowcase";
-
-const features = [
-  {
-    icon: Ruler,
-    title: "Ice Depth Monitoring",
-    description:
-      "Numbered measurement points on your own rink layout, with Bluetooth caliper input.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Daily Reports",
-    description:
-      "Up to 20 admin-configurable tabs, locked and submitted at end of day.",
-  },
-  {
-    icon: ShieldAlert,
-    title: "Incident & Accident Reports",
-    description:
-      "Document incidents and accidents once, with body diagrams, in one record.",
-  },
-  {
-    icon: CalendarClock,
-    title: "Employee Scheduling",
-    description: "Built for facilities with staffs of up to 1,000.",
-  },
-  {
-    icon: Thermometer,
-    title: "Refrigeration & Air Quality",
-    description:
-      "Plant and air logs, with jurisdiction-aware compliance built in.",
-  },
-  {
-    icon: FileDown,
-    title: "PDF Reports",
-    description: "Stakeholder-ready reports in one click.",
-  },
-];
 
 const differentiators = [
   {
@@ -124,40 +80,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What it does */}
-      <section className="py-24">
-        <Reveal>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
-              <p className="eyebrow mb-5">What it does</p>
-              <h2 className="section-heading">Everything your rink logs, in one place</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {features.map((f) => (
-                <div
-                  key={f.title}
-                  className="card-soft p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-float"
-                >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-navy">
-                    <f.icon className="h-7 w-7 text-green-500" />
-                  </div>
-                  <h3 className="mb-2 text-xl font-bold text-navy">{f.title}</h3>
-                  <p className="text-grey-700">{f.description}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-10 text-center">
-              <Link
-                href="/ice-rink#rinkreports"
-                className="pill font-semibold text-navy hover:bg-white"
-              >
-                See all {moduleCount} modules <ArrowRight className="h-4 w-4" />
-              </Link>
-            </p>
-          </div>
-        </Reveal>
-      </section>
-
       {/* What RinkReports does for you (desktop and tablet) */}
       <section className="hidden bg-soft-fade py-24 md:block">
         <Reveal>
@@ -175,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Why it works in a rink */}
-      <section className="bg-soft-fade py-24">
+      <section className="py-24">
         <Reveal>
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
