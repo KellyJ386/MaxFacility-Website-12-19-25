@@ -52,7 +52,7 @@ export default function TermsPage() {
             </p>
             <ul className="list-disc pl-6 text-grey-600 mb-6">
               <li>All Modules plan: $999 per year (annual billing)</li>
-              <li>Ice Depth plan: $750 per year (annual billing)</li>
+              <li>Ice Depth plan: $599 per year (annual billing)</li>
               <li>Multi-facility discount: 15% off for 2+ facilities</li>
               <li>Subscriptions renew automatically unless cancelled</li>
             </ul>

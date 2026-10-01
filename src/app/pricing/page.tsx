@@ -6,14 +6,14 @@ import { Check, ArrowRight, Snowflake, Users, Monitor } from "lucide-react";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $399/year.",
+    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $599/year.",
 };
 
 const softwarePlans = [
   {
     name: "All Modules",
     description: "Complete ice facility management platform",
-    annualPrice: 799,
+    annualPrice: 999,
     highlight: true,
     badge: "Most Popular — All Features Included",
     features: [
@@ -40,7 +40,7 @@ const softwarePlans = [
   {
     name: "Ice Depth",
     description: "Ice depth monitoring with custom diagrams and ice operations",
-    annualPrice: 399,
+    annualPrice: 599,
     highlight: false,
     badge: null,
     features: [
@@ -105,7 +105,7 @@ const faqs = [
   {
     question: "How is RinkReports Software billed?",
     answer:
-      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $799 per facility per year for the full platform, and the Ice Depth plan is $399 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
+      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $999 per facility per year for the full platform, and the Ice Depth plan is $599 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",

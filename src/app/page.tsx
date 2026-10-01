@@ -209,14 +209,14 @@ export default function Home() {
             <div className="rounded-xl border-2 border-green-500 bg-white p-6">
               <p className="text-lg font-bold text-navy">All Modules</p>
               <p className="mt-2 font-mono text-3xl font-extrabold text-navy">
-                $799<span className="text-base font-medium text-grey-700">/year per facility</span>
+                $999<span className="text-base font-medium text-grey-700">/year per facility</span>
               </p>
               <p className="mt-2 text-sm text-grey-700">The complete platform.</p>
             </div>
             <div className="rounded-xl border border-grey-200 bg-white p-6">
               <p className="text-lg font-bold text-navy">Ice Depth</p>
               <p className="mt-2 font-mono text-3xl font-extrabold text-navy">
-                $399<span className="text-base font-medium text-grey-700">/year per facility</span>
+                $599<span className="text-base font-medium text-grey-700">/year per facility</span>
               </p>
               <p className="mt-2 text-sm text-grey-700">
                 Depth monitoring and ice operations.
