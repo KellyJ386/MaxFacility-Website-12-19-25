@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { modules } from "@/lib/modules";
@@ -9,21 +9,29 @@ import { modules } from "@/lib/modules";
 export default function ModuleTabs() {
   const [active, setActive] = useState(0);
   const m = modules[active];
+  const listRef = useRef<HTMLDivElement>(null);
+
+  function select(i: number, el: HTMLElement) {
+    setActive(i);
+    // On phones the tab row scrolls sideways; keep the chosen tab in view.
+    el.scrollIntoView?.({ inline: "center", block: "nearest", behavior: "smooth" });
+  }
 
   return (
     <div>
       <div
+        ref={listRef}
         role="tablist"
-        className="mx-auto mb-10 flex max-w-5xl flex-wrap justify-center gap-2 rounded-[2rem] bg-white p-2 shadow-soft"
+        className="mx-auto mb-10 flex max-w-5xl gap-2 overflow-x-auto rounded-[2rem] bg-white p-2 shadow-soft [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible [&::-webkit-scrollbar]:hidden"
       >
         {modules.map((mod, i) => (
           <button
             key={mod.title}
             role="tab"
             aria-selected={i === active}
-            onClick={() => setActive(i)}
+            onClick={(e) => select(i, e.currentTarget)}
             className={cn(
-              "rounded-full px-5 py-3 font-display text-sm font-semibold transition-all",
+              "shrink-0 whitespace-nowrap rounded-full px-5 py-3 font-display text-sm font-semibold transition-all",
               i === active
                 ? "bg-gradient-to-r from-navy to-navy-500 text-white shadow-md"
                 : "text-navy hover:bg-navy-50"
