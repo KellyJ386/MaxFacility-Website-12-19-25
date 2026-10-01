@@ -37,21 +37,26 @@ export default function WorkflowShowcase() {
   const [active, setActive] = useState(0);
   const w = workflows[active];
 
+  function select(i: number, el: HTMLElement) {
+    setActive(i);
+    el.scrollIntoView?.({ inline: "center", block: "nearest", behavior: "smooth" });
+  }
+
   return (
     <div>
       <div
         role="tablist"
         aria-label="RinkReports workflows"
-        className="mx-auto mb-8 flex max-w-4xl flex-wrap justify-center gap-2 rounded-[2rem] bg-white p-2 shadow-soft"
+        className="mx-auto mb-8 flex max-w-4xl gap-2 overflow-x-auto rounded-[2rem] bg-white p-2 shadow-soft [scrollbar-width:none] sm:flex-wrap sm:justify-center sm:overflow-visible [&::-webkit-scrollbar]:hidden"
       >
         {workflows.map((item, i) => (
           <button
             key={item.tab}
             role="tab"
             aria-selected={i === active}
-            onClick={() => setActive(i)}
+            onClick={(e) => select(i, e.currentTarget)}
             className={cn(
-              "rounded-full px-5 py-3 font-display text-sm font-semibold transition-all",
+              "shrink-0 whitespace-nowrap rounded-full px-5 py-3 font-display text-sm font-semibold transition-all",
               i === active
                 ? "bg-gradient-to-r from-navy to-navy-500 text-white shadow-md"
                 : "text-navy hover:bg-navy-50"
@@ -66,18 +71,35 @@ export default function WorkflowShowcase() {
         role="tabpanel"
         className="card-soft mx-auto max-w-6xl overflow-hidden p-2 sm:p-3"
       >
-        {workflows.map((item, i) => (
-          <Image
-            key={item.src}
-            src={item.src}
-            alt={item.alt}
-            width={1672}
-            height={941}
-            priority={i === 0}
-            sizes="(min-width: 1152px) 1152px, 100vw"
-            className={cn("h-auto w-full rounded-2xl", i !== active && "hidden")}
-          />
-        ))}
+        {/* The graphics carry small text, so on phones they scroll sideways at a
+            readable size instead of shrinking to fit. */}
+        <div className="overflow-x-auto rounded-2xl md:overflow-visible">
+          <div className="min-w-[960px] md:min-w-0">
+            {workflows.map((item, i) => (
+              <Image
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                width={1672}
+                height={941}
+                priority={i === 0}
+                sizes="(min-width: 1152px) 1152px, 960px"
+                className={cn("h-auto w-full rounded-2xl", i !== active && "hidden")}
+              />
+            ))}
+          </div>
+        </div>
+        <p className="flex items-center justify-between gap-3 px-3 pb-2 pt-3 text-xs text-grey-600 md:hidden">
+          <span>Swipe sideways to read the full graphic</span>
+          <a
+            href={w.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 font-semibold text-navy underline"
+          >
+            Open full size
+          </a>
+        </p>
       </div>
     </div>
   );
