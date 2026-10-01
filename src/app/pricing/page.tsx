@@ -95,7 +95,7 @@ const faqs = [
   {
     question: "Do you offer discounts for multiple facilities?",
     answer:
-      "Yes! We offer a 15% discount on every facility for organizations managing 2 or more facilities. Contact us for volume pricing details.",
+      "Yes! We offer a 15% discount on every facility for organizations managing 2 or more facilities.",
   },
   {
     question: "How does the consulting pricing work?",
