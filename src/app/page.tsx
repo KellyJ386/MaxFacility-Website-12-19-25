@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { moduleCount } from "@/lib/modules";
 import Reveal from "@/components/Reveal";
+import WorkflowShowcase from "@/components/WorkflowShowcase";
 
 const features = [
   {
@@ -153,6 +154,22 @@ export default function Home() {
                 See all {moduleCount} modules <ArrowRight className="h-4 w-4" />
               </Link>
             </p>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* What RinkReports does for you (desktop and tablet) */}
+      <section className="hidden bg-soft-fade py-24 md:block">
+        <Reveal>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <p className="eyebrow mb-5">What RinkReports does for you</p>
+              <h2 className="section-heading">From paper binders to one clean workflow.</h2>
+              <p className="section-subheading">
+                See how scheduling, ice operations, and every department connect in RinkReports.
+              </p>
+            </div>
+            <WorkflowShowcase />
           </div>
         </Reveal>
       </section>

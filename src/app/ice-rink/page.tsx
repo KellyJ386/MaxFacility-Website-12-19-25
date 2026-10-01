@@ -374,7 +374,7 @@ export default function IceRinkPage() {
       </div></Reveal></section>
 
       {/* What RinkReports does for you — workflow graphic slot */}
-      <section className="bg-soft-fade py-24"><Reveal>
+      <section className="hidden bg-soft-fade py-24 md:block"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">What RinkReports does for you</p>
@@ -389,33 +389,6 @@ export default function IceRinkPage() {
         </div>
       </Reveal></section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {modules.map((module) => (
-              <div
-                key={module.title}
-                className="bg-white border border-grey-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4">
-                  <module.icon className="h-6 w-6 text-green-500" />
-                </div>
-                <h3 className="text-lg font-bold text-navy mb-2">
-                  {module.title}
-                </h3>
-                <p className="text-grey-700 text-sm mb-4">{module.description}</p>
-                <ul className="space-y-2">
-                  {module.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-center text-sm text-grey-700"
-                    >
-                      <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
       {/* Modules Section */}
       <section className="py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
