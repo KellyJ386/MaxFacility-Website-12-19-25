@@ -42,7 +42,7 @@ const services = [
       "All-in-one ice rink management platform. Digitize operations, track ice depth, manage schedules, and generate reports effortlessly.",
     icon: Monitor,
     href: "#rinkreports",
-    price: "From $399/year",
+    price: "From $599/year per facility",
   },
   {
     name: "Ice Maintenance",
@@ -215,11 +215,13 @@ export default function IceRinkPage() {
               >
                 <div className="w-14 h-14 bg-green-100 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
                   <service.icon className="h-7 w-7 text-green-600 group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500 transition-colors">
+                  <service.icon className="h-7 w-7 text-green-600 group-hover:text-navy-900 transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">
                   {service.name}
                 </h3>
-                <p className="text-grey-600 mb-4">{service.description}</p>
+                <p className="text-grey-700 mb-4">{service.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-green-600 font-medium">
                     {service.location || service.price}
@@ -265,7 +267,7 @@ export default function IceRinkPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-1">{cert.name}</h3>
-                <p className="text-sm text-grey-500">{cert.description}</p>
+                <p className="text-sm text-grey-700">{cert.description}</p>
               </div>
             ))}
           </div>
@@ -280,7 +282,7 @@ export default function IceRinkPage() {
               <h2 className="section-heading text-left">
                 Why Choose Max Facility?
               </h2>
-              <p className="text-grey-600 mb-8">
+              <p className="text-grey-700 mb-8">
                 We combine decades of hands-on experience with modern technology
                 to deliver unmatched value for ice facility operations.
               </p>
@@ -293,7 +295,7 @@ export default function IceRinkPage() {
                   "Ongoing support and training for your staff",
                 ].map((item) => (
                   <li key={item} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0" />
                     <span className="text-grey-700">{item}</span>
                   </li>
                 ))}
@@ -313,6 +315,8 @@ export default function IceRinkPage() {
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
                   25+ Years Experience
+                <div className="absolute -bottom-4 -right-4 bg-green-500 text-navy-900 px-6 py-3 rounded-lg font-semibold shadow-lg">
+                  30+ Years Experience
                 </div>
               </div>
             </div>
@@ -358,8 +362,8 @@ export default function IceRinkPage() {
               employees, and generate reports—all in one place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Request Demo
+              <Link href="/request-demo" className="btn-primary text-lg px-8 py-4">
+                Request a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link href="/pricing" className="btn-secondary text-lg px-8 py-4">
@@ -367,7 +371,7 @@ export default function IceRinkPage() {
               </Link>
             </div>
             <p className="mt-6 text-green-400 font-semibold">
-              Starting at $399/year
+              Starting at $599/year per facility
             </p>
           </div>
         </div>
@@ -389,6 +393,33 @@ export default function IceRinkPage() {
         </div>
       </Reveal></section>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {modules.map((module) => (
+              <div
+                key={module.title}
+                className="bg-white border border-grey-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mb-4">
+                  <module.icon className="h-6 w-6 text-green-500" />
+                </div>
+                <h3 className="text-lg font-bold text-navy mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-grey-700 text-sm mb-4">{module.description}</p>
+                <ul className="space-y-2">
+                  {module.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center text-sm text-grey-700"
+                    >
+                      <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
       {/* Modules Section */}
       <section className="py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -435,7 +466,7 @@ export default function IceRinkPage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-grey-600 text-sm">{item.description}</p>
+                  <p className="text-grey-700 text-sm">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -454,7 +485,7 @@ export default function IceRinkPage() {
               <h2 className="section-heading text-left mt-2">
                 Works When Your Building Doesn&apos;t Cooperate
               </h2>
-              <p className="text-grey-600 mb-6">
+              <p className="text-grey-700 mb-6">
                 Ice rinks are concrete boxes. Wi-Fi drops, cell signal dies, and
                 your staff still have a Saturday public skate to run. RinkReports
                 is built offline-first — every module keeps working without a
@@ -469,7 +500,7 @@ export default function IceRinkPage() {
                   `Built on the same foundation across all ${moduleCount} modules`,
                 ].map((feature) => (
                   <li key={feature} className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-grey-700">{feature}</span>
                   </li>
                 ))}
@@ -490,7 +521,7 @@ export default function IceRinkPage() {
                     className="object-contain p-6"
                   />
                 </div>
-                <p className="text-center text-grey-500 text-sm mt-4">
+                <p className="text-center text-grey-700 text-sm mt-4">
                   Offline-first across every module
                 </p>
               </div>
@@ -506,19 +537,19 @@ export default function IceRinkPage() {
             <h2 className="text-3xl font-bold text-navy mb-4">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-grey-600 mb-8">
+            <p className="text-grey-700 mb-8">
               Everything you need to manage your ice facility, on a simple annual
               subscription.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-green-600">$799</div>
-                <div className="text-grey-500">per year — All Modules</div>
+                <div className="text-5xl font-bold text-green-600">$999</div>
+                <div className="text-grey-700">per facility, per year — All Modules</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-grey-200" />
               <div className="text-center">
-                <div className="text-5xl font-bold text-navy">$399</div>
-                <div className="text-grey-500">per year — Ice Depth</div>
+                <div className="text-5xl font-bold text-navy">$599</div>
+                <div className="text-grey-700">per facility, per year — Ice Depth</div>
               </div>
             </div>
             <ul className="inline-grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-left mb-8">
@@ -531,7 +562,7 @@ export default function IceRinkPage() {
                 "Email support",
               ].map((feature) => (
                 <li key={feature} className="flex items-center text-grey-700">
-                  <Check className="h-5 w-5 text-green-500 mr-2" />
+                  <Check className="h-5 w-5 text-green-600 mr-2" />
                   {feature}
                 </li>
               ))}
@@ -545,12 +576,13 @@ export default function IceRinkPage() {
                 View Full Pricing
               </Link>
             </div>
-            <p className="mt-4 text-sm text-grey-500">
-              15% discount for multi-facility subscriptions
+            <p className="mt-4 text-sm text-grey-700">
+              15% off every facility for multi-facility subscriptions
             </p>
           </div>
         </div>
       </div></Reveal></section>
+      </section>
 
       {/* CTA Section */}
       <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 py-16 shadow-float">

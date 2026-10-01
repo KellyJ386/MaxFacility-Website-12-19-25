@@ -7,7 +7,16 @@ interface ContactFormData {
   facilityName?: string;
   facilityType?: string;
   serviceInterest: string;
-  message: string;
+  message?: string;
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 export async function POST(request: NextRequest) {
@@ -15,7 +24,13 @@ export async function POST(request: NextRequest) {
     const data: ContactFormData = await request.json();
 
     // Validate required fields
-    if (!data.name || !data.email || !data.serviceInterest || !data.message) {
+    const isDemo = data.serviceInterest === "demo";
+    if (
+      !data.name ||
+      !data.email ||
+      !data.serviceInterest ||
+      (!isDemo && !data.message)
+    ) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -52,7 +67,7 @@ export async function POST(request: NextRequest) {
         facility_name: data.facilityName || null,
         facility_type: data.facilityType || null,
         service_interest: data.serviceInterest,
-        message: data.message,
+        message: data.message || null,
         created_at: new Date().toISOString(),
       });
 
@@ -63,12 +78,21 @@ export async function POST(request: NextRequest) {
     }
     */
 
-    // Example Resend email integration (uncomment when configured):
-    /*
+    // Log first so a lead is recoverable from the server logs even if the
+    // email send below fails.
+    console.log("Contact form submission:", data);
+
+    // Email notification via Resend. Active when RESEND_API_KEY and
+    // CONTACT_EMAIL are set; otherwise the submission is only logged.
     const resendApiKey = process.env.RESEND_API_KEY;
     const contactEmail = process.env.CONTACT_EMAIL;
 
     if (resendApiKey && contactEmail) {
+      const label = isDemo ? "Demo Request" : "New Lead";
+      const oneLine = (v: string) => v.replace(/[\r\n]+/g, " ").trim();
+      const row = (name: string, value?: string) =>
+        `<p><strong>${name}:</strong> ${escapeHtml(value || "Not provided")}</p>`;
+
       const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -78,29 +102,31 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           from: "Max Facility <noreply@maxfacility.com>",
           to: contactEmail,
-          subject: `New Lead: ${data.name} - ${data.serviceInterest}`,
+          reply_to: data.email,
+          subject: `${label}: ${oneLine(data.name)} - ${oneLine(
+            data.serviceInterest
+          )}`,
           html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${data.name}</p>
-            <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>Phone:</strong> ${data.phone || "Not provided"}</p>
-            <p><strong>Facility Name:</strong> ${data.facilityName || "Not provided"}</p>
-            <p><strong>Facility Type:</strong> ${data.facilityType || "Not provided"}</p>
-            <p><strong>Service Interest:</strong> ${data.serviceInterest}</p>
-            <p><strong>Message:</strong></p>
-            <p>${data.message}</p>
+            <h2>${label}</h2>
+            ${row("Name", data.name)}
+            ${row("Email", data.email)}
+            ${row("Phone", data.phone)}
+            ${row("Facility Name", data.facilityName)}
+            ${row("Facility Type", data.facilityType)}
+            ${row("Service Interest", data.serviceInterest)}
+            ${row("Message", data.message)}
           `,
         }),
       });
 
       if (!response.ok) {
         console.error("Resend error:", await response.text());
+        return NextResponse.json(
+          { error: "Failed to send notification" },
+          { status: 502 }
+        );
       }
     }
-    */
-
-    // Log the submission for development
-    console.log("Contact form submission:", data);
 
     return NextResponse.json(
       { success: true, message: "Form submitted successfully" },

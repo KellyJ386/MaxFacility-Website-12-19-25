@@ -7,14 +7,14 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $399/year.",
+    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $599/year.",
 };
 
 const softwarePlans = [
   {
     name: "All Modules",
     description: "Complete ice facility management platform",
-    annualPrice: 799,
+    annualPrice: 999,
     highlight: true,
     badge: "Most Popular — All Features Included",
     features: [
@@ -41,7 +41,7 @@ const softwarePlans = [
   {
     name: "Ice Depth",
     description: "Ice depth monitoring with custom diagrams and ice operations",
-    annualPrice: 399,
+    annualPrice: 599,
     highlight: false,
     badge: null,
     features: [
@@ -96,7 +96,7 @@ const faqs = [
   {
     question: "Do you offer discounts for multiple facilities?",
     answer:
-      "Yes! We offer a 15% discount for organizations managing 2 or more facilities. Contact us for volume pricing details.",
+      "Yes! We offer a 15% discount on every facility for organizations managing 2 or more facilities.",
   },
   {
     question: "How does the consulting pricing work?",
@@ -106,7 +106,7 @@ const faqs = [
   {
     question: "How is RinkReports Software billed?",
     answer:
-      "RinkReports Software is billed annually. The All Modules plan is $799 per year for the full platform, and the Ice Depth plan is $399 per year for ice depth monitoring with custom diagrams and ice operations.",
+      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $999 per facility per year for the full platform, and the Ice Depth plan is $599 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",
@@ -144,12 +144,13 @@ export default function PricingPage() {
               className="mx-auto mb-6 h-auto w-[200px] md:w-[260px]"
             />
             <div className="flex items-center justify-center mb-4">
-              <Monitor className="h-8 w-8 text-green-500 mr-2" />
+              <Monitor className="h-8 w-8 text-green-600 mr-2" />
               <h2 className="text-2xl font-bold text-navy">RinkReports Software</h2>
             </div>
-            <p className="text-grey-600">
-              Annual subscriptions billed once per year. Choose the full
-              platform or the ice depth package.
+            <p className="text-grey-700">
+              Annual subscriptions billed once per year, per facility, regardless
+              of the number of ice sheets. Choose the full platform or the ice
+              depth package.
             </p>
           </div>
 
@@ -165,7 +166,7 @@ export default function PricingPage() {
               >
                 {plan.badge && (
                   <div className="bg-green-500 py-4 px-8">
-                    <p className="text-center text-white font-semibold">
+                    <p className="text-center text-navy-900 font-semibold">
                       {plan.badge}
                     </p>
                   </div>
@@ -175,7 +176,7 @@ export default function PricingPage() {
                     <h3 className="text-xl font-bold text-navy mb-1">
                       {plan.name}
                     </h3>
-                    <p className="text-sm text-grey-500 mb-4">
+                    <p className="text-sm text-grey-700 mb-4">
                       {plan.description}
                     </p>
                     <div
@@ -185,13 +186,13 @@ export default function PricingPage() {
                     >
                       ${plan.annualPrice}
                     </div>
-                    <div className="text-grey-500">per year</div>
+                    <div className="text-grey-700">per facility, per year</div>
                   </div>
 
                   <div className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <div key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                         <span className="text-grey-700">{feature}</span>
                       </div>
                     ))}
@@ -213,8 +214,8 @@ export default function PricingPage() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-grey-500 mt-8">
-            15% discount available for 2+ facility subscriptions
+          <p className="text-center text-sm text-grey-700 mt-8">
+            15% off every facility when you subscribe for 2 or more
           </p>
         </div>
       </Reveal></section>
@@ -225,7 +226,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <h2 className="section-heading">Professional Services</h2>
             <p className="section-subheading">
-              Custom solutions tailored to your facility&apos;s specific needs.
+              Hands-on ice maintenance and operations consulting, quoted by facility size and scope.
             </p>
           </div>
 
@@ -241,7 +242,7 @@ export default function PricingPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-xl font-bold text-navy">{plan.name}</h3>
-                    <p className="text-grey-500 text-sm">{plan.description}</p>
+                    <p className="text-grey-700 text-sm">{plan.description}</p>
                   </div>
                 </div>
 
@@ -254,13 +255,13 @@ export default function PricingPage() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                       <span className="text-grey-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-sm text-grey-500 mb-6">{plan.note}</p>
+                <p className="text-sm text-grey-700 mb-6">{plan.note}</p>
 
                 <Link
                   href="/contact"
@@ -290,7 +291,7 @@ export default function PricingPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {faq.question}
                 </h3>
-                <p className="text-grey-600">{faq.answer}</p>
+                <p className="text-grey-700">{faq.answer}</p>
               </div>
             ))}
           </div>

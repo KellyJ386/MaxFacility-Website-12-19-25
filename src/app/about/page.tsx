@@ -154,7 +154,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="section-heading text-left">Our Story</h2>
-              <div className="space-y-4 text-grey-600">
+              <div className="space-y-4 text-grey-700">
                 <p>
                   Max Facility LLC was founded by Kelly Johnson, who has over
                   25 years of experience running ice rinks &mdash; ice
@@ -196,7 +196,9 @@ export default function AboutPage() {
                 Founder
               </span>
               <h3 className="mt-4 text-2xl font-bold">Kelly Johnson</h3>
-              <p className="mt-1 text-grey-300">Career Ice Rink Operator</p>
+              <p className="mt-1 text-grey-300">
+                Founder, Max Facility LLC &middot; Creator of RinkReports
+              </p>
               <p className="text-sm text-green-400">
                 25+ Years in Ice Rink Operations
               </p>
@@ -313,7 +315,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-navy mb-2">
                   {value.title}
                 </h3>
-                <p className="text-grey-600 text-sm">{value.description}</p>
+                <p className="text-grey-700 text-sm">{value.description}</p>
               </div>
             ))}
           </div>
@@ -367,6 +369,7 @@ export default function AboutPage() {
 
       {/* Positioning Band */}
       <section className="px-4 py-10 sm:px-6 lg:px-8"><Reveal><div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-green-600 via-green-500 to-green-400 py-16 shadow-float">
+      <section className="py-16 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
@@ -384,10 +387,10 @@ export default function AboutPage() {
               },
             ].map((item) => (
               <div key={item.value}>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">
+                <div className="text-2xl md:text-3xl font-bold text-green-500 mb-2">
                   {item.value}
                 </div>
-                <div className="text-green-50 text-sm">{item.label}</div>
+                <div className="text-grey-300 text-sm">{item.label}</div>
               </div>
             ))}
           </div>

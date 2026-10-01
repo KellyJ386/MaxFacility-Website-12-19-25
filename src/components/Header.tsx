@@ -50,6 +50,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:items-center">
             <Link
               href="/contact"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
               className="inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-2.5 font-display text-sm font-semibold text-white transition-colors hover:bg-green-600"
             >
               Book a Demo
@@ -87,6 +88,7 @@ export default function Header() {
             <div className="px-3 pt-3">
               <Link
                 href="/contact"
+                className="block w-full text-center px-5 py-2 text-sm font-semibold text-navy-900 bg-green-500 rounded-lg hover:bg-green-400 transition-colors"
                 className="block w-full rounded-full bg-green-500 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-green-600"
                 onClick={() => setMobileMenuOpen(false)}
               >

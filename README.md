@@ -1,8 +1,7 @@
 # Max Facility Website
 
-Marketing site for Max Facility — two business lines: ice rink operations
-(consulting, maintenance, and the RinkReports management platform) and custom
-web applications for recreation and sport facilities of all sizes.
+Marketing site for Max Facility — focused on ice rink operations (consulting,
+maintenance, and the RinkReports management platform).
 
 Built with **Next.js 16** (App Router), **React 18**, **TypeScript**, and
 **Tailwind CSS**.
@@ -68,13 +67,17 @@ in **Vercel → Settings → Environment Variables** for deployed environments.
 | --- | --- | --- |
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL (stores contact-form leads) | Optional |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key | Optional |
-| `RESEND_API_KEY` | Resend API key (email notifications on new leads) | Optional |
-| `CONTACT_EMAIL` | Destination address for lead notifications | Optional |
+| `RESEND_API_KEY` | Resend API key (email notifications on new leads) | Required for lead emails |
+| `CONTACT_EMAIL` | Destination address for lead notifications | Required for lead emails |
 
 ## Contact form
 
 `src/app/contact/page.tsx` POSTs to `src/app/api/contact/route.ts`, which
-validates the payload and currently logs submissions to the server logs. The
-route contains scaffolding (commented out) to persist leads to a Supabase
-`leads` table and send email notifications via Resend; enable it once the
-corresponding environment variables are configured.
+validates the payload, emails each submission via Resend when `RESEND_API_KEY`
+and `CONTACT_EMAIL` are set, and always logs it to the server logs. If Resend is
+configured but the send fails, the route returns an error so the visitor sees it
+instead of the lead being silently lost. The Supabase `leads` insert remains
+commented out scaffolding.
+
+Resend requires the `maxfacility.com` domain to be verified before
+`noreply@maxfacility.com` can send.

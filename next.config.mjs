@@ -24,6 +24,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Custom software was discontinued to focus on RinkReports.
+        source: '/custom-software',
+        destination: '/ice-rink#rinkreports',
+        permanent: true,
+      },
+      {
         source: '/services/ice-maintenance',
         destination: '/services#ice-maintenance',
         permanent: true,

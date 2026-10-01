@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -19,6 +20,19 @@ const label = Space_Grotesk({
   display: "swap",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Max Facility | Ice Rink Operations & RinkReports Software",
@@ -26,6 +40,11 @@ export const metadata: Metadata = {
   },
   description:
     "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes. CIT, CIRM, CRA certified.",
+    default: "Max Facility | RinkReports & Ice Rink Operations",
+    template: "%s | Max Facility",
+  },
+  description:
+    "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform. CIT, CIRM, CRA certified.",
   keywords: [
     "ice rink management software",
     "ice facility consulting",
@@ -34,6 +53,7 @@ export const metadata: Metadata = {
     "ice maintenance services",
     "ice rink management",
     "facility management software",
+    "RinkReports",
   ],
   authors: [{ name: "Max Facility" }],
   creator: "Max Facility",
@@ -47,6 +67,9 @@ export const metadata: Metadata = {
     title: "Max Facility | Ice Rink Operations & RinkReports Software",
     description:
       "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
+    title: "Max Facility | RinkReports & Ice Rink Operations",
+    description:
+      "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
     url: "https://maxfacility.com",
     siteName: "Max Facility",
     locale: "en_US",
@@ -57,6 +80,9 @@ export const metadata: Metadata = {
     title: "Max Facility | Ice Rink Operations & RinkReports Software",
     description:
       "Expert ice rink consulting and maintenance, the RinkReports platform and operations tools for ice facilities of all sizes.",
+    title: "Max Facility | RinkReports & Ice Rink Operations",
+    description:
+      "Expert ice rink consulting and maintenance, and the RinkReports ice rink management platform.",
   },
   robots: {
     index: true,
@@ -77,6 +103,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <html lang="en" className={`${spaceGrotesk.variable} ${spaceMono.variable}`}>
+      <body className="font-sans">
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} ${label.variable} font-sans`}>
         <Header />
