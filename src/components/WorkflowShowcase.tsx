@@ -140,10 +140,10 @@ export default function WorkflowShowcase() {
         role="tabpanel"
         className="card-soft mx-auto max-w-6xl overflow-hidden p-2 sm:p-3"
       >
-        {/* The graphics carry small text, so on phones they scroll sideways at a
-            readable size instead of shrinking to fit. */}
-        <div className="overflow-x-auto rounded-2xl md:overflow-visible">
-          <div className="min-w-[960px] md:min-w-0">
+        {/* From tablet up the graphic fits the width (pinch to zoom for detail);
+            below that it scrolls sideways at a readable size. */}
+        <div className="overflow-x-auto rounded-2xl sm:overflow-visible">
+          <div className="min-w-[960px] sm:min-w-0">
             {workflows.map((item, i) => (
               <Image
                 key={item.src}
@@ -152,13 +152,13 @@ export default function WorkflowShowcase() {
                 width={item.width}
                 height={item.height}
                 priority={i === 0}
-                sizes="(min-width: 1152px) 1152px, 960px"
+                sizes="(min-width: 1152px) 1152px, (min-width: 640px) 100vw, 960px"
                 className={cn("h-auto w-full rounded-2xl", i !== active && "hidden")}
               />
             ))}
           </div>
         </div>
-        <p className="flex items-center justify-between gap-3 px-3 pb-2 pt-3 text-xs text-grey-600 md:hidden">
+        <p className="flex items-center justify-between gap-3 px-3 pb-2 pt-3 text-xs text-grey-600 sm:hidden">
           <span>Swipe sideways to read the full graphic</span>
           <a
             href={w.src}
