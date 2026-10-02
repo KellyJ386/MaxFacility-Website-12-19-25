@@ -23,12 +23,6 @@ const differentiators = [
   },
 ];
 
-const certifications = [
-  { abbr: "CIT", name: "Certified Ice Technician", logo: "/images/certs/cit.png" },
-  { abbr: "CIRM", name: "Certified Ice Rink Manager", logo: "/images/certs/cirm.png" },
-  { abbr: "CRA", name: "Certified Rink Administrator", logo: "/images/certs/cra.png" },
-];
-
 export default function Home() {
   return (
     <>
@@ -100,32 +94,6 @@ export default function Home() {
                     <d.icon className="h-7 w-7 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-navy">{d.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* Credibility */}
-      <section className="py-24">
-        <Reveal>
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <p className="eyebrow mb-5 px-6 py-3 text-base">Credentials</p>
-            <h2 className="section-heading">Certifications</h2>
-            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-              {certifications.map((c) => (
-                <div key={c.abbr} className="card-soft p-6 text-center">
-                  <Image
-                    src={c.logo}
-                    alt={`${c.abbr} — ${c.name}`}
-                    width={120}
-                    height={120}
-                    className="mx-auto h-24 w-auto object-contain"
-                  />
-                  <p className="mt-3 font-mono text-sm font-semibold text-navy">{c.abbr}</p>
-                  <p className="text-xs text-grey-700">{c.name}</p>
-                  <p className="text-xs text-grey-700">U.S. Ice Rink Association</p>
                 </div>
               ))}
             </div>
