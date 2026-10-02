@@ -46,7 +46,7 @@ export default function Home() {
               height={185}
               priority
               unoptimized
-              className="mx-auto h-auto w-56 sm:w-72"
+              className="mx-auto h-auto w-[240px] md:w-[320px]"
             />
             <p className="mt-6 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-green-400">
               Built by an ice rink operator
@@ -117,13 +117,7 @@ export default function Home() {
         <Reveal>
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
             <p className="eyebrow mb-5">Credentials</p>
-            <h2 className="section-heading">
-              Why RinkReports understands your rink
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-grey-700">
-              RinkReports is built by Kelly Johnson, founder of Max Facility LLC,
-              who holds the industry&apos;s core ice rink certifications.
-            </p>
+            <h2 className="section-heading">Certifications</h2>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
               {certifications.map((c) => (
                 <div key={c.abbr} className="card-soft p-6 text-center">
