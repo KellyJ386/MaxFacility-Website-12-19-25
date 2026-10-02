@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ArrowRight,
   WifiOff,
   Wrench,
   Users,
@@ -46,7 +45,7 @@ export default function Home() {
               height={185}
               priority
               unoptimized
-              className="mx-auto h-auto w-56 sm:w-72"
+              className="mx-auto h-auto w-[240px] md:w-[320px]"
             />
             <p className="mt-6 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-green-400">
               Built by an ice rink operator
@@ -62,10 +61,6 @@ export default function Home() {
               for ice depth, daily reports, incidents, scheduling and compliance.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <Link href="/request-demo" className="btn-primary px-8 py-4 text-lg">
-                Request a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
               <Link href="/pricing" className="btn-secondary px-8 py-4 text-lg">
                 View Pricing
               </Link>
@@ -116,14 +111,8 @@ export default function Home() {
       <section className="py-24">
         <Reveal>
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <p className="eyebrow mb-5">Credentials</p>
-            <h2 className="section-heading">
-              Why RinkReports understands your rink
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-grey-700">
-              RinkReports is built by Kelly Johnson, founder of Max Facility LLC,
-              who holds the industry&apos;s core ice rink certifications.
-            </p>
+            <p className="eyebrow mb-5 px-6 py-3 text-base">Credentials</p>
+            <h2 className="section-heading">Certifications</h2>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
               {certifications.map((c) => (
                 <div key={c.abbr} className="card-soft p-6 text-center">
@@ -180,22 +169,6 @@ export default function Home() {
                 Learn more →
               </Link>
             </p>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="px-4 pb-24 pt-8 sm:px-6 lg:px-8">
-        <Reveal>
-          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 px-8 py-16 text-center shadow-float">
-            <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
-            <h2 className="relative mb-8 text-3xl font-bold text-white md:text-5xl">
-              See RinkReports on your rink.
-            </h2>
-            <Link href="/request-demo" className="btn-primary relative px-8 py-4 text-lg">
-              Request a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </Reveal>
       </section>
