@@ -116,7 +116,7 @@ export default function Home() {
       <section className="py-24">
         <Reveal>
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <p className="eyebrow mb-5">Credentials</p>
+            <p className="eyebrow mb-5 px-6 py-3 text-base">Credentials</p>
             <h2 className="section-heading">Certifications</h2>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
               {certifications.map((c) => (
