@@ -45,7 +45,7 @@ export default function Home() {
               height={185}
               priority
               unoptimized
-              className="mx-auto h-auto w-[240px] md:w-[320px]"
+              className="mx-auto h-auto w-[300px] md:w-[440px]"
             />
             <p className="mt-6 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-green-400">
               Built by an ice rink operator
