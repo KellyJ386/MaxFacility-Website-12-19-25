@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ArrowRight,
   WifiOff,
   Wrench,
   Users,
@@ -62,10 +61,6 @@ export default function Home() {
               for ice depth, daily reports, incidents, scheduling and compliance.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <Link href="/request-demo" className="btn-primary px-8 py-4 text-lg">
-                Request a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
               <Link href="/pricing" className="btn-secondary px-8 py-4 text-lg">
                 View Pricing
               </Link>
@@ -174,22 +169,6 @@ export default function Home() {
                 Learn more →
               </Link>
             </p>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="px-4 pb-24 pt-8 sm:px-6 lg:px-8">
-        <Reveal>
-          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-navy-700 via-navy to-navy-500 px-8 py-16 text-center shadow-float">
-            <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-500/20 blur-3xl" aria-hidden="true" />
-            <h2 className="relative mb-8 text-3xl font-bold text-white md:text-5xl">
-              See RinkReports on your rink.
-            </h2>
-            <Link href="/request-demo" className="btn-primary relative px-8 py-4 text-lg">
-              Request a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
           </div>
         </Reveal>
       </section>

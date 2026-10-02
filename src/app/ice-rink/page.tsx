@@ -358,10 +358,6 @@ export default function IceRinkPage() {
               employees, and generate reports—all in one place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/request-demo" className="btn-primary text-lg px-8 py-4">
-                Request a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
               <Link href="/pricing" className="btn-secondary text-lg px-8 py-4">
                 View Pricing
               </Link>
