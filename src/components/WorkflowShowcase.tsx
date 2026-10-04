@@ -57,6 +57,13 @@ const workflows = [
     height: 1086,
     alt: "Communication and oversight: incident reports, daily reports, ice operations, maintenance, air quality, and scheduling feed the communications center and admin panel, so frontline staff, managers, facility leaders, and ownership each get the right information, with role-based control and real-time visibility.",
   },
+  {
+    tab: "Facility Assets & Documentation",
+    src: "/images/workflows/facility-assets-documentation.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Facility assets and documentation: track, inspect, maintain, document. A dasher board issue is found, the inspection is logged, a repair task is assigned and completed, maintenance records are linked to the asset, and permits and manuals are stored in one place, with asset tracking and facility paperwork connected to dasher boards.",
+  },
 ];
 
 /** Pill tabs that switch between the RinkReports workflow graphics. */
