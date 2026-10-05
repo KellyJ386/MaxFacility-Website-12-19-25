@@ -69,8 +69,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What RinkReports does for you (desktop and tablet) */}
-      <section className="hidden bg-soft-fade py-24 sm:block">
+      {/* What RinkReports does for you (all screen sizes) */}
+      <section className="bg-soft-fade py-16 sm:py-24">
         <Reveal>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">

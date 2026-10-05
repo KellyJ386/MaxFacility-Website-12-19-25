@@ -370,7 +370,7 @@ export default function IceRinkPage() {
       </div></Reveal></section>
 
       {/* What RinkReports does for you — workflow graphic slot */}
-      <section className="hidden bg-soft-fade py-24 md:block"><Reveal>
+      <section className="bg-soft-fade py-16 sm:py-24"><Reveal>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-12 text-center">
             <p className="eyebrow mb-5">What RinkReports does for you</p>
