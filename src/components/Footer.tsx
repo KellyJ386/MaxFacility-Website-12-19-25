@@ -4,6 +4,7 @@ import { Mail, MapPin } from "lucide-react";
 const footerLinks = {
   services: [
     { name: "Ice Rink Solutions", href: "/ice-rink" },
+    { name: "Custom Software", href: "/custom-software" },
     { name: "Ice Maintenance", href: "/services#ice-maintenance" },
     { name: "Facility Consulting", href: "/services#consulting" },
     { name: "RinkReports Software", href: "/ice-rink#rinkreports" },
