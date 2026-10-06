@@ -24,7 +24,7 @@ const navigation: NavItem[] = [
     ],
   },
   { name: "Custom Software", href: "/custom-software" },
-  { name: "Ice Rink", href: "/ice-rink" },
+  { name: "Rink Software", href: "/ice-rink" },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
