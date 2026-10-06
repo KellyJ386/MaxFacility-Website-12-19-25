@@ -23,6 +23,7 @@ const navigation: NavItem[] = [
       { name: "Facility Consulting", href: "/services#consulting" },
     ],
   },
+  { name: "Custom Software", href: "/custom-software" },
   { name: "Ice Rink", href: "/ice-rink" },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
