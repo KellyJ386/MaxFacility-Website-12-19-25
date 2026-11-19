@@ -45,7 +45,7 @@ const services = [
     price: "From $399/year per facility",
   },
   {
-    name: "Ice Maintenance",
+    name: "On-site Ice Service",
     description:
       "Professional ice maintenance and resurfacing services for facilities throughout Central New York. Expert care for optimal ice quality.",
     icon: Snowflake,

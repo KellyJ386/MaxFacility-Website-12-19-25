@@ -57,7 +57,7 @@ const softwarePlans = [
 const servicePlans = [
   {
     icon: Snowflake,
-    name: "Ice Maintenance",
+    name: "On-site Ice Service",
     description: "Professional ice care for Central NY facilities",
     pricing: "Custom Quote",
     features: [
