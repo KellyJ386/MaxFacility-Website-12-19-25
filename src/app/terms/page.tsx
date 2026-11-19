@@ -52,8 +52,8 @@ export default function TermsPage() {
               RinkReports Software is provided on a per-facility subscription basis, regardless of the number of ice sheets:
             </p>
             <ul className="list-disc pl-6 text-grey-700 mb-6">
-              <li>All Modules plan: $999 per year (annual billing)</li>
-              <li>Ice Depth plan: $599 per year (annual billing)</li>
+              <li>All Modules plan: $799 per year (annual billing)</li>
+              <li>Ice Maintenance plan: $399 per year (annual billing)</li>
               <li>Multi-facility discount: 15% off the price of every facility when an organization subscribes for 2 or more facilities</li>
               <li>Subscriptions renew automatically unless cancelled</li>
             </ul>

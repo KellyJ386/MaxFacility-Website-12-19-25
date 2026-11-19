@@ -7,14 +7,14 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $599/year.",
+    "Transparent pricing for Max Facility services and RinkReports software. Ice maintenance, consulting, and software solutions starting at $399/year.",
 };
 
 const softwarePlans = [
   {
     name: "All Modules",
     description: "Complete ice facility management platform",
-    annualPrice: 999,
+    annualPrice: 799,
     highlight: true,
     badge: "Most Popular — All Features Included",
     features: [
@@ -39,9 +39,9 @@ const softwarePlans = [
     ],
   },
   {
-    name: "Ice Depth",
+    name: "Ice Maintenance",
     description: "Ice depth monitoring with custom diagrams and ice operations",
-    annualPrice: 599,
+    annualPrice: 399,
     highlight: false,
     badge: null,
     features: [
@@ -57,7 +57,7 @@ const softwarePlans = [
 const servicePlans = [
   {
     icon: Snowflake,
-    name: "Ice Maintenance",
+    name: "On-site Ice Service",
     description: "Professional ice care for Central NY facilities",
     pricing: "Custom Quote",
     features: [
@@ -106,7 +106,7 @@ const faqs = [
   {
     question: "How is RinkReports Software billed?",
     answer:
-      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $999 per facility per year for the full platform, and the Ice Depth plan is $599 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
+      "RinkReports Software is billed annually, per facility. The price does not change with the number of ice sheets in your facility. The All Modules plan is $799 per facility per year for the full platform, and the Ice Maintenance plan is $399 per facility per year for ice depth monitoring with custom diagrams and ice operations.",
   },
   {
     question: "What payment methods do you accept?",
