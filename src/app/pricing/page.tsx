@@ -64,7 +64,6 @@ const servicePlans = [
       "Expert ice resurfacing",
       "Ice building & maintenance",
       "Ice depth management",
-      "Equipment maintenance",
       "Emergency response available",
       "CIT certified technicians",
     ],
