@@ -8,7 +8,6 @@ import {
   Thermometer,
   Droplets,
   Gauge,
-  Shield,
   ClipboardCheck,
   GraduationCap,
   TrendingUp,
@@ -42,12 +41,6 @@ const maintenanceServices = [
     title: "Ice Depth Management",
     description:
       "Regular monitoring and maintenance of ice depth using our proprietary tracking systems.",
-  },
-  {
-    icon: Shield,
-    title: "Equipment Maintenance",
-    description:
-      "Comprehensive care for Zamboni machines, edgers, and other ice maintenance equipment.",
   },
 ];
 
